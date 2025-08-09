@@ -58,6 +58,16 @@
                 <h3 id="course-name">Net Worth Awareness</h3>
             </div>
 
+            <div id="popup-modal">
+                <div id="popup-content">
+                    <header id="popup-header">
+                        <span id="close-btn">&times;</span>
+                        <img id="popup-img" src="" alt="">
+                        <h3 id="popup-title"></h3>
+                    </header>
+                </div>
+            </div>
+
         <div>
             <button id="next">></button>
         </div>
@@ -89,12 +99,12 @@
         </div>
 
         <div id="material">
-           <img src="/favicons/purchase-power.png" id="course-img">
+           <img src="/favicons/purchase-power1.png" id="course-img">
            <h3 id="course-name">Purchasing Power</h3>
         </div>
 
         <div id="material">
-           <img>
+           <img src="/favicons/Time-Value-of-Money.png" id="course-img">
            <h3 id="course-name">Time Value of Money</h3>
         </div>
 
@@ -114,6 +124,7 @@
         <div id="material">
             <img>
             <h3 id="course-name">Advanced Investment Strategies</h3>
+            
         </div>
 
         <div id="material">
@@ -141,5 +152,43 @@
         </div>
         <br>
     </div>
+
+<script>
+function openPopup() {
+  document.getElementById("popup-modal").classList.add("show");
+}
+
+function closePopup() {
+  document.getElementById("popup-modal").classList.remove("show");
+}
+
+// Attach click listeners to each material div
+document.querySelectorAll('#material').forEach(card => {
+  card.addEventListener('click', () => {
+    const img = card.querySelector('img');
+    const title = card.querySelector('h3');
+    
+    document.getElementById('popup-img').src = img.src;
+    document.getElementById('popup-title').innerText = title.innerText;
+    openPopup(); // <--- trigger the smooth fade-in
+  });
+});
+
+// Close modal
+document.getElementById('close-btn').addEventListener('click', closePopup);
+
+// Close on outside click
+window.addEventListener('click', (e) => {
+  if (e.target === document.getElementById('popup-modal')) {
+    closePopup();
+  }
+});
+</script>
+
+
+  <script>
+  </script>
+
+
 </body>
 </html>
