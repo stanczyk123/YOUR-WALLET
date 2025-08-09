@@ -212,18 +212,25 @@ document.addEventListener('DOMContentLoaded', () => {
     sidebar.classList.remove('show');
   }
 
+  // Profile pic dissappear after it clicked
+document.getElementById('profile-pic').addEventListener('click', function() {
+    this.classList.toggle('dissappear');
+});
+
   // Open on profile pic click
   profilePic.addEventListener('click', (e) => {
     e.stopPropagation();
     openSidebar();
   });
 
-  // Close when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!sidebar.contains(e.target) && !profilePic.contains(e.target)) {
-      closeSidebar();
+
+// Close sidebar when clicking outside
+window.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && e.target !== profilePic) {
+        sidebar.classList.remove('show');
+        profilePic.classList.remove('dissappear');
     }
-  });
+});
 
   // Close with Escape key
   document.addEventListener('keydown', (e) => {
