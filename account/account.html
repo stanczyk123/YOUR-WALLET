@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="account.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicons/wallet.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<header>
+    <div>
+        <a href="/Index.html">
+            <img src="/favicons/wallet.png" id="walletFavicon">
+            <h2 id="title">FRIENDLY</h2>
+            <h2 id="title2">WALLET</h2>
+        </a>
+    </div>
+
+    <div class="dropdown">
+        <a><img src="/favicons/profile-pic.png" id="profile-pic" alt="profile-pic"></a>
+    </div>
+
+    <div id="sidebar">
+        <div id="sidebar-content">
+            <a><img src="/favicons/profile-pic.png" id="profile-pic-sidebar"></a>
+            <h3 id="username"></h3>
+            <div id="sidebar-links">
+                <a href="/account/account.html" id="content1">Account</a>
+                <a href="/manage-profile/manage-profile.html" id="content1">Manage Profile</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    
+    <h2 id="AccountInformationTitle">Account Information</h2>
+
+    <div id="sidebar-left">
+        <h3 id="settingstittle">Settings</h3>
+        <a></a>
+    </div>
+    <div id="textbox-container">
+        <input type="text" class="textbox">
+        <input type="text" class="textbox">
+    </div>
+
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const sidebar = document.getElementById('sidebar');
+  const profilePic = document.getElementById('profile-pic'); // clickable avatar
+
+  function openSidebar() {
+    sidebar.classList.add('show');
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove('show');
+  }
+
+  // Profile pic dissappear after it clicked
+document.getElementById('profile-pic').addEventListener('click', function() {
+    this.classList.toggle('dissappear');
+});
+
+  // Open on profile pic click
+  profilePic.addEventListener('click', (e) => {
+    e.stopPropagation();
+    openSidebar();
+  });
+
+
+// Close sidebar when clicking outside
+window.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && e.target !== profilePic) {
+        sidebar.classList.remove('show');
+        profilePic.classList.remove('dissappear');
+    }
+});
+
+  // Close with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeSidebar();
+  });
+});
+</script>
+</body>
+
+
+</html>

@@ -1,0 +1,524 @@
+body{
+    background-color: rgb(24, 24, 24);
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    background-color: rgb(16, 16, 16);
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0px;
+    right: 1px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius:20px ;
+    box-shadow: 2px 2px 2px black;
+    z-index: 10; /* Ensures header is on top */
+}
+
+#title{
+    font-family: "press start 2p";
+    color: white;
+    font-size: larger;
+    position: fixed;
+    left:100px ;
+    top: 10px;
+}
+
+#walletFavicon{
+    width: 100px;
+    position: fixed;
+}
+
+#title2{
+    font-family: "press start 2p";
+    color: white;
+    font-size: larger;
+    position: fixed;
+    left:100px ;
+    top: 40px;
+}
+
+#profile-pic{
+    width: 45px;
+    position: fixed;
+    right: 140px;
+    border-radius: 120px;
+    top: 20px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.content{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    min-width: 100px;
+    box-shadow: 2px 2px black;
+    right: 10px;
+    top: 65px;
+    border: 1px solid rgb(60, 60, 60);
+    border-radius: 5px;
+    display: none;
+    padding: 10px 10px;
+}
+
+
+
+a, a * {
+    text-decoration: none;
+    color: white;
+}
+
+#content1{
+    text-decoration: none;
+    display: block;
+    color: grey;
+    padding: 6px 6px;
+}
+
+#content1:hover{
+    color: white;
+}
+
+#button1{
+    background-color: red;
+    width: 1000px;
+}
+
+.dropdown:hover .content{
+    display: block;
+    
+}
+
+#basic-knowledge{
+    position: relative;
+    top: 200px;
+    color: white;
+    left: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 1; /* Behind header */
+    margin-top: -20px; /* Optional: move it closer under the header */
+}
+
+#material {
+    position: relative; /* This is crucial */
+    border: 1px solid rgb(94, 94, 94);
+    width: 270px;
+    height: 140px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: transform 0.2s ease, border 0.2s ease;
+
+}
+
+#material:hover {
+    border: 2px solid white;
+    transform: scale(1.2);
+    box-shadow: 5px 5px 25px black;
+}
+
+/* Course name transitions from center to top */
+#course-name {
+    position: absolute;
+    top: 40%; /* Center vertically */
+    left: 70%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    font-family: 'Franklin Gothic Medium';
+    transition: top 0.3s ease, transform 0.3s ease;
+    color: rgb(163, 163, 163);
+}
+
+/* On hover, move to the top and keep it centered horizontally */
+#material:hover #course-name {
+color: white;
+}
+
+.rows {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 200px; /* to push it below the header */
+    margin-left: 25px;
+    position: relative;
+}
+
+#intermediate{
+    position: relative;
+    top: 50px;
+    color: white;
+    left: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
+}
+
+.rows2{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 50px; /* to push it below the header */
+    margin-left: 25px;
+    position: relative;
+
+}
+
+#advance{
+    position: relative;
+    top: 50px;
+    color: white;
+    left: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+}
+
+.rows3{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 50px; /* to push it below the header */
+    margin-left: 25px;
+    position: relative;    
+}
+
+#content1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#course-img{
+    width: 100px;
+    position: relative;
+    right: 60px;
+    opacity: 0.4; /* faded by default */
+    transition: all 0.3s ease;
+}
+
+#material:hover #course-img {
+    opacity: 1; /* fade back to fully visible on hover */
+    width: 130px
+}
+
+#next{
+    background-color: rgb(28, 28, 28);
+    border-radius: 100px;
+    border: 0.2px solid rgb(44, 44, 44);
+    color: white;
+    width: 30px;
+    height: 60px;
+    position: relative;
+    right: 5px;
+    top: 55px;
+    cursor: pointer;
+    transition: transform 0.2s ease, border 0.2s ease, width 0.2s ease, height 0.2s ease;
+    
+}
+
+#previous{
+    background-color: rgb(28, 28, 28);
+    border-radius: 100px;
+    border: 0.2px solid rgb(44, 44, 44);
+    color: white;
+    width: 30px;
+    height: 60px;
+    position: relative;
+    left: 5px;
+    top: 60px;
+    cursor: pointer;  
+    transition: transform 0.2s ease, border 0.2s ease, width 0.2s ease, height 0.2s ease;     
+}
+
+#next:hover{
+    border: 2px solid rgb(220, 220, 220);
+    background-color: rgb(28, 28, 28);
+    width: 50px;
+    height:80px ;
+    transform: scale(0.9);
+}
+
+#previous:hover{
+    border: 2px solid rgb(220, 220, 220);
+    background-color: rgb(28, 28, 28);
+    width: 50px;
+    height:80px ;
+    transform: scale(0.9);   
+}
+
+#next2{
+    background-color: rgb(28, 28, 28);
+    border-radius: 100px;
+    border: 0.2px solid rgb(44, 44, 44);
+    color: white;
+    width: 30px;
+    height: 60px;
+    position: relative;
+    right: 5px;
+    top: 55px;
+    cursor: pointer;
+    transition: transform 0.2s ease, border 0.2s ease, width 0.2s ease, height 0.2s ease;
+}
+
+#previous2{
+    background-color: rgb(28, 28, 28);
+    border-radius: 100px;
+    border: 0.2px solid rgb(44, 44, 44);
+    color: white;
+    width: 30px;
+    height: 60px;
+    position: relative;
+    left: 5px;
+    top: 55px;
+    cursor: pointer;  
+    transition: transform 0.2s ease, border 0.2s ease, width 0.2s ease, height 0.2s ease;   
+}
+
+#next2:hover{
+    border: 2px solid rgb(220, 220, 220);
+    background-color: rgb(28, 28, 28);
+    width: 50px;
+    height:80px ;
+    transform: scale(0.9);
+}
+
+#previous2:hover{
+    border: 2px solid rgb(220, 220, 220);
+    background-color: rgb(28, 28, 28);
+    width: 50px;
+    height:80px ;
+    transform: scale(0.9);   
+}
+
+#next3{
+    background-color: rgb(28, 28, 28);
+    border-radius: 100px;
+    border: 0.2px solid rgb(44, 44, 44);
+    color: white;
+    width: 30px;
+    height: 60px;
+    position: relative;
+    right: 5px;
+    top: 55px;
+    cursor: pointer;
+    transition: transform 0.2s ease, border 0.2s ease, width 0.2s ease, height 0.2s ease;
+}
+
+#previous3{
+    background-color: rgb(28, 28, 28);
+    border-radius: 100px;
+    border: 0.2px solid rgb(44, 44, 44);
+    color: white;
+    width: 30px;
+    height: 60px;
+    position: relative;
+    left: 5px;
+    top: 55px;
+    cursor: pointer;  
+    transition: transform 0.2s ease, border 0.2s ease, width 0.2s ease, height 0.2s ease;   
+}
+
+#next3:hover{
+    border: 2px solid rgb(220, 220, 220);
+    background-color: rgb(28, 28, 28);
+    width: 50px;
+    height:80px ;
+    transform: scale(0.9);
+}
+
+#previous3:hover{
+    border: 2px solid rgb(220, 220, 220);
+    background-color: rgb(28, 28, 28);
+    width: 50px;
+    height:80px ;
+    transform: scale(0.9); 
+}
+
+    #popup-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Franklin Gothic Medium';
+      color: white;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease;
+    }
+
+    #popup-content{
+        background-color: rgb(37, 37, 37);
+        padding: 2rem;
+        border-radius: 12px;
+        max-width: 90%;
+        max-height: 90%;
+        overflow: auto;
+        text-align: center;
+        width: 700px;
+        height: 600px;
+        transform: scale(0.55);
+        transition: transform 0.4s ease;
+        overflow-x: hidden;
+    }
+
+    #popup-modal.show{
+        transform: scale(1);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #popup-modal.show #popup-content{
+        transform: scale(1);
+    }
+
+    #popup-content img {
+      max-width:300px;
+      margin-bottom: 1rem;
+      position: relative;
+      right: 240px;
+      top: 80px;
+    }
+
+    #popup-title{
+        font-size: 40px;
+        position: relative;
+        bottom: 300px;
+        left: 60px;
+    }
+
+    #close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    #popup-header{
+        background-color: rgb(63, 63, 63);
+        height: 200px;
+        position: fixed;
+
+    }
+
+    #description{
+        font-size: larger;
+        font-family:'Segoe UI';
+        position: relative;
+        bottom: 290px;
+        right:50px;
+        cursor: pointer;
+    }
+
+
+    #sidebar{
+        position: fixed;
+        right: -220px;
+        background-color: rgb(16, 16, 16);
+        height: 600px;
+        border: 1px solid rgb(196, 196, 196);
+        border-top-left-radius:20px ;
+        border-bottom-left-radius: 20px;
+        width: 200px;
+        border-right: none;
+        z-index: 1000;
+        transition: right 0.3s ease-in-out;
+    }
+    
+    #sidebar.show{
+        right: 0;
+    }
+
+    #sidebar-content{
+        position: relative;
+        top: 100px;
+        padding: 20px;
+        padding-top: 80px;
+    }
+
+    #profile-pic-sidebar{
+        width: 45px;
+        position: absolute;
+        right: 140px;
+        border-radius: 120px;
+        bottom: 230px;
+        cursor: pointer;   
+    }
+
+    #username{
+        color: white;
+        font-size: x-large;
+        position: relative;
+        bottom: 100px;
+        left: 70px;
+        font-family:"roboto";
+        text-align: left;
+    }
+
+    #sidebar-links{
+        position: relative;
+        bottom: 90px;
+        left: 30px;
+        
+    }
+
+    #profile-pic.dissappear{
+        display: none;
+    }
+
+    #AccountInformationTitle{
+        color: white;
+        font-size: xx-large;
+        position: relative;
+        top: 150px;
+        right: 200px;
+        font-family: "roboto";
+    }
+
+    #textbox-container{
+        position: relative;
+        top: 200px;
+        margin-right: 10;
+        display: flex;
+        flex-direction: row;
+        gap: 105px;
+    }
+
+    .textbox{
+        height: 30px;
+        width: 260px;
+        border: 2px solid rgb(157, 157, 157);
+        border-radius: 10px;
+        background-color:rgb(24, 24, 24) ;
+        color: white;
+    }
+
+    #sidebar-left{
+        position: fixed;
+        color: white;
+        top: 160px;
+        left: 190px;
+        font-size: x-large;
+        font-family: "roboto";
+        height: 600px;
+        background-color: rgb(47, 47, 47);
+        width: 260px;
+        border-radius: 10px;
+        border: 0.6px solid rgb(67, 67, 67);
+    }
+
+    #settingstittle{
+        position: relative;
+        left: 30px;
+    }
