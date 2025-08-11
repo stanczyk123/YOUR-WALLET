@@ -44,27 +44,27 @@
             <button id="previous"><</button>
         </div>
 
-            <div id="material">
+            <div class="material">
                 <img src="/favicons/budgeting.png" id="course-img">
                 <h3 id="course-name">Budgeting</h3>
             </div>
 
-            <div id="material">
+            <div class="material">
                 <img src="/favicons/understanding-debt.png" id="course-img">
                 <h3 id="course-name">Understanding Debt</h3>
             </div>
 
-            <div id="material">
+            <div class="material">
                 <img src="/favicons/saving.png" id="course-img">
                 <h3 id="course-name">Saving & Emergency Fund</h3>
             </div>
 
-            <div id="material">
+            <div class="material">
                 <img src="/favicons/basic-investing.png" id="course-img">
                 <h3 id="course-name">Investing Basics</h3>
             </div>
 
-            <div id="material">
+            <div class="material">
                 <img src="/favicons/net-worth.png" id="course-img">
                 <h3 id="course-name">Net Worth Awareness</h3>
             </div>
@@ -96,27 +96,27 @@
             <button id="previous2"><</button>
         </div>
 
-        <div id="material">
+        <div class="material">
             <img src="/favicons/asset.png" id="course-img">
             <h3 id="course-name">Asset Allocation</h3>
         </div>
 
-        <div id="material">
+        <div class="material">
             <img src="/favicons/tax.png" id="course-img">
             <h3 id="course-name">Tax-Efficient Investing</h3>
         </div>
 
-        <div id="material">
+        <div class="material">
            <img src="/favicons/retirement.png" id="course-img">
            <h3 id="course-name">Retirement Plans</h3>
         </div>
 
-        <div id="material">
+        <div class="material">
            <img src="/favicons/purchase-power1.png" id="course-img">
            <h3 id="course-name">Purchasing Power</h3>
         </div>
 
-        <div id="material">
+        <div class="material">
            <img src="/favicons/Time-Value-of-Money.png" id="course-img">
            <h3 id="course-name">Time Value of Money</h3>
         </div>
@@ -134,28 +134,28 @@
         <div>
             <button id="previous3"><</button>
         </div>
-        <div id="material">
+        <div class="material">
             <img src="/favicons/advanced-invesment-strat.png" id="course-img">
             <h3 id="course-name">Advanced Investment Strategies</h3>
             
         </div>
 
-        <div id="material">
+        <div class="material">
             <img src="/favicons/advanced-porto.png" id="course-img">
             <h3 id="course-name">Advanced Portfolio Theory</h3>
         </div>
 
-        <div id="material">
+        <div class="material">
            <img src="/favicons/behavioral-finance.png" id="course-img">
            <h3 id="course-name">Behavioral Finance</h3>
         </div>
 
-        <div id="material">
+        <div class="material">
            <img src="favicons/alternative-invesment.png" id="course-img">
            <h3 id="course-name">Alternative Investments</h3>
         </div>
 
-        <div id="material">
+        <div class="material">
            <img src="/favicons/international-finance.png" id="course-img">
            <h3 id="course-name">International Finance</h3>
         </div>
@@ -167,6 +167,24 @@
     </div>
 
 <script>
+const materials = {
+  "Budgeting": "Budgeting is the process of creating a plan to spend your money wisely so that you have enough for your needs and goals.",
+  "Understanding Debt": "Understanding debt means knowing how borrowing works, the cost of interest, and how to manage repayment effectively.",
+  "Saving & Emergency Fund": "An emergency fund is money set aside to cover unexpected expenses, helping you avoid debt in crises.",
+  "Investing Basics": "Investing involves putting money into assets with the goal of generating income or growth over time.",
+  "Net Worth Awareness": "Net worth is the difference between what you own and what you owe. Tracking it shows your overall financial health.",
+  "Asset Allocation": "Asset allocation is the strategy of dividing investments among different categories to balance risk and reward.",
+  "Tax-Efficient Investing": "Tax-efficient investing reduces the tax impact on your returns through smart investment choices and timing.",
+  "Retirement Plans": "Retirement plans help you save and invest money for life after work, often with tax advantages.",
+  "Purchasing Power": "Purchasing power is the value of money in terms of the amount of goods or services it can buy.",
+  "Time Value of Money": "The time value of money means money today is worth more than the same amount in the future due to earning potential.",
+  "Advanced Investment Strategies": "These are sophisticated methods for maximizing returns and managing risks in complex markets.",
+  "Advanced Portfolio Theory": "This focuses on optimizing investment portfolios to achieve the best possible return for a given level of risk.",
+  "Behavioral Finance": "Behavioral finance studies how psychological influences and biases affect investors and financial markets.",
+  "Alternative Investments": "Alternative investments include assets like real estate, commodities, and private equity outside traditional markets.",
+  "International Finance": "International finance deals with monetary interactions between two or more countries, including trade and investment."
+};
+
 function openPopup() {
   document.getElementById("popup-modal").classList.add("show");
 }
@@ -175,15 +193,20 @@ function closePopup() {
   document.getElementById("popup-modal").classList.remove("show");
 }
 
-// Attach click listeners to each material div
-document.querySelectorAll('#material').forEach(card => {
+// Attach click listeners to each material card (use class, not ID)
+document.querySelectorAll('.material').forEach(card => {
   card.addEventListener('click', () => {
     const img = card.querySelector('img');
-    const title = card.querySelector('h3');
-    
+    const title = card.querySelector('h3').innerText.trim(); // trim removes spaces
+
     document.getElementById('popup-img').src = img.src;
-    document.getElementById('popup-title').innerText = title.innerText;
-    openPopup(); // <--- trigger the smooth fade-in
+    document.getElementById('popup-title').innerText = title;
+
+    // Automatically set learning material text
+    document.getElementById('learning-material').innerText =
+      materials[title] || "No description available.";
+
+    openPopup();
   });
 });
 
@@ -196,8 +219,10 @@ window.addEventListener('click', (e) => {
     closePopup();
   }
 });
-
 </script>
+
+
+
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
