@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="account.css">
+    <title>Personal Finance Management</title>
+    <link rel="stylesheet" href="personal-finance-management.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicons/wallet.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
 </head>
-<header>
+<body>
+    <header>
     <div>
         <a href="/Index.html">
             <img src="/favicons/wallet.png" id="walletFavicon">
@@ -21,28 +21,31 @@
         </a>
     </div>
 
+    <div>
+        <a href="">
+            <button class="buttonHeader">Basic Knowledge</button>
+        </a>
+
+        <a>
+            <button class="buttonHeader">Personal Finance Management</button>
+        </a>
+    </div>
+
     <div class="dropdown">
         <a><img src="/favicons/profile-pic.png" id="profile-pic" alt="profile-pic"></a>
     </div>
-</header>
 
-<body>
-    
-    <h2 id="AccountInformationTitle">Account Information</h2>
-
-    <div id="sidebar-left">
-        <h3 id="settingstittle">Settings</h3>
-        <div class="sidebarLeftContent">
-            <a id="accountInformation">Account Information</a>
-            <a id="manageProfile">Manage Profile</a>
+    <div id="sidebar">
+        <div id="sidebar-content">
+            <a><img src="/favicons/profile-pic.png" id="profile-pic-sidebar"></a>
+            <h3 id="username"></h3>
+            <div id="sidebar-links">
+                <a href="/account/account.html" id="content1">Account</a>
+                <a href="/manage-profile/manage-profile.html" id="content1">Manage Profile</a>
+            </div>
         </div>
     </div>
-
-    <div id="textbox-container">
-        <input type="text" class="textbox">
-        <button id="renamebtn"></button>
-        <input type="text" class="textbox">
-    </div>
+</header>
 
 </body>
 </html>
