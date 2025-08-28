@@ -10,43 +10,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
 
 </head>
-<header>
-    <div>
-        <a href="Index.html">
-            <img src="/favicons/wallet.png" id="walletFavicon">
-            <h2 id="title">FRIENDLY</h2>
-            <h2 id="title2">WALLET</h2>
-        </a>
-    </div>
 
-    <div>
-        <a href="">
-            <button class="buttonHeader">Basic Knowledge</button>
-        </a>
-        <a href="personal-finance-management/personal-finance-management.html">
-            <button class="buttonHeader">Personal Finance Management</button>
-        </a>
-    </div>
-
-    <div class="dropdown">
-        <a><img src="/favicons/profile-pic.png" id="profile-pic" alt="profile-pic"></a>
-    </div>
-
-    <div id="sidebar">
-        <div id="sidebar-content">
-            <a><img src="/favicons/profile-pic.png" id="profile-pic-sidebar"></a>
-            <h3 id="username"></h3>
-            <div id="sidebar-links">
-                <a href="/account/account.html" id="content1">Account</a>
-                <a href="/manage-profile/manage-profile.html" id="content1">Manage Profile</a>
-            </div>
-        </div>
-    </div>
-</header>
 
 <body>
+    <div class="top-hover-zone"></div>
+
+    <header>
+        <div class="header-border">
+            <div id="header-container">
+                <button class="headerbtn"  onclick="location.href='/Index.html'"><span>Home</span></button>   
+                <button class="headerbtn"><span>Budget Planning</span></button>
+                <button class="headerbtn"><span>Investment</span></button>
+                <button class="headerbtn"><span>Personal Management</span></button>
+                <button class="headerbtn"  onclick="document.getElementById('subbab2').scrollIntoView({behavior: 'smooth'});"><span>Other Topics</span></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="intro">
+        <h1 id="title1">Friendly</h1>
+        <h1 id="title2">Wallet</h1>
+    </div>
+
+    <div id="subbab1">
+        <h1 id="why">Why should you learn financial knowledge?</h1>
+    </div>
+
+    <br><br>
+
+    <div class="sideNumbers">
+        <h1 class="number">01</h1>
+        <h1 class="number">02</h1>
+    </div>
+
+    <div class="contentWrapper">
+        <div class="greyLine"></div>
+        <div id="reasson">
+            <p>
+                Mempelajari pengetahuan keuangan merupakan hal yang sangat penting karena berkaitan langsung dengan kualitas hidup dan masa depan seseorang. Keuangan memiliki peran fundamental dalam hampir seluruh aspek kehidupan, mulai dari pemenuhan kebutuhan pokok, kepemilikan tempat tinggal, pembiayaan pendidikan, hingga perencanaan masa depan. Tanpa pemahaman yang memadai, seseorang berisiko terjebak dalam berbagai permasalahan, seperti pengelolaan keuangan yang boros, penumpukan utang, maupun ketiadaan dana darurat ketika menghadapi situasi tak terduga.
+                <br><br>
+                Dengan menguasai pengetahuan keuangan, individu dapat mengatur pendapatan secara bijaksana, menyusun anggaran yang terarah, serta membangun kebiasaan menabung yang sehat. Selain itu, pemahaman mengenai utang, pinjaman, serta bunga akan membantu seseorang menghindari jeratan masalah finansial yang sulit diatasi. Lebih jauh, pengetahuan keuangan juga memungkinkan setiap individu untuk merancang tujuan jangka panjang, seperti membeli rumah, membiayai pendidikan, memulai usaha, hingga mempersiapkan masa pensiun yang sejahtera.
+                <br><br>
+                Di samping itu, pengetahuan keuangan membuka peluang untuk mengembangkan aset dan kekayaan. Melalui pemahaman yang baik mengenai investasi, risiko, serta peluang, seseorang dapat membangun kemandirian finansial secara berkelanjutan. Dengan demikian, pengetahuan ini tidak hanya mengurangi tekanan atau kecemasan terkait keuangan, tetapi juga meningkatkan kepercayaan diri dalam mengambil keputusan finansial.
+                <br><br>
+                Secara keseluruhan, pengetahuan keuangan bukan semata-mata mengenai uang, melainkan mengenai kebebasan, keamanan, serta kemampuan untuk membangun kehidupan yang stabil dan sejahtera di masa kini maupun masa depan.
+            </p>
+        </div>
+    </div>
+
+    
+
+
+
+    <div id="subbab2">
+        <h1 id="other-topics">Other Topics</h1>
+    </div>
     <h2 id="basic-knowledge">Basic Knowledge:</h2>
     <div class="rows">
         <div>
@@ -55,27 +76,27 @@
 
             <div class="material">
                 <img src="/favicons/budgeting.png" id="course-img">
-                <h3 id="course-name">Budgeting</h3>
+                <h3 class="course-name">Budgeting</h3>
             </div>
 
             <div class="material">
                 <img src="/favicons/understanding-debt.png" id="course-img">
-                <h3 id="course-name">Understanding Debt</h3>
+                <h3 class="course-name">Understanding Debt</h3>
             </div>
 
             <div class="material">
                 <img src="/favicons/saving.png" id="course-img">
-                <h3 id="course-name">Saving & Emergency Fund</h3>
+                <h3 class="course-name">Saving & Emergency Fund</h3>
             </div>
 
             <div class="material">
                 <img src="/favicons/basic-investing.png" id="course-img">
-                <h3 id="course-name">Investing Basics</h3>
+                <h3 class="course-name">Investing Basics</h3>
             </div>
 
             <div class="material">
                 <img src="/favicons/net-worth.png" id="course-img">
-                <h3 id="course-name">Net Worth Awareness</h3>
+                <h3 class="course-name">Net Worth Awareness</h3>
             </div>
 
             <div id="popup-modal">
@@ -108,27 +129,27 @@
 
         <div class="material">
             <img src="/favicons/asset.png" id="course-img">
-            <h3 id="course-name">Asset Allocation</h3>
+            <h3 class="course-name">Asset Allocation</h3>
         </div>
 
         <div class="material">
             <img src="/favicons/tax.png" id="course-img">
-            <h3 id="course-name">Tax-Efficient Investing</h3>
+            <h3 class="course-name">Tax-Efficient Investing</h3>
         </div>
 
         <div class="material">
            <img src="/favicons/retirement.png" id="course-img">
-           <h3 id="course-name">Retirement Plans</h3>
+           <h3 class="course-name">Retirement Plans</h3>
         </div>
 
         <div class="material">
            <img src="/favicons/purchase-power1.png" id="course-img">
-           <h3 id="course-name">Purchasing Power</h3>
+           <h3 class="course-name">Purchasing Power</h3>
         </div>
 
         <div class="material">
            <img src="/favicons/Time-Value-of-Money.png" id="course-img">
-           <h3 id="course-name">Time Value of Money</h3>
+           <h3 class="course-name">Time Value of Money</h3>
         </div>
 
         <div>
@@ -146,28 +167,28 @@
         </div>
         <div class="material">
             <img src="/favicons/advanced-invesment-strat.png" id="course-img">
-            <h3 id="course-name">Advanced Investment Strategies</h3>
+            <h3 class="course-name">Advanced Investment Strategies</h3>
             
         </div>
 
         <div class="material">
             <img src="/favicons/advanced-porto.png" id="course-img">
-            <h3 id="course-name">Advanced Portfolio Theory</h3>
+            <h3 class="course-name">Advanced Portfolio Theory</h3>
         </div>
 
         <div class="material">
            <img src="/favicons/behavioral-finance.png" id="course-img">
-           <h3 id="course-name">Behavioral Finance</h3>
+           <h3 class="course-name">Behavioral Finance</h3>
         </div>
 
         <div class="material">
            <img src="favicons/alternative-invesment.png" id="course-img">
-           <h3 id="course-name">Alternative Investments</h3>
+           <h3 class="course-name">Alternative Investments</h3>
         </div>
 
         <div class="material">
            <img src="/favicons/international-finance.png" id="course-img">
-           <h3 id="course-name">International Finance</h3>
+           <h3 class="course-name">International Finance</h3>
         </div>
 
         <div>
@@ -178,21 +199,35 @@
 
 <script>
 const materials = {
-  "Budgeting": "Budgeting is the process of creating a plan to spend your money wisely so that you have enough for your needs and goals.",
-  "Understanding Debt": "Understanding debt means knowing how borrowing works, the cost of interest, and how to manage repayment effectively.",
-  "Saving & Emergency Fund": "An emergency fund is money set aside to cover unexpected expenses, helping you avoid debt in crises.",
-  "Investing Basics": "Investing involves putting money into assets with the goal of generating income or growth over time.",
-  "Net Worth Awareness": "Net worth is the difference between what you own and what you owe. Tracking it shows your overall financial health.",
-  "Asset Allocation": "Asset allocation is the strategy of dividing investments among different categories to balance risk and reward.",
-  "Tax-Efficient Investing": "Tax-efficient investing reduces the tax impact on your returns through smart investment choices and timing.",
-  "Retirement Plans": "Retirement plans help you save and invest money for life after work, often with tax advantages.",
-  "Purchasing Power": "Purchasing power is the value of money in terms of the amount of goods or services it can buy.",
-  "Time Value of Money": "The time value of money means money today is worth more than the same amount in the future due to earning potential.",
-  "Advanced Investment Strategies": "These are sophisticated methods for maximizing returns and managing risks in complex markets.",
-  "Advanced Portfolio Theory": "This focuses on optimizing investment portfolios to achieve the best possible return for a given level of risk.",
-  "Behavioral Finance": "Behavioral finance studies how psychological influences and biases affect investors and financial markets.",
-  "Alternative Investments": "Alternative investments include assets like real estate, commodities, and private equity outside traditional markets.",
-  "International Finance": "International finance deals with monetary interactions between two or more countries, including trade and investment."
+  "Budgeting": "Budgeting is the process of creating a plan to spend your money wisely so that you have enough for your needs and goals. It helps you prioritize essential expenses, control unnecessary spending, and save for future purposes. A good budget gives you a clear roadmap for reaching both short-term and long-term financial goals.",
+
+  "Understanding Debt": "Understanding debt means knowing how borrowing works, the cost of interest, and how to manage repayment effectively. Debt can be useful for building credit or funding important needs, but unmanaged debt can quickly become overwhelming. By understanding the different types of debt and repayment strategies, you can make smarter financial decisions.",
+
+  "Saving & Emergency Fund": "An emergency fund is money set aside to cover unexpected expenses, helping you avoid debt in crises. It acts as a financial safety net for events like medical bills, job loss, or urgent repairs. Experts recommend saving three to six months of living expenses so you can handle emergencies without financial stress.",
+
+  "Investing Basics": "Investing involves putting money into assets with the goal of generating income or growth over time. Common investments include stocks, bonds, and real estate, each carrying different risks and rewards. The earlier you start investing, the more you can benefit from compounding, which helps your money grow faster.",
+
+  "Net Worth Awareness": "Net worth is the difference between what you own and what you owe. Tracking it shows your overall financial health and helps you measure progress toward your goals. A positive and growing net worth means your assets are increasing faster than your debts, which is a strong financial sign.",
+
+  "Asset Allocation": "Asset allocation is the strategy of dividing investments among different categories to balance risk and reward. By spreading money across assets like stocks, bonds, and cash, you reduce the impact of losses in any single category. The right allocation depends on your age, risk tolerance, and financial goals.",
+
+  "Tax-Efficient Investing": "Tax-efficient investing reduces the tax impact on your returns through smart investment choices and timing. This might include using tax-advantaged accounts, holding investments longer to lower capital gains taxes, or choosing tax-friendly assets. Managing taxes wisely allows you to keep more of your investment growth over time.",
+
+  "Retirement Plans": "Retirement plans help you save and invest money for life after work, often with tax advantages. These accounts, such as pensions, 401(k)s, or IRAs, encourage long-term saving by offering benefits like employer matching or tax deferrals. Building a strong retirement plan early ensures financial stability in your later years.",
+
+  "Purchasing Power": "Purchasing power is the value of money in terms of the amount of goods or services it can buy. Inflation reduces purchasing power over time, meaning the same amount of money buys less in the future. Protecting your purchasing power often involves saving wisely and investing in assets that grow faster than inflation.",
+
+  "Time Value of Money": "The time value of money means money today is worth more than the same amount in the future due to earning potential. This principle is the foundation for interest, investments, and financial planning. Understanding it helps you make smarter decisions about saving, borrowing, and investing.",
+
+  "Advanced Investment Strategies": "These are sophisticated methods for maximizing returns and managing risks in complex markets. They can include options trading, hedging, leverage, and other tools that require deep knowledge of finance. While they offer opportunities for higher gains, they also carry higher risks and should be used carefully.",
+
+  "Advanced Portfolio Theory": "This focuses on optimizing investment portfolios to achieve the best possible return for a given level of risk. It uses concepts like diversification, risk-adjusted returns, and efficient frontiers to build smarter portfolios. Investors use this theory to balance safety with growth in their financial plans.",
+
+  "Behavioral Finance": "Behavioral finance studies how psychological influences and biases affect investors and financial markets. Emotions like fear, greed, and overconfidence often lead people to make poor financial choices. By understanding these behaviors, investors can work to reduce mistakes and improve their decision-making.",
+
+  "Alternative Investments": "Alternative investments include assets like real estate, commodities, and private equity outside traditional markets. They often behave differently from stocks and bonds, making them useful for diversification. However, they can also be less liquid, more complex, and require careful research before investing.",
+
+  "International Finance": "International finance deals with monetary interactions between two or more countries, including trade and investment. It covers topics like exchange rates, global markets, and economic policies that affect international business. Understanding it is essential in today’s global economy, where financial systems are deeply connected."
 };
 
 function openPopup() {
@@ -273,7 +308,6 @@ window.addEventListener('click', (e) => {
   });
 });
 </script>
-
 
 
 

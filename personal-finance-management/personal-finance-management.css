@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(24, 24, 24);
+    background-color: rgb(42, 149, 203);
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -27,7 +27,7 @@ header{
 }
 
 #walletFavicon{
-    width: 70px;
+    width: 105px;
     position: fixed;
 }
 
