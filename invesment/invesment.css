@@ -88,3 +88,101 @@ header:hover .header-border {
     background-color: white;
     border: 2px solid white;
 }
+
+#titlecontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: left
+    ;
+}
+
+#title{
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 80px;
+    margin-left: 60px;
+}
+
+#inside{
+    max-width: 800px;
+    font-family: "roboto";
+    position: relative;
+    left: 10%;
+}
+
+#apaituinvestasi{
+    width: 980px;
+    height: 450px;
+    background-color: bisque;
+    position: relative;
+    left: 2%;
+    border-radius: 60px;
+    margin-top: 3%;
+    
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Default: hidden */
+#apaituinvestasi, 
+#title, 
+#inside {
+  opacity: 0;
+}
+
+/* Fade in one by one */
+#apaituinvestasi {
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.3s; /* start first */
+}
+
+#title {
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 1s; /* after apaituinvestasi */
+}
+
+#inside {
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 1.4s; /* after title */
+}
+
+#mengapakitaharusinvestasi{
+    background-color: olivedrab;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 1100px;   /* set width so it doesn't span 100% */
+    margin-left: 30%;  /* this pushes it to the right */
+    border-radius: 60px;
+}
+
+#titlecontainer2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#title2{
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 80px;
+    position: relative;
+    right: 5%;
+    width: 980px;
+    
+}
+
+#inside2{
+    max-width: 900px;
+    position: relative;
+    right: 7%;
+    font-family: "roboto";
+
+}
