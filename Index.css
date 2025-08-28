@@ -539,6 +539,10 @@ color: white;
         width: 100%;
     }
 
+.section{
+    margin-bottom: 10px; /* Very tight spacing */
+}
+
 .sideNumbers {
   position: sticky;
   margin-left: 130px;
@@ -556,7 +560,9 @@ color: white;
 .contentWrapper {
   display: flex;
   align-items: flex-start; /* sejajarkan dari atas */
-  margin-bottom: 150px; /* jarak antar section */
+  position: relative;
+  margin-bottom: 50px; /* jarak antar section */
+  bottom: 100px;
 }
 
 
@@ -567,7 +573,7 @@ color: white;
   line-height: 1.6;
   margin-left: 30%;
     position: relative;
-    bottom: 230px;
+    bottom: 80px; /* Even less negative positioning */
 }
 
 
@@ -712,4 +718,5 @@ p {
     flex-direction: column;
     align-items: center;
     font-size: 30px;
+    margin-top: 100px;
 }
