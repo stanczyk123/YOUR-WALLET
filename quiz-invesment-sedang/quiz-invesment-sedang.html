@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz investasi Menegah</title>
+    <link rel="stylesheet" href="quiz-invesment-sedang.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicons/walletFav.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <img src="/favicons/cloud1.png" id="cloud1">
+  <img src="/favicons/cloud2.png" id="cloud2">
+  <img src="/favicons/cloud1.png" id="cloud3">
+  <img src="/favicons/cloud2.png" id="cloud4">
+  <img src="/favicons/cloud1.png" id="cloud5">
+  <img src="/favicons/cloud2.png" id="cloud6">
+  <img src="/favicons/cloud2.png" id="cloud7">
+
+  <div id="questioncontainer">
+    <h2 id="question"></h2>
+
+    <div id="quiz-container">
+        <form id="quiz-form">
+        <label>
+            <input type="radio" name="answer" value="0">
+            <span id="option0"></span>
+        </label>
+        <label>
+            <input type="radio" name="answer" value="1">
+            <span id="option1"></span>
+        </label>
+        <label>
+            <input type="radio" name="answer" value="2">
+            <span id="option2"></span>
+        </label>
+        </form>
+    </div>
+
+    <h3 id="benaratausalah"></h3>
+  </div>
+
+  <button id="kembalibtn">Kembali</button>
+  <button id="selanjutnyabtn">Selanjutnya</button>
+  <button id="keluar">Keluar</button>
+
+  <div id="warning" class="hidden">
+    <h2>Anda yakin ingin keluar dari quiz ini?</h2>
+    <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
+    <button id="lanjutQuiz">Lanjut</button>
+    <a href="/invesment/invesment.html">
+        <button id="konfirmasiKeluar">Keluar</button>
+    </a>
+  </div>
+
+<script>
+const quiz = [
+  {
+    question: "1. Apa tujuan utama dari diversifikasi portofolio investasi?",
+    options: [
+      "Meningkatkan risiko",
+      "Mengurangi risiko dengan menyebar aset",
+      "Memusatkan dana pada satu instrumen",
+      "Menghindari pajak investasi"
+    ],
+    answer: 1
+  },
+  {
+    question: "2. Saham perusahaan dengan kapitalisasi besar biasanya disebut sebagai?",
+    options: [
+      "Blue chip stocks",
+      "Growth stocks",
+      "Penny stocks",
+      "Speculative stocks"
+    ],
+    answer: 0
+  },
+  {
+    question: "3. Manakah instrumen investasi yang umumnya memiliki risiko paling rendah?",
+    options: [
+      "Obligasi pemerintah",
+      "Saham teknologi",
+      "Reksa dana saham",
+      "Mata uang kripto"
+    ],
+    answer: 0
+  },
+  {
+    question: "4. Istilah 'compound interest' dalam investasi berarti?",
+    options: [
+      "Bunga yang dibayarkan sekali saja",
+      "Bunga yang dihitung dari pokok awal",
+      "Bunga yang dihitung dari pokok + bunga sebelumnya",
+      "Bunga yang ditentukan investor"
+    ],
+    answer: 2
+  },
+  {
+    question: "5. Jika investor membeli obligasi, artinya dia adalah?",
+    options: [
+      "Pemilik perusahaan",
+      "Pemberi pinjaman kepada penerbit obligasi",
+      "Penerima dividen tetap",
+      "Pengendali manajemen perusahaan"
+    ],
+    answer: 1
+  },
+  {
+    question: "6. Apa fungsi utama dari indeks saham (misalnya IHSG)?",
+    options: [
+      "Sebagai ukuran kinerja pasar modal",
+      "Menentukan harga emas",
+      "Mengatur suku bunga bank",
+      "Menentukan kurs mata uang"
+    ],
+    answer: 0
+  },
+  {
+    question: "7. Dalam analisis fundamental, rasio P/E digunakan untuk mengukur?",
+    options: [
+      "Harga saham terhadap pendapatan perusahaan",
+      "Likuiditas perusahaan",
+      "Jumlah utang perusahaan",
+      "Dividen yang dibagikan"
+    ],
+    answer: 0
+  },
+  {
+    question: "8. Instrumen derivatif seperti futures dan options digunakan untuk?",
+    options: [
+      "Spekulasi dan lindung nilai (hedging)",
+      "Menabung jangka panjang",
+      "Membayar pajak",
+      "Mengurangi dividen"
+    ],
+    answer: 0
+  },
+  {
+    question: "9. Apa perbedaan utama antara saham biasa dan saham preferen?",
+    options: [
+      "Saham preferen selalu mendapat dividen tetap",
+      "Saham biasa bebas pajak",
+      "Saham preferen tidak bisa diperdagangkan",
+      "Saham biasa tidak memiliki hak suara"
+    ],
+    answer: 0
+  },
+  {
+    question: "10. Risiko perubahan nilai tukar mata uang dikenal dengan istilah?",
+    options: [
+      "Risiko likuiditas",
+      "Risiko inflasi",
+      "Risiko valuta asing",
+      "Risiko kredit"
+    ],
+    answer: 2
+  },
+  {
+    question: "11. Reksa dana campuran berinvestasi pada?",
+    options: [
+      "Hanya obligasi",
+      "Hanya saham",
+      "Gabungan saham, obligasi, dan instrumen pasar uang",
+      "Hanya deposito"
+    ],
+    answer: 2
+  },
+  {
+    question: "12. Dalam analisis teknikal, moving average digunakan untuk?",
+    options: [
+      "Mengukur nilai intrinsik",
+      "Mendeteksi tren harga",
+      "Mengukur laba bersih",
+      "Menghitung inflasi"
+    ],
+    answer: 1
+  },
+  {
+    question: "13. Beta dalam saham digunakan untuk mengukur?",
+    options: [
+      "Risiko sistematis dibandingkan pasar",
+      "Jumlah dividen yang diterima",
+      "Jumlah laba per saham",
+      "Nilai buku perusahaan"
+    ],
+    answer: 0
+  },
+  {
+    question: "14. Return on Equity (ROE) mengukur?",
+    options: [
+      "Kemampuan perusahaan menghasilkan laba dari modal sendiri",
+      "Jumlah utang perusahaan",
+      "Rasio aset terhadap liabilitas",
+      "Tingkat inflasi"
+    ],
+    answer: 0
+  },
+  {
+    question: "15. Jika suku bunga naik, harga obligasi cenderung?",
+    options: [
+      "Naik",
+      "Tetap",
+      "Turun",
+      "Tidak terpengaruh"
+    ],
+    answer: 2
+  },
+  {
+    question: "16. Apa yang dimaksud dengan dollar-cost averaging?",
+    options: [
+      "Membeli aset dalam jumlah besar sekaligus",
+      "Membeli aset secara rutin dengan jumlah dana tetap",
+      "Menjual aset dalam jangka pendek",
+      "Mengurangi biaya broker"
+    ],
+    answer: 1
+  },
+  {
+    question: "17. Apa keuntungan utama dari investasi jangka panjang?",
+    options: [
+      "Menghindari volatilitas jangka pendek",
+      "Menghilangkan semua risiko",
+      "Memberi keuntungan cepat",
+      "Membebaskan dari pajak"
+    ],
+    answer: 0
+  },
+  {
+    question: "18. Istilah IPO (Initial Public Offering) berarti?",
+    options: [
+      "Perusahaan pertama kali menjual saham ke publik",
+      "Perusahaan membagikan dividen",
+      "Penerbitan obligasi pertama kali",
+      "Penurunan harga saham"
+    ],
+    answer: 0
+  },
+  {
+    question: "19. Dalam investasi properti, cash flow positif artinya?",
+    options: [
+      "Pengeluaran lebih besar dari pemasukan",
+      "Pemasukan sewa lebih besar dari biaya",
+      "Nilai properti menurun",
+      "Tidak ada keuntungan"
+    ],
+    answer: 1
+  },
+  {
+    question: "20. Salah satu keunggulan ETF (Exchange Traded Fund) dibanding reksa dana konvensional adalah?",
+    options: [
+      "Diperdagangkan di bursa layaknya saham",
+      "Bebas risiko",
+      "Selalu memberikan dividen tetap",
+      "Tidak dikenakan biaya manajemen"
+    ],
+    answer: 0
+  },
+  {
+    question: "21. Apa yang dimaksud dengan 'margin trading'?",
+    options: [
+      "Membeli saham dengan uang pinjaman dari broker",
+      "Menjual saham tanpa biaya",
+      "Membeli saham menggunakan kartu kredit",
+      "Menyimpan saham dalam jangka panjang"
+    ],
+    answer: 0
+  },
+  {
+    question: "22. Apa arti istilah 'high risk high return'?",
+    options: [
+      "Risiko tinggi selalu rugi",
+      "Risiko tinggi berpotensi memberi imbal hasil lebih besar",
+      "Risiko tinggi sama dengan risiko rendah",
+      "Risiko tinggi tidak memengaruhi return"
+    ],
+    answer: 1
+  },
+  {
+    question: "23. Yield obligasi adalah?",
+    options: [
+      "Harga jual obligasi",
+      "Pendapatan bunga yang diterima dibanding harga obligasi",
+      "Nilai nominal obligasi",
+      "Jumlah saham yang diterbitkan"
+    ],
+    answer: 1
+  },
+  {
+    question: "24. Saham yang cenderung memberikan dividen rutin disebut?",
+    options: [
+      "Income stocks",
+      "Growth stocks",
+      "Penny stocks",
+      "Speculative stocks"
+    ],
+    answer: 0
+  },
+  {
+    question: "25. Apa itu capital gain?",
+    options: [
+      "Keuntungan dari selisih harga jual lebih tinggi dari harga beli",
+      "Bunga dari obligasi",
+      "Dividen yang diterima",
+      "Kerugian dari penurunan harga"
+    ],
+    answer: 0
+  },
+  {
+    question: "26. Likuiditas dalam investasi berarti?",
+    options: [
+      "Kemudahan mengubah aset menjadi uang tunai",
+      "Kemampuan menghasilkan dividen",
+      "Jumlah investor dalam suatu instrumen",
+      "Nilai laba bersih"
+    ],
+    answer: 0
+  },
+  {
+    question: "27. Risiko gagal bayar pada obligasi disebut?",
+    options: [
+      "Risiko kredit",
+      "Risiko likuiditas",
+      "Risiko pasar",
+      "Risiko inflasi"
+    ],
+    answer: 0
+  },
+  {
+    question: "28. Apa arti istilah 'time horizon' dalam investasi?",
+    options: [
+      "Lama waktu investor berencana menahan investasinya",
+      "Jumlah dana yang diinvestasikan",
+      "Jenis instrumen yang dipilih",
+      "Tingkat inflasi tahunan"
+    ],
+    answer: 0
+  },
+  {
+    question: "29. Strategi 'buy and hold' dalam investasi saham berarti?",
+    options: [
+      "Membeli saham lalu menjualnya segera",
+      "Membeli saham dan menahannya dalam jangka panjang",
+      "Membeli saham dengan pinjaman",
+      "Membeli saham hanya saat harga tinggi"
+    ],
+    answer: 1
+  },
+  {
+    question: "30. Apa fungsi utama dari manajer investasi?",
+    options: [
+      "Mengelola dana investor dalam instrumen sesuai tujuan investasi",
+      "Menentukan suku bunga bank",
+      "Menerbitkan obligasi pemerintah",
+      "Mengatur nilai tukar mata uang"
+    ],
+    answer: 0
+  }
+];
+
+ let currentQuestion = 0;
+    const questionEl = document.getElementById("question");
+    const optionEls = [
+      document.getElementById("option0"),
+      document.getElementById("option1"),
+      document.getElementById("option2")
+    ];
+    const feedbackEl = document.getElementById("benaratausalah");
+
+    function loadQuestion() {
+      const q = quiz[currentQuestion];
+      questionEl.textContent = (currentQuestion+1) + ". " + q.question;
+      q.options.forEach((opt, i) => {
+        optionEls[i].textContent = opt;
+      });
+      feedbackEl.textContent = ""; 
+      document.querySelectorAll('input[name="answer"]').forEach(r => r.checked = false);
+    }
+
+    document.getElementById("selanjutnyabtn").addEventListener("click", () => {
+      const selected = document.querySelector('input[name="answer"]:checked');
+      if (!selected) {
+        feedbackEl.textContent = "⚠️ Pilih salah satu jawaban dulu!";
+        feedbackEl.style.color = "orange";
+        return;
+      }
+
+      const answer = parseInt(selected.value);
+      if (answer === quiz[currentQuestion].answer) {
+        feedbackEl.textContent = "✅ Jawaban benar!";
+        feedbackEl.style.color = "green";
+      } else {
+        const correctText = quiz[currentQuestion].options[quiz[currentQuestion].answer];
+        feedbackEl.textContent = "❌ Jawaban salah. Yang benar: " + correctText;
+        feedbackEl.style.color = "red";
+      }
+
+      // lanjut soal setelah 1,5 detik
+      setTimeout(() => {
+        if (currentQuestion < quiz.length - 1) {
+          currentQuestion++;
+          loadQuestion();
+        } else {
+          questionEl.textContent = "🎉 Kuis selesai!";
+          feedbackEl.textContent = "";
+          document.getElementById("selanjutnyabtn").disabled = true;
+          document.getElementById("kembalibtn").disabled = true;
+        }
+      }, 1500);
+    });
+
+    document.getElementById("kembalibtn").addEventListener("click", () => {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        loadQuestion();
+      } else {
+        feedbackEl.textContent = "Ini soal pertama!";
+        feedbackEl.style.color = "orange";
+      }
+    });
+
+    loadQuestion();
+
+</script>
+
+</style>
+
+<div id="overlay" class="hidden"></div>
+
+<script>
+  const btnKeluar = document.getElementById("keluar");
+  const warning = document.getElementById("warning");
+  const overlay = document.getElementById("overlay");
+  const btnLanjut = document.getElementById("lanjutQuiz");
+  const btnKonfirmasiKeluar = document.getElementById("konfirmasiKeluar");
+
+  // Saat klik tombol keluar → fade in popup
+  btnKeluar.addEventListener("click", () => {
+    warning.classList.add("show");
+    warning.classList.remove("hidden");
+    overlay.classList.add("show");
+    overlay.classList.remove("hidden");
+  });
+
+  // Saat klik lanjut → fade out popup
+  btnLanjut.addEventListener("click", () => {
+    warning.classList.remove("show");
+    warning.classList.add("hidden");
+    overlay.classList.remove("show");
+    overlay.classList.add("hidden");
+  });
+
+  // Saat klik keluar di dalam warning → reset quiz
+  btnKonfirmasiKeluar.addEventListener("click", () => {
+    location.reload(); // reload halaman, progress hilang
+  });
+</script>
+</body>
+</html>

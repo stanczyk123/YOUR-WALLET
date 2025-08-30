@@ -20,5 +20,160 @@
             </div>
         </div>
     </header>
+
+    <div id="apaituinvestasi">
+        <div id="titlecontainer">
+            <h1 id="title">Apa itu menejemen personal?</h1>      
+        </div>
+
+        <div id="inside">
+            <h3>Manajemen pribadi dalam keuangan adalah cara seseorang mengatur, merencanakan, dan mengendalikan penggunaan uangnya agar kebutuhan terpenuhi, tujuan tercapai, dan risiko keuangan bisa diminimalkan.</h3>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div id="mengapakitaharusinvestasi" class="fade-in">
+        <div id="titlecontainer2">
+            <h1 id="title2" class="fade-in">1.Perencanaan Anggaran (Budgeting)</h1>
+
+            <div id="inside2" class="fade-in">
+                <h3>Ini adalah langkah awal. Kita membuat rencana bagaimana uang akan dipakai.
+<br><br>
+Misalnya, dari pendapatan bulanan, kita tentukan berapa persen untuk kebutuhan pokok (makan, transportasi, listrik), berapa persen untuk tabungan, investasi, hiburan, dan lain-lain.
+<br><br>
+- Contoh sederhana: dari gaji Rp5.000.000, dialokasikan 50% kebutuhan pokok, 20% tabungan, 20% investasi, 10% hiburan.
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="tipsandtrick" class="fade-in">
+        <div id="titlecontainer3">
+            <h1 id="title3" class="fade-in">2. Pengelolaan Pendapatan dan Pengeluaran</h1>
+
+            <div id="inside3" class="fade-in">
+                <h3>
+Kita harus disiplin dalam menjalankan anggaran yang sudah dibuat.
+<br><br>
+- Jangan sampai pengeluaran lebih besar daripada pendapatan.
+<br><br>
+- Biasakan mencatat semua pemasukan dan pengeluaran, agar tahu uang habis untuk apa.
+<br><br>
+- Contohnya: jika sudah mengalokasikan Rp500.000 untuk hiburan, jangan dipaksa menjadi Rp1.000.000.
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="perencanaan" class="fade-in">
+        <div id="titlecontainer4">
+            <h1 id="title4" class="fade-in">3. Perencanaan Investasi</h1>
+
+            <div id="inside4" class="fade-in">
+                <h3>
+                    Dana yang tidak dipakai untuk kebutuhan sehari-hari bisa ditanam di instrumen yang menghasilkan keuntungan.
+<br><br>
+- Pilihan investasi bisa berupa emas, reksa dana, saham, obligasi, atau properti.
+<br><br>
+- Tujuannya agar nilai uang kita berkembang dan tidak habis karena inflasi.
+<br><br>
+- Contoh: dari gaji, sisihkan Rp1.000.000 tiap bulan ke reksa dana pasar uang untuk tujuan jangka menengah.
+                </h3>
+            </div>
+        </div>
+    </div>
+
+        <br><br><br><br><hr>
+
+    <div id="quizcontainer">
+      <h1>Quiz</h1>
+    </div>
+
+
+    <div id="buttoncontainer">
+      <div class="pemula">
+        <h3 id="titlequiz">Pemula</h3>
+        <h4>Uji pengetahuanmu tentang dasar dasar investasi</h4>
+        <a href="/quiz-invesment-pemula/quiz-invesment-pemula.html">
+          <button id="quizbtn">
+            Start
+          </button>
+        </a>
+      </div>
+
+      <div class="sedang">
+        <h3 id="titlequiz">Menegah</h3>
+        <h4>Uji pengetahuanmu tentang keuangan di level menengah</h4>
+        <a href="/quiz-invesment-sedang/quiz-invesment-sedang.html">
+          <button id="quizbtn">
+            Start
+          </button>
+        </a>
+      </div>
+
+      <div class="sulit">
+        <h3 id="titlequiz">Sulit</h3>
+        <h4>Uji pengetahuanmu tentang keuangan di level sulit</h4>
+        <a href="/quiz-invesment-sulit/quiz-invesment-sulit.html">
+          <button id="quizbtn">
+            Start
+          </button>
+        </a>
+      </div>
+    </div>
+
+<br><br>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Fade in section 1
+          if (entry.target.id === "mengapakitaharusinvestasi") {
+            entry.target.classList.add("visible");
+            setTimeout(() => {
+              document.getElementById("title2").classList.add("visible");
+              setTimeout(() => {
+                document.getElementById("inside2").classList.add("visible");
+              }, 500);
+            }, 500);
+          }
+
+          // Fade in section 2
+          if (entry.target.id === "tipsandtrick") {
+            entry.target.classList.add("visible");
+            setTimeout(() => {
+              document.getElementById("title3").classList.add("visible");
+              setTimeout(() => {
+                document.getElementById("inside3").classList.add("visible");
+              }, 500);
+            }, 500);
+          }
+
+        // Fade in section 3
+        if (entry.target.id === "perencanaan") {
+            entry.target.classList.add("visible");
+            setTimeout(() => {
+                document.getElementById("title4").classList.add("visible");
+                setTimeout(() => {
+                    document.getElementById("inside4").classList.add("visible");
+                }, 500);
+            }, 500);
+        }
+
+
+        }
+      });
+    }, { threshold: 0.2 });
+
+    // Observe both sections
+    observer.observe(document.getElementById("mengapakitaharusinvestasi"));
+    observer.observe(document.getElementById("tipsandtrick"));
+    observer.observe(document.getElementById("perencanaan"));
+  });
+</script>
 </body>
 </html>
