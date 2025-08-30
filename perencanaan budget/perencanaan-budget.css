@@ -1,0 +1,497 @@
+body{
+    background-color: rgb(255, 255, 255) ;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* invisible hover zone at the very top of the screen */
+.top-hover-zone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px; /* how tall the hover area is */
+    z-index: 1000;
+}
+
+/* the actual header bar */
+.header-border {
+    position: fixed;
+    top: -60px; /* hide it above screen */
+    left: 0;
+    width: 100%;
+    transition: top 0.3s ease-in-out;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* when hovering the top zone, show the header */
+.top-hover-zone:hover + .header-border {
+    top: 0;
+}
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+header:hover .header-border {
+    top: 0; /* slides into view */
+}
+
+
+#header-container {
+    display: flex;
+    flex-direction: row; /* make them go in a row */
+    justify-content: center; /* optional: center them horizontally */
+    align-items: center; /* align them vertically */
+    gap: 30px; /* add spacing between buttons */
+    width: 730px;
+    border-radius: 100px;
+    background-color: rgb(200, 200, 200);
+    height: 60px; /* slightly taller for row layout */
+    border: 2px solid white;
+    background: rgba(185, 185, 185, 0.4); /* semi-transparent grey */
+    backdrop-filter: blur(10px); /* blur background behind it */
+    -webkit-backdrop-filter: blur(10px); /* for Safari */
+    text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color:rgb(132, 132, 132) ;
+}
+
+.headerbtn {
+    padding: 8px 16px;       /* space inside button */
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;       /* scalable font size */
+    font-family: "Roboto", sans-serif;
+    color: rgb(132, 132, 132);
+    transition: 0.2s ease;
+    background-color: rgb(225, 225, 225);
+    white-space: nowrap;     /* prevents text breaking into 2 lines */
+    text-decoration: none;
+}
+
+.headerbtn:hover {
+    color: black;
+    transform: scale(1.2);
+    background-color: white;
+    border: 2px solid white;
+}
+
+body{
+    background-color: rgb(255, 255, 255) ;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* invisible hover zone at the very top of the screen */
+.top-hover-zone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px; /* how tall the hover area is */
+    z-index: 1000;
+}
+
+/* the actual header bar */
+.header-border {
+    position: fixed;
+    top: -60px; /* hide it above screen */
+    left: 0;
+    width: 100%;
+    transition: top 0.3s ease-in-out;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* when hovering the top zone, show the header */
+.top-hover-zone:hover + .header-border {
+    top: 0;
+}
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+header:hover .header-border {
+    top: 0; /* slides into view */
+}
+
+
+#header-container {
+    display: flex;
+    flex-direction: row; /* make them go in a row */
+    justify-content: center; /* optional: center them horizontally */
+    align-items: center; /* align them vertically */
+    gap: 30px; /* add spacing between buttons */
+    width: 730px;
+    border-radius: 100px;
+    background-color: rgb(200, 200, 200);
+    height: 60px; /* slightly taller for row layout */
+    border: 2px solid white;
+    background: rgba(185, 185, 185, 0.4); /* semi-transparent grey */
+    backdrop-filter: blur(10px); /* blur background behind it */
+    -webkit-backdrop-filter: blur(10px); /* for Safari */
+    text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color:rgb(132, 132, 132) ;
+}
+
+.headerbtn {
+    padding: 8px 16px;       /* space inside button */
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;       /* scalable font size */
+    font-family: "Roboto", sans-serif;
+    color: rgb(132, 132, 132);
+    transition: 0.2s ease;
+    background-color: rgb(225, 225, 225);
+    white-space: nowrap;     /* prevents text breaking into 2 lines */
+    text-decoration: none;
+}
+
+.headerbtn:hover {
+    color: black;
+    transform: scale(1.2);
+    background-color: white;
+    border: 2px solid white;
+}
+
+#titlecontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: left
+    ;
+}
+
+#title{
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 80px;
+    margin-left: 60px;
+}
+
+#inside{
+    max-width: 800px;
+    font-family: "roboto";
+    position: relative;
+    left: 10%;
+}
+
+#apaituinvestasi{
+    width: 980px;
+    height: 850px;
+    background-color: bisque;
+    position: relative;
+    left: 2%;
+    border-radius: 60px;
+    margin-top: 15%;
+    
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Default: hidden */
+#apaituinvestasi, 
+#title, 
+#inside {
+  opacity: 0;
+}
+
+/* Fade in one by one */
+#apaituinvestasi {
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.3s; /* start first */
+}
+
+#title {
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 1s; /* after apaituinvestasi */
+}
+
+#inside {
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 1.4s; /* after title */
+}
+
+#mengapakitaharusinvestasi{
+    background-color: olivedrab;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 1100px;   /* set width so it doesn't span 100% */
+    margin-left: 30%;  /* this pushes it to the right */
+    border-radius: 60px;
+}
+
+#titlecontainer2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#title2{
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 80px;
+    position: relative;
+    right: 5%;
+    width: 980px;
+    
+}
+
+#inside2{
+    max-width: 900px;
+    position: relative;
+    right: 7%;
+    font-family: "roboto";
+
+}
+
+#tipsandtrick{
+    background-color: lightblue;
+    width: 990px;
+    position: relative;
+    border-radius: 60px;
+    margin-top: 10%;
+    margin-left: 2%;
+}
+
+#titlecontainer3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    left: 5%;
+}
+
+#title3{
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 80px;
+    position: relative;
+    width: 980px;
+}
+
+#inside3{
+   max-width: 900px; 
+   font-family: "roboto";
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#buttoncontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    justify-content: center;
+    width: 100%;
+}
+
+.pemula,
+.sedang,
+.sulit {
+    border: 2px solid rgb(108, 108, 108);
+    width: 400px;
+    height: 270px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* push text to top, button to bottom */
+    align-items: center;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center; /* center text inside */
+}
+
+.pemula a,
+.sedang a,
+.sulit a {
+    margin-top: auto; /* pushes the button to the bottom */
+    text-decoration: none;
+}
+
+#quizbtn{
+    background-color: rgb(42, 42, 42);
+    color: rgb(182, 182, 182);
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    transition: all 0.4s ease; /* smooth expand & shrink */
+    cursor: pointer;
+}
+
+.pemula:hover #quizbtn,
+.sedang:hover #quizbtn,
+.sulit:hover #quizbtn {
+  width: 140px;   /* expand width */
+  height: 60px;   /* expand height */
+  transition: all 0.3s ease; /* smooth animation */
+  
+}
+
+#quizbtn:hover{
+    color: white;
+    font-size: x-large;
+}
+
+
+#quizcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 60px;
+}
+
+h4{
+    font-family: "roboto";
+}
+
+#titlequiz{
+    font-size:xx-large;
+}
+
+#perencanaan{
+    background-color: lightsalmon;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 1100px;   /* set width so it doesn't span 100% */
+    margin-left: 30%;  /* this pushes it to the right */
+    border-radius: 60px;
+    margin-top: 7%; 
+}
+
+#titlecontainer4{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;    
+}
+
+#title4{
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 80px;
+    position: relative;
+    right: 5%;
+    width: 980px;
+    
+}
+
+#inside4{
+    max-width: 900px;
+    position: relative;
+    right: 7%;
+    font-family: "roboto";
+}
+
+#manajemen{
+    background-color: pink;
+    width: 990px;
+    position: relative;
+    border-radius: 60px;
+    margin-top: 10%;
+    margin-left: 2%;
+}
+
+#titlecontainer5{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    left: 5%;
+}
+
+#title5{
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 80px;
+    position: relative;
+    width: 980px;
+}
+
+#inside5{
+   max-width: 900px; 
+   font-family: "roboto";
+}
+
+#perlindungan{
+    background-color: khaki;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 1100px;   /* set width so it doesn't span 100% */
+    margin-left: 30%;  /* this pushes it to the right */
+    border-radius: 60px;
+    margin-top: 7%; 
+}
+
+#titlecontainer6{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;    
+}
+
+#title6{
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 80px;
+    position: relative;
+    right: 5%;
+    width: 980px;
+    
+}
+
+#inside6{
+    max-width: 900px;
+    position: relative;
+    right: 7%;
+    font-family: "roboto";
+}

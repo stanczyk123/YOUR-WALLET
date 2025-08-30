@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz investasi pemula</title>
+    <link rel="stylesheet" href="quiz-perencanaan-anggaran-sulit.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicons/walletFav.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <img src="/favicons/cloud1.png" id="cloud1">
+  <img src="/favicons/cloud2.png" id="cloud2">
+  <img src="/favicons/cloud1.png" id="cloud3">
+  <img src="/favicons/cloud2.png" id="cloud4">
+  <img src="/favicons/cloud1.png" id="cloud5">
+  <img src="/favicons/cloud2.png" id="cloud6">
+  <img src="/favicons/cloud2.png" id="cloud7">
+
+  <div id="questioncontainer">
+    <h2 id="question"></h2>
+
+    <div id="quiz-container">
+        <form id="quiz-form">
+        <label>
+            <input type="radio" name="answer" value="0">
+            <span id="option0"></span>
+        </label>
+        <label>
+            <input type="radio" name="answer" value="1">
+            <span id="option1"></span>
+        </label>
+        <label>
+            <input type="radio" name="answer" value="2">
+            <span id="option2"></span>
+        </label>
+        </form>
+    </div>
+
+    <h3 id="benaratausalah"></h3>
+  </div>
+
+  <button id="kembalibtn">Kembali</button>
+  <button id="selanjutnyabtn">Selanjutnya</button>
+  <button id="keluar">Keluar</button>
+
+  <div id="warning" class="hidden">
+    <h2>Anda yakin ingin keluar dari quiz ini?</h2>
+    <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
+    <button id="lanjutQuiz">Lanjut</button>
+    <a href="/perencanaan budget/perencanaan-budget.html">
+        <button id="konfirmasiKeluar">Keluar</button>
+    </a>
+  </div>
+
+<script>
+const quiz = [
+  {
+    question: "Mengapa perencanaan anggaran harus mempertimbangkan faktor inflasi jangka panjang?",
+    options: [
+      "Karena inflasi menurunkan nilai uang",
+      "Karena inflasi meningkatkan daya beli",
+      "Karena inflasi membuat semua harga tetap stabil",
+      "Karena inflasi hanya memengaruhi tabungan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Bagaimana cara mengantisipasi pengeluaran darurat dalam perencanaan anggaran?",
+    options: [
+      "Mengabaikannya karena sulit diprediksi",
+      "Menyediakan dana darurat terpisah",
+      "Menggunakan pinjaman saja",
+      "Mengurangi kebutuhan pokok"
+    ],
+    answer: 1
+  },
+  {
+    question: "Mengapa alokasi anggaran untuk investasi jangka panjang penting?",
+    options: [
+      "Untuk menjaga likuiditas jangka pendek",
+      "Untuk meningkatkan nilai aset di masa depan",
+      "Untuk mengurangi pengeluaran bulanan",
+      "Untuk menghindari pajak"
+    ],
+    answer: 1
+  },
+  {
+    question: "Bagaimana cara menyeimbangkan antara kebutuhan, keinginan, dan tabungan dalam anggaran?",
+    options: [
+      "Mengalokasikan dana sesuai skema 50-30-20",
+      "Mengalokasikan seluruh dana untuk kebutuhan",
+      "Mendahulukan keinginan daripada tabungan",
+      "Membiarkan pengeluaran tanpa batas"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mengapa melakukan evaluasi anggaran secara berkala diperlukan?",
+    options: [
+      "Untuk menambah pengeluaran hiburan",
+      "Untuk menyesuaikan anggaran dengan perubahan kondisi",
+      "Agar tidak perlu membuat anggaran baru",
+      "Agar lebih boros dalam keuangan"
+    ],
+    answer: 1
+  },
+  {
+    question: "Jika pengeluaran selalu lebih besar dari pendapatan, apa langkah strategis pertama?",
+    options: [
+      "Menambah utang konsumtif",
+      "Mengurangi atau menghapuskan pos pengeluaran non-prioritas",
+      "Mengabaikan masalah",
+      "Menambah pengeluaran lagi"
+    ],
+    answer: 1
+  },
+  {
+    question: "Apa tujuan utama dari diversifikasi dalam anggaran investasi?",
+    options: [
+      "Mengurangi risiko kerugian",
+      "Meningkatkan pengeluaran bulanan",
+      "Meningkatkan konsumsi",
+      "Mengurangi tabungan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mengapa penting memiliki prioritas dalam menyusun perencanaan anggaran?",
+    options: [
+      "Agar dapat fokus pada pengeluaran yang mendesak",
+      "Supaya semua pengeluaran sama penting",
+      "Untuk menghindari tabungan",
+      "Untuk mengurangi pendapatan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa dampak jika seseorang tidak memiliki rencana anggaran?",
+    options: [
+      "Lebih mudah mengontrol pengeluaran",
+      "Sering mengalami kesulitan keuangan",
+      "Pendapatan otomatis meningkat",
+      "Semua kebutuhan pasti terpenuhi"
+    ],
+    answer: 1
+  },
+  {
+    question: "Mengapa penting mencatat setiap pemasukan dan pengeluaran?",
+    options: [
+      "Untuk melacak arus kas dan evaluasi anggaran",
+      "Untuk menambah utang",
+      "Untuk mengurangi jumlah tabungan",
+      "Agar semua uang habis"
+    ],
+    answer: 0
+  },
+  {
+    question: "Bagaimana anggaran dapat membantu seseorang mencapai tujuan jangka panjang?",
+    options: [
+      "Dengan menyediakan arah penggunaan dana",
+      "Dengan membatasi pendapatan",
+      "Dengan meningkatkan konsumsi",
+      "Dengan menghapus tabungan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa perbedaan antara anggaran statis dan anggaran fleksibel?",
+    options: [
+      "Anggaran statis tidak berubah, anggaran fleksibel menyesuaikan kondisi",
+      "Anggaran statis selalu berubah, fleksibel tidak pernah berubah",
+      "Anggaran statis hanya untuk hiburan, fleksibel untuk tabungan",
+      "Tidak ada perbedaan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa akibat jika dana darurat tidak disiapkan dalam perencanaan anggaran?",
+    options: [
+      "Mudah menghadapi kejadian tak terduga",
+      "Mengandalkan pinjaman yang berisiko",
+      "Lebih hemat",
+      "Pengeluaran tetap terkendali"
+    ],
+    answer: 1
+  },
+  {
+    question: "Mengapa perlu menetapkan target keuangan dalam perencanaan anggaran?",
+    options: [
+      "Agar ada motivasi dan arah dalam pengelolaan keuangan",
+      "Agar bisa berbelanja lebih banyak",
+      "Agar pendapatan berkurang",
+      "Agar kebutuhan selalu diabaikan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Bagaimana anggaran dapat membantu mengurangi risiko utang konsumtif?",
+    options: [
+      "Dengan membatasi pengeluaran sesuai kemampuan",
+      "Dengan menambah pinjaman",
+      "Dengan menunda tabungan",
+      "Dengan menghapus kebutuhan pokok"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa langkah strategis ketika pendapatan tidak stabil?",
+    options: [
+      "Membuat anggaran fleksibel dan menambah tabungan darurat",
+      "Menghabiskan uang ketika ada",
+      "Mengandalkan kartu kredit",
+      "Mengabaikan perencanaan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mengapa pengendalian emosi berperan penting dalam perencanaan anggaran?",
+    options: [
+      "Karena keputusan emosional sering menimbulkan pemborosan",
+      "Karena emosi selalu membuat tabungan meningkat",
+      "Karena emosi membuat pendapatan naik",
+      "Karena emosi tidak berhubungan dengan keuangan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa yang dimaksud dengan opportunity cost dalam perencanaan anggaran?",
+    options: [
+      "Biaya yang muncul akibat memilih satu pilihan dan mengorbankan yang lain",
+      "Biaya tambahan hiburan",
+      "Biaya tetap bulanan",
+      "Biaya yang tidak pernah ada"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mengapa anggaran investasi tidak boleh diambil dari dana darurat?",
+    options: [
+      "Karena dana darurat bersifat likuid dan untuk kebutuhan mendesak",
+      "Karena dana darurat hanya untuk hiburan",
+      "Karena dana darurat selalu menguntungkan",
+      "Karena dana darurat dapat diabaikan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Bagaimana cara membedakan kebutuhan dan keinginan dalam anggaran?",
+    options: [
+      "Kebutuhan adalah hal pokok, keinginan bersifat tambahan",
+      "Kebutuhan selalu ditunda, keinginan harus dipenuhi",
+      "Kebutuhan sama dengan hiburan",
+      "Keinginan lebih penting daripada kebutuhan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mengapa perlu membuat proyeksi jangka panjang dalam anggaran?",
+    options: [
+      "Untuk memastikan kestabilan keuangan masa depan",
+      "Untuk menambah pengeluaran konsumsi",
+      "Untuk menghindari tabungan",
+      "Agar selalu berutang"
+    ],
+    answer: 0
+  },
+  {
+    question: "Bagaimana cara menilai efektivitas perencanaan anggaran?",
+    options: [
+      "Dengan membandingkan realisasi keuangan dengan rencana",
+      "Dengan menambah utang konsumtif",
+      "Dengan mengabaikan pencatatan",
+      "Dengan menghabiskan semua uang"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mengapa penting untuk disiplin terhadap rencana anggaran?",
+    options: [
+      "Agar tujuan keuangan dapat tercapai",
+      "Agar lebih banyak hutang",
+      "Agar lebih mudah boros",
+      "Agar tabungan berkurang"
+    ],
+    answer: 0
+  },
+  {
+    question: "Bagaimana cara menyesuaikan anggaran ketika pendapatan menurun?",
+    options: [
+      "Mengurangi pos pengeluaran non-prioritas",
+      "Meningkatkan pengeluaran hiburan",
+      "Menghapus dana darurat",
+      "Mengabaikan kebutuhan pokok"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mengapa dana pensiun perlu dimasukkan dalam perencanaan anggaran?",
+    options: [
+      "Untuk menjamin keuangan di masa tua",
+      "Untuk memperbesar utang",
+      "Untuk mempercepat konsumsi",
+      "Untuk mengurangi pendapatan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa risiko utama jika perencanaan anggaran hanya fokus pada jangka pendek?",
+    options: [
+      "Tidak siap menghadapi kebutuhan jangka panjang",
+      "Tabungan otomatis bertambah",
+      "Investasi selalu meningkat",
+      "Pengeluaran lebih stabil"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mengapa perencanaan anggaran harus realistis?",
+    options: [
+      "Agar dapat dilaksanakan sesuai kemampuan",
+      "Agar lebih mudah berutang",
+      "Agar kebutuhan diabaikan",
+      "Agar tabungan tidak ada"
+    ],
+    answer: 0
+  },
+  {
+    question: "Bagaimana cara anggaran membantu meningkatkan kesehatan finansial?",
+    options: [
+      "Dengan mengendalikan pengeluaran, menambah tabungan, dan mengurangi utang",
+      "Dengan menambah utang konsumtif",
+      "Dengan meningkatkan belanja impulsif",
+      "Dengan mengabaikan pendapatan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa peran teknologi dalam perencanaan anggaran modern?",
+    options: [
+      "Membantu mencatat, memantau, dan menganalisis keuangan lebih mudah",
+      "Menghapus kebutuhan membuat anggaran",
+      "Menambah pengeluaran tidak terkontrol",
+      "Mengurangi tabungan"
+    ],
+    answer: 0
+  }
+];
+
+
+ let currentQuestion = 0;
+    const questionEl = document.getElementById("question");
+    const optionEls = [
+      document.getElementById("option0"),
+      document.getElementById("option1"),
+      document.getElementById("option2")
+    ];
+    const feedbackEl = document.getElementById("benaratausalah");
+
+    function loadQuestion() {
+      const q = quiz[currentQuestion];
+      questionEl.textContent = (currentQuestion+1) + ". " + q.question;
+      q.options.forEach((opt, i) => {
+        optionEls[i].textContent = opt;
+      });
+      feedbackEl.textContent = ""; 
+      document.querySelectorAll('input[name="answer"]').forEach(r => r.checked = false);
+    }
+
+    document.getElementById("selanjutnyabtn").addEventListener("click", () => {
+      const selected = document.querySelector('input[name="answer"]:checked');
+      if (!selected) {
+        feedbackEl.textContent = "⚠️ Pilih salah satu jawaban dulu!";
+        feedbackEl.style.color = "orange";
+        return;
+      }
+
+      const answer = parseInt(selected.value);
+      if (answer === quiz[currentQuestion].answer) {
+        feedbackEl.textContent = "✅ Jawaban benar!";
+        feedbackEl.style.color = "green";
+      } else {
+        const correctText = quiz[currentQuestion].options[quiz[currentQuestion].answer];
+        feedbackEl.textContent = "❌ Jawaban salah. Yang benar: " + correctText;
+        feedbackEl.style.color = "red";
+      }
+
+      // lanjut soal setelah 1,5 detik
+      setTimeout(() => {
+        if (currentQuestion < quiz.length - 1) {
+          currentQuestion++;
+          loadQuestion();
+        } else {
+          questionEl.textContent = "🎉 Kuis selesai!";
+          feedbackEl.textContent = "";
+          document.getElementById("selanjutnyabtn").disabled = true;
+          document.getElementById("kembalibtn").disabled = true;
+        }
+      }, 1500);
+    });
+
+    document.getElementById("kembalibtn").addEventListener("click", () => {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        loadQuestion();
+      } else {
+        feedbackEl.textContent = "Ini soal pertama!";
+        feedbackEl.style.color = "orange";
+      }
+    });
+
+    loadQuestion();
+
+</script>
+
+</style>
+
+<div id="overlay" class="hidden"></div>
+
+<script>
+  const btnKeluar = document.getElementById("keluar");
+  const warning = document.getElementById("warning");
+  const overlay = document.getElementById("overlay");
+  const btnLanjut = document.getElementById("lanjutQuiz");
+  const btnKonfirmasiKeluar = document.getElementById("konfirmasiKeluar");
+
+  // Saat klik tombol keluar → fade in popup
+  btnKeluar.addEventListener("click", () => {
+    warning.classList.add("show");
+    warning.classList.remove("hidden");
+    overlay.classList.add("show");
+    overlay.classList.remove("hidden");
+  });
+
+  // Saat klik lanjut → fade out popup
+  btnLanjut.addEventListener("click", () => {
+    warning.classList.remove("show");
+    warning.classList.add("hidden");
+    overlay.classList.remove("show");
+    overlay.classList.add("hidden");
+  });
+
+  // Saat klik keluar di dalam warning → reset quiz
+  btnKonfirmasiKeluar.addEventListener("click", () => {
+    location.reload(); // reload halaman, progress hilang
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz investasi pemula</title>
+    <link rel="stylesheet" href="quiz-perencanaan-anggaran-menegah.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicons/walletFav.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <img src="/favicons/cloud1.png" id="cloud1">
+  <img src="/favicons/cloud2.png" id="cloud2">
+  <img src="/favicons/cloud1.png" id="cloud3">
+  <img src="/favicons/cloud2.png" id="cloud4">
+  <img src="/favicons/cloud1.png" id="cloud5">
+  <img src="/favicons/cloud2.png" id="cloud6">
+  <img src="/favicons/cloud2.png" id="cloud7">
+
+  <div id="questioncontainer">
+    <h2 id="question"></h2>
+
+    <div id="quiz-container">
+        <form id="quiz-form">
+        <label>
+            <input type="radio" name="answer" value="0">
+            <span id="option0"></span>
+        </label>
+        <label>
+            <input type="radio" name="answer" value="1">
+            <span id="option1"></span>
+        </label>
+        <label>
+            <input type="radio" name="answer" value="2">
+            <span id="option2"></span>
+        </label>
+        </form>
+    </div>
+
+    <h3 id="benaratausalah"></h3>
+  </div>
+
+  <button id="kembalibtn">Kembali</button>
+  <button id="selanjutnyabtn">Selanjutnya</button>
+  <button id="keluar">Keluar</button>
+
+  <div id="warning" class="hidden">
+    <h2>Anda yakin ingin keluar dari quiz ini?</h2>
+    <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
+    <button id="lanjutQuiz">Lanjut</button>
+    <a href="/perencanaan budget/perencanaan-budget.html">
+        <button id="konfirmasiKeluar">Keluar</button>
+    </a>
+  </div>
+
+<script>
+const quiz = [
+  {
+    question: "Mengapa penting untuk membedakan antara kebutuhan dan keinginan dalam perencanaan anggaran?",
+    options: ["Agar pengeluaran lebih terkontrol", "Untuk menambah hutang", "Supaya uang cepat habis", "Agar sulit menabung"],
+    answer: 0
+  },
+  {
+    question: "Langkah pertama yang biasanya dilakukan dalam menyusun anggaran bulanan adalah?",
+    options: ["Mencatat pengeluaran", "Mencatat pendapatan", "Menghabiskan uang", "Membeli barang mewah"],
+    answer: 1
+  },
+  {
+    question: "Apa tujuan membuat anggaran darurat?",
+    options: ["Untuk berlibur", "Untuk kebutuhan mendesak", "Untuk investasi jangka panjang", "Untuk membeli barang elektronik"],
+    answer: 1
+  },
+  {
+    question: "Mengapa penting mencatat semua pengeluaran kecil dalam anggaran?",
+    options: ["Karena bisa menumpuk dan memengaruhi total pengeluaran", "Karena tidak penting", "Agar uang lebih cepat habis", "Supaya tidak bisa menabung"],
+    answer: 0
+  },
+  {
+    question: "Apa fungsi dari membuat kategori dalam anggaran?",
+    options: ["Agar lebih mudah mengontrol pengeluaran", "Agar sulit dipahami", "Agar uang cepat habis", "Supaya tidak bisa menabung"],
+    answer: 0
+  },
+  {
+    question: "Berapa persen biasanya disarankan untuk dana darurat dari total pengeluaran bulanan?",
+    options: ["5%", "10%", "20%", "Minimal 3–6 bulan pengeluaran"],
+    answer: 3
+  },
+  {
+    question: "Mengapa anggaran perlu ditinjau kembali secara berkala?",
+    options: ["Untuk menyesuaikan dengan perubahan pendapatan atau kebutuhan", "Agar makin rumit", "Supaya uang cepat habis", "Agar tidak bisa menabung"],
+    answer: 0
+  },
+  {
+    question: "Jika pengeluaran lebih besar dari pendapatan, apa yang sebaiknya dilakukan?",
+    options: ["Menambah utang", "Mengurangi pengeluaran tidak penting", "Membiarkan saja", "Menghabiskan tabungan"],
+    answer: 1
+  },
+  {
+    question: "Apa yang dimaksud dengan anggaran fleksibel?",
+    options: ["Anggaran yang bisa menyesuaikan dengan perubahan kondisi keuangan", "Anggaran yang tidak boleh diubah", "Anggaran yang boros", "Anggaran untuk berlibur"],
+    answer: 0
+  },
+  {
+    question: "Apa risiko jika tidak memiliki perencanaan anggaran?",
+    options: ["Mudah terjebak hutang", "Lebih hemat", "Tabungan bertambah cepat", "Pendapatan berkurang"],
+    answer: 0
+  },
+  {
+    question: "Apa manfaat menyisihkan uang untuk tabungan dalam anggaran?",
+    options: ["Untuk kebutuhan masa depan", "Untuk mengurangi pendapatan", "Supaya uang cepat habis", "Untuk membayar utang"],
+    answer: 0
+  },
+  {
+    question: "Apa arti prinsip 'pay yourself first' dalam anggaran?",
+    options: ["Membayar tagihan dulu", "Menabung terlebih dahulu sebelum belanja", "Menghabiskan uang untuk keinginan", "Membeli barang mewah"],
+    answer: 1
+  },
+  {
+    question: "Mengapa penting mencatat semua sumber pendapatan?",
+    options: ["Agar anggaran lebih akurat", "Supaya pengeluaran makin besar", "Agar sulit menabung", "Supaya uang cepat habis"],
+    answer: 0
+  },
+  {
+    question: "Apa yang sebaiknya dilakukan jika ada pengeluaran tak terduga?",
+    options: ["Menggunakan dana darurat", "Berutang tanpa pikir panjang", "Mengabaikannya", "Menjual barang penting"],
+    answer: 0
+  },
+  {
+    question: "Apa fungsi dari prioritas dalam perencanaan anggaran?",
+    options: ["Agar kebutuhan utama terpenuhi terlebih dahulu", "Supaya keinginan selalu diutamakan", "Agar anggaran lebih rumit", "Agar uang cepat habis"],
+    answer: 0
+  },
+  {
+    question: "Mengapa disarankan mencatat semua transaksi harian?",
+    options: ["Untuk mengetahui kebiasaan belanja", "Agar sulit menghitung uang", "Supaya uang cepat habis", "Agar bingung sendiri"],
+    answer: 0
+  },
+  {
+    question: "Apa yang dimaksud dengan kebocoran anggaran?",
+    options: ["Pengeluaran kecil yang tidak terkontrol", "Uang hilang di jalan", "Tidak ada tabungan", "Pendapatan berkurang"],
+    answer: 0
+  },
+  {
+    question: "Apa strategi yang bisa dilakukan agar anggaran lebih disiplin?",
+    options: ["Menggunakan aplikasi pencatat keuangan", "Tidak mencatat pengeluaran", "Membiarkan belanja bebas", "Mengabaikan tabungan"],
+    answer: 0
+  },
+  {
+    question: "Jika pendapatan bertambah, apa yang sebaiknya dilakukan pada anggaran?",
+    options: ["Menambah tabungan atau investasi", "Menghabiskan semuanya", "Membeli barang mewah", "Membiarkan tanpa rencana"],
+    answer: 0
+  },
+  {
+    question: "Mengapa penting melibatkan keluarga dalam perencanaan anggaran?",
+    options: ["Agar semua anggota memahami prioritas keuangan", "Supaya makin boros", "Agar sulit menabung", "Supaya uang cepat habis"],
+    answer: 0
+  },
+  {
+    question: "Apa yang terjadi jika hanya fokus pada pengeluaran tanpa mencatat pendapatan?",
+    options: ["Anggaran tidak seimbang", "Lebih hemat", "Lebih mudah menabung", "Uang bertambah"],
+    answer: 0
+  },
+  {
+    question: "Apa yang dimaksud dengan anggaran jangka panjang?",
+    options: ["Rencana keuangan untuk masa depan, seperti rumah atau pendidikan", "Pengeluaran harian", "Belanja bulanan", "Uang transportasi"],
+    answer: 0
+  },
+  {
+    question: "Mengapa dana hiburan perlu dimasukkan dalam anggaran?",
+    options: ["Untuk menjaga keseimbangan hidup", "Agar uang cepat habis", "Supaya makin boros", "Untuk menambah hutang"],
+    answer: 0
+  },
+  {
+    question: "Jika selalu gagal mengikuti anggaran, apa yang sebaiknya dilakukan?",
+    options: ["Evaluasi dan sesuaikan kembali anggaran", "Berhenti membuat anggaran", "Mengabaikan masalah", "Menambah utang"],
+    answer: 0
+  },
+  {
+    question: "Apa yang dimaksud dengan fixed expense dalam anggaran?",
+    options: ["Pengeluaran tetap, seperti sewa rumah", "Pengeluaran yang berubah-ubah", "Pengeluaran darurat", "Pengeluaran hiburan"],
+    answer: 0
+  },
+  {
+    question: "Apa yang dimaksud dengan variable expense dalam anggaran?",
+    options: ["Pengeluaran yang berubah sesuai kebutuhan, seperti listrik", "Pengeluaran tetap", "Pengeluaran darurat", "Pengeluaran tabungan"],
+    answer: 0
+  },
+  {
+    question: "Bagaimana cara memastikan anggaran berjalan sesuai rencana?",
+    options: ["Mencatat dan mengevaluasi secara rutin", "Membiarkan begitu saja", "Mengabaikan pencatatan", "Menghabiskan uang dulu"],
+    answer: 0
+  },
+  {
+    question: "Mengapa disarankan memiliki target keuangan dalam perencanaan anggaran?",
+    options: ["Agar lebih termotivasi menabung", "Agar uang cepat habis", "Supaya makin boros", "Agar sulit menabung"],
+    answer: 0
+  },
+  {
+    question: "Apa yang dimaksud dengan zero-based budgeting?",
+    options: ["Setiap rupiah pendapatan dialokasikan untuk tujuan tertentu", "Tidak membuat anggaran sama sekali", "Membiarkan uang mengendap", "Menghabiskan semua uang"],
+    answer: 0
+  },
+  {
+    question: "Apa tujuan utama dari perencanaan anggaran?",
+    options: ["Mengatur pendapatan dan pengeluaran agar seimbang", "Menghabiskan uang lebih cepat", "Menambah hutang", "Membeli barang mewah"],
+    answer: 0
+  }
+];
+
+
+ let currentQuestion = 0;
+    const questionEl = document.getElementById("question");
+    const optionEls = [
+      document.getElementById("option0"),
+      document.getElementById("option1"),
+      document.getElementById("option2")
+    ];
+    const feedbackEl = document.getElementById("benaratausalah");
+
+    function loadQuestion() {
+      const q = quiz[currentQuestion];
+      questionEl.textContent = (currentQuestion+1) + ". " + q.question;
+      q.options.forEach((opt, i) => {
+        optionEls[i].textContent = opt;
+      });
+      feedbackEl.textContent = ""; 
+      document.querySelectorAll('input[name="answer"]').forEach(r => r.checked = false);
+    }
+
+    document.getElementById("selanjutnyabtn").addEventListener("click", () => {
+      const selected = document.querySelector('input[name="answer"]:checked');
+      if (!selected) {
+        feedbackEl.textContent = "⚠️ Pilih salah satu jawaban dulu!";
+        feedbackEl.style.color = "orange";
+        return;
+      }
+
+      const answer = parseInt(selected.value);
+      if (answer === quiz[currentQuestion].answer) {
+        feedbackEl.textContent = "✅ Jawaban benar!";
+        feedbackEl.style.color = "green";
+      } else {
+        const correctText = quiz[currentQuestion].options[quiz[currentQuestion].answer];
+        feedbackEl.textContent = "❌ Jawaban salah. Yang benar: " + correctText;
+        feedbackEl.style.color = "red";
+      }
+
+      // lanjut soal setelah 1,5 detik
+      setTimeout(() => {
+        if (currentQuestion < quiz.length - 1) {
+          currentQuestion++;
+          loadQuestion();
+        } else {
+          questionEl.textContent = "🎉 Kuis selesai!";
+          feedbackEl.textContent = "";
+          document.getElementById("selanjutnyabtn").disabled = true;
+          document.getElementById("kembalibtn").disabled = true;
+        }
+      }, 1500);
+    });
+
+    document.getElementById("kembalibtn").addEventListener("click", () => {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        loadQuestion();
+      } else {
+        feedbackEl.textContent = "Ini soal pertama!";
+        feedbackEl.style.color = "orange";
+      }
+    });
+
+    loadQuestion();
+
+</script>
+
+</style>
+
+<div id="overlay" class="hidden"></div>
+
+<script>
+  const btnKeluar = document.getElementById("keluar");
+  const warning = document.getElementById("warning");
+  const overlay = document.getElementById("overlay");
+  const btnLanjut = document.getElementById("lanjutQuiz");
+  const btnKonfirmasiKeluar = document.getElementById("konfirmasiKeluar");
+
+  // Saat klik tombol keluar → fade in popup
+  btnKeluar.addEventListener("click", () => {
+    warning.classList.add("show");
+    warning.classList.remove("hidden");
+    overlay.classList.add("show");
+    overlay.classList.remove("hidden");
+  });
+
+  // Saat klik lanjut → fade out popup
+  btnLanjut.addEventListener("click", () => {
+    warning.classList.remove("show");
+    warning.classList.add("hidden");
+    overlay.classList.remove("show");
+    overlay.classList.add("hidden");
+  });
+
+  // Saat klik keluar di dalam warning → reset quiz
+  btnKonfirmasiKeluar.addEventListener("click", () => {
+    location.reload(); // reload halaman, progress hilang
+  });
+</script>
+
+</body>
+</html>
