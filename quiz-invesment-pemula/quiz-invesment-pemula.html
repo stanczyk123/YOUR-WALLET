@@ -14,15 +14,418 @@
 
 </head>
 <body>
-    <img src="/favicons/cloud1.png" id="cloud1">
-    <img src="/favicons/cloud2.png" id="cloud2">
-    <img src="/favicons/cloud1.png" id="cloud3">
-    <img src="/favicons/cloud2.png" id="cloud4">
-    <img src="/favicons/cloud1.png" id="cloud5">
-    <img src="/favicons/cloud2.png" id="cloud6">
-    <img src="/favicons/cloud2.png" id="cloud7">
-    
-    <button id="kembalibtn">Kembali</button>
-    <button id="selanjutnyabtn">Selanjutnya</button>
+  <img src="/favicons/cloud1.png" id="cloud1">
+  <img src="/favicons/cloud2.png" id="cloud2">
+  <img src="/favicons/cloud1.png" id="cloud3">
+  <img src="/favicons/cloud2.png" id="cloud4">
+  <img src="/favicons/cloud1.png" id="cloud5">
+  <img src="/favicons/cloud2.png" id="cloud6">
+  <img src="/favicons/cloud2.png" id="cloud7">
+
+  <div id="questioncontainer">
+    <h2 id="question"></h2>
+
+    <div id="quiz-container">
+        <form id="quiz-form">
+        <label>
+            <input type="radio" name="answer" value="0">
+            <span id="option0"></span>
+        </label>
+        <label>
+            <input type="radio" name="answer" value="1">
+            <span id="option1"></span>
+        </label>
+        <label>
+            <input type="radio" name="answer" value="2">
+            <span id="option2"></span>
+        </label>
+        </form>
+    </div>
+
+    <h3 id="benaratausalah"></h3>
+  </div>
+
+  <button id="kembalibtn">Kembali</button>
+  <button id="selanjutnyabtn">Selanjutnya</button>
+  <button id="keluar">Keluar</button>
+
+  <div id="warning" class="hidden">
+    <h2>Anda yakin ingin keluar dari quiz ini?</h2>
+    <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
+    <button id="lanjutQuiz">Lanjut</button>
+    <button id="konfirmasiKeluar">Keluar</button>
+  </div>
+
+<script>
+  const quiz = [
+    {
+      question: "Apa tujuan utama dari investasi?",
+      options: [
+        "Mengurangi nilai uang",
+        "Mengembangkan aset dan memperoleh keuntungan",
+        "Menghabiskan uang secepat mungkin"
+      ],
+      answer: 1
+    },
+    {
+      question: "Apa arti diversifikasi dalam investasi?",
+      options: [
+        "Menaruh semua uang di satu instrumen",
+        "Menyebar investasi ke berbagai instrumen untuk mengurangi risiko",
+        "Menghindari investasi sama sekali"
+      ],
+      answer: 1
+    },
+    {
+      question: "Apa risiko terbesar jika kita tidak berinvestasi?",
+      options: [
+        "Uang berkurang karena inflasi",
+        "Uang akan otomatis berkembang",
+        "Tidak ada risiko sama sekali"
+      ],
+      answer: 0
+    },
+      {
+    question: "Apa itu inflasi?",
+    options: [
+      "Penurunan harga barang secara terus menerus",
+      "Kenaikan harga barang dan jasa secara umum",
+      "Stabilnya harga barang dalam jangka panjang"
+    ],
+    answer: 1
+  },
+  {
+    question: "Investasi jangka panjang biasanya bertujuan untuk?",
+    options: [
+      "Mendapatkan keuntungan cepat",
+      "Membangun kekayaan secara bertahap",
+      "Mengurangi pendapatan"
+    ],
+    answer: 1
+  },
+  {
+    question: "Instrumen investasi yang paling aman biasanya adalah?",
+    options: [
+      "Saham",
+      "Obligasi pemerintah",
+      "Kripto"
+    ],
+    answer: 1
+  },
+  {
+    question: "Apa itu saham?",
+    options: [
+      "Surat tanda kepemilikan perusahaan",
+      "Surat hutang pemerintah",
+      "Tabungan di bank"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa itu reksa dana?",
+    options: [
+      "Kumpulan dana yang dikelola manajer investasi",
+      "Pinjaman kepada teman",
+      "Tabungan di celengan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa yang dimaksud dengan return?",
+    options: [
+      "Keuntungan atau hasil dari investasi",
+      "Jumlah modal awal",
+      "Jumlah kerugian"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa yang dimaksud dengan risiko dalam investasi?",
+    options: [
+      "Ketidakpastian hasil investasi",
+      "Kepastian mendapatkan keuntungan",
+      "Jumlah tabungan di bank"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa itu aset?",
+    options: [
+      "Segala sesuatu yang memiliki nilai ekonomi",
+      "Hutang kepada orang lain",
+      "Pengeluaran sehari-hari"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mengapa emas dianggap investasi aman?",
+    options: [
+      "Karena nilainya stabil dan tahan inflasi",
+      "Karena nilainya selalu turun",
+      "Karena tidak bisa dijual lagi"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa itu obligasi?",
+    options: [
+      "Surat hutang yang diterbitkan pemerintah atau perusahaan",
+      "Saham perusahaan",
+      "Deposito bank"
+    ],
+    answer: 0
+  },
+  {
+    question: "Investasi jangka pendek biasanya bertujuan untuk?",
+    options: [
+      "Mencapai tujuan keuangan dalam waktu singkat",
+      "Menabung untuk pensiun",
+      "Membeli rumah 20 tahun lagi"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa keuntungan utama menabung di deposito?",
+    options: [
+      "Bunga lebih tinggi dari tabungan biasa",
+      "Tidak ada keuntungan sama sekali",
+      "Uang bisa ditarik kapan saja"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa itu pasar modal?",
+    options: [
+      "Tempat jual beli saham dan obligasi",
+      "Pasar tradisional",
+      "Pasar swalayan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa itu investasi properti?",
+    options: [
+      "Membeli dan memiliki tanah atau bangunan",
+      "Menyewa rumah untuk ditinggali",
+      "Membeli barang konsumsi"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mengapa penting memiliki tujuan investasi?",
+    options: [
+      "Agar strategi investasi lebih jelas dan terarah",
+      "Agar uang cepat habis",
+      "Supaya bingung memilih investasi"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa itu investasi jangka panjang?",
+    options: [
+      "Investasi yang dilakukan dalam hitungan hari",
+      "Investasi yang dilakukan bertahun-tahun",
+      "Investasi untuk main game"
+    ],
+    answer: 1
+  },
+  {
+    question: "Apa itu likuiditas dalam investasi?",
+    options: [
+      "Kemudahan mengubah aset menjadi uang tunai",
+      "Banyaknya risiko",
+      "Jumlah bunga yang diperoleh"
+    ],
+    answer: 0
+  },
+  {
+    question: "Kenapa investasi berbeda dengan menabung?",
+    options: [
+      "Investasi berpotensi memberikan return lebih tinggi dengan risiko",
+      "Investasi pasti tanpa risiko",
+      "Tabungan selalu lebih untung"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa itu dividen?",
+    options: [
+      "Bagian laba perusahaan yang dibagikan kepada pemegang saham",
+      "Bunga bank",
+      "Biaya administrasi"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa itu instrumen investasi berisiko tinggi?",
+    options: [
+      "Investasi dengan potensi keuntungan tinggi tetapi risiko besar",
+      "Investasi yang selalu untung",
+      "Investasi tanpa kemungkinan rugi"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa yang dimaksud dengan capital gain?",
+    options: [
+      "Keuntungan dari selisih harga beli dan harga jual aset",
+      "Kerugian dari investasi",
+      "Jumlah modal awal"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa itu manajer investasi?",
+    options: [
+      "Pihak yang mengelola dana investor dalam reksa dana",
+      "Orang yang menabung",
+      "Peminjam uang"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mengapa penting memahami profil risiko sebelum berinvestasi?",
+    options: [
+      "Agar investasi sesuai dengan toleransi risiko pribadi",
+      "Supaya selalu untung",
+      "Agar uang habis cepat"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa itu inflasi rendah?",
+    options: [
+      "Kenaikan harga barang yang kecil dan terkendali",
+      "Harga barang turun drastis",
+      "Harga barang tetap sama selamanya"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa perbedaan investasi dengan spekulasi?",
+    options: [
+      "Investasi didasarkan pada analisis, spekulasi lebih pada keberuntungan",
+      "Spekulasi selalu lebih aman",
+      "Investasi selalu rugi"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa itu instrumen keuangan syariah?",
+    options: [
+      "Produk keuangan yang sesuai prinsip syariah",
+      "Produk bebas risiko",
+      "Produk untuk konsumsi"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa yang dimaksud dengan portofolio investasi?",
+    options: [
+      "Kumpulan berbagai aset investasi yang dimiliki seseorang",
+      "Daftar belanja bulanan",
+      "Catatan utang piutang"
+    ],
+    answer: 0
+  }
+  ];
+ let currentQuestion = 0;
+    const questionEl = document.getElementById("question");
+    const optionEls = [
+      document.getElementById("option0"),
+      document.getElementById("option1"),
+      document.getElementById("option2")
+    ];
+    const feedbackEl = document.getElementById("benaratausalah");
+
+    function loadQuestion() {
+      const q = quiz[currentQuestion];
+      questionEl.textContent = (currentQuestion+1) + ". " + q.question;
+      q.options.forEach((opt, i) => {
+        optionEls[i].textContent = opt;
+      });
+      feedbackEl.textContent = ""; 
+      document.querySelectorAll('input[name="answer"]').forEach(r => r.checked = false);
+    }
+
+    document.getElementById("selanjutnyabtn").addEventListener("click", () => {
+      const selected = document.querySelector('input[name="answer"]:checked');
+      if (!selected) {
+        feedbackEl.textContent = "⚠️ Pilih salah satu jawaban dulu!";
+        feedbackEl.style.color = "orange";
+        return;
+      }
+
+      const answer = parseInt(selected.value);
+      if (answer === quiz[currentQuestion].answer) {
+        feedbackEl.textContent = "✅ Jawaban benar!";
+        feedbackEl.style.color = "green";
+      } else {
+        const correctText = quiz[currentQuestion].options[quiz[currentQuestion].answer];
+        feedbackEl.textContent = "❌ Jawaban salah. Yang benar: " + correctText;
+        feedbackEl.style.color = "red";
+      }
+
+      // lanjut soal setelah 1,5 detik
+      setTimeout(() => {
+        if (currentQuestion < quiz.length - 1) {
+          currentQuestion++;
+          loadQuestion();
+        } else {
+          questionEl.textContent = "🎉 Kuis selesai!";
+          feedbackEl.textContent = "";
+          document.getElementById("selanjutnyabtn").disabled = true;
+          document.getElementById("kembalibtn").disabled = true;
+        }
+      }, 1500);
+    });
+
+    document.getElementById("kembalibtn").addEventListener("click", () => {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        loadQuestion();
+      } else {
+        feedbackEl.textContent = "Ini soal pertama!";
+        feedbackEl.style.color = "orange";
+      }
+    });
+
+    loadQuestion();
+
+</script>
+
+</style>
+
+<div id="overlay" class="hidden"></div>
+
+<script>
+  const btnKeluar = document.getElementById("keluar");
+  const warning = document.getElementById("warning");
+  const overlay = document.getElementById("overlay");
+  const btnLanjut = document.getElementById("lanjutQuiz");
+  const btnKonfirmasiKeluar = document.getElementById("konfirmasiKeluar");
+
+  // Saat klik tombol keluar → fade in popup
+  btnKeluar.addEventListener("click", () => {
+    warning.classList.add("show");
+    warning.classList.remove("hidden");
+    overlay.classList.add("show");
+    overlay.classList.remove("hidden");
+  });
+
+  // Saat klik lanjut → fade out popup
+  btnLanjut.addEventListener("click", () => {
+    warning.classList.remove("show");
+    warning.classList.add("hidden");
+    overlay.classList.remove("show");
+    overlay.classList.add("hidden");
+  });
+
+  // Saat klik keluar di dalam warning → reset quiz
+  btnKonfirmasiKeluar.addEventListener("click", () => {
+    location.reload(); // reload halaman, progress hilang
+  });
+</script>
+
 </body>
 </html>
