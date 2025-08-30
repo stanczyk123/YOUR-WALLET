@@ -84,6 +84,42 @@ Kita harus disiplin dalam menjalankan anggaran yang sudah dibuat.
         </div>
     </div>
 
+    <div id="manajemen" class="fade-in">
+        <div id="titlecontainer5">
+            <h1 id="title5" class="fade-in">4. Manajemen Utang</h1>
+
+            <div id="inside5" class="fade-in">
+                <h3>
+- Utang tidak selalu buruk, asalkan dikelola dengan bijak.
+<br><br>
+- Utang produktif (seperti KPR rumah atau modal usaha) masih wajar karena memberi manfaat jangka panjang.
+<br><br>
+- Hindari utang konsumtif berlebihan, misalnya utang untuk membeli barang mewah yang sebenarnya tidak terlalu dibutuhkan.
+<br><br>
+- Aturan sehat: cicilan utang jangan lebih dari 30% dari pendapatan bulanan.
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="perlindungan" class="fade-in">
+        <div id="titlecontainer6">
+            <h1 id="title6" class="fade-in">5. Perlindungan Keuangan</h1>
+
+            <div id="inside6" class="fade-in">
+                <h3>
+Keuangan harus disiapkan untuk menghadapi keadaan darurat.
+<br><br>
+- Siapkan dana darurat minimal 3–6 kali pengeluaran bulanan.
+<br><br>
+- Gunakan asuransi (kesehatan, jiwa, atau aset) untuk melindungi dari risiko yang bisa membuat kondisi keuangan terguncang.
+<br><br>
+-  Contoh: jika biaya hidup per bulan Rp3.000.000, maka dana darurat sebaiknya Rp9.000.000–Rp18.000.000.
+                </h3>
+            </div>
+        </div>
+    </div>
+
         <br><br><br><br><hr>
 
     <div id="quizcontainer">
@@ -95,7 +131,7 @@ Kita harus disiplin dalam menjalankan anggaran yang sudah dibuat.
       <div class="pemula">
         <h3 id="titlequiz">Pemula</h3>
         <h4>Uji pengetahuanmu tentang dasar dasar investasi</h4>
-        <a href="/quiz-invesment-pemula/quiz-invesment-pemula.html">
+        <a href="">
           <button id="quizbtn">
             Start
           </button>
@@ -105,7 +141,7 @@ Kita harus disiplin dalam menjalankan anggaran yang sudah dibuat.
       <div class="sedang">
         <h3 id="titlequiz">Menegah</h3>
         <h4>Uji pengetahuanmu tentang keuangan di level menengah</h4>
-        <a href="/quiz-invesment-sedang/quiz-invesment-sedang.html">
+        <a href="">
           <button id="quizbtn">
             Start
           </button>
@@ -115,7 +151,7 @@ Kita harus disiplin dalam menjalankan anggaran yang sudah dibuat.
       <div class="sulit">
         <h3 id="titlequiz">Sulit</h3>
         <h4>Uji pengetahuanmu tentang keuangan di level sulit</h4>
-        <a href="/quiz-invesment-sulit/quiz-invesment-sulit.html">
+        <a href="">
           <button id="quizbtn">
             Start
           </button>
@@ -164,6 +200,27 @@ Kita harus disiplin dalam menjalankan anggaran yang sudah dibuat.
             }, 500);
         }
 
+        // Fade in section 3
+        if (entry.target.id === "manajemen") {
+            entry.target.classList.add("visible");
+            setTimeout(() => {
+                document.getElementById("title5").classList.add("visible");
+                setTimeout(() => {
+                    document.getElementById("inside5").classList.add("visible");
+                }, 500);
+            }, 500);
+        }
+
+        // Fade in section 3
+        if (entry.target.id === "perlindungan") {
+            entry.target.classList.add("visible");
+            setTimeout(() => {
+                document.getElementById("title6").classList.add("visible");
+                setTimeout(() => {
+                    document.getElementById("inside6").classList.add("visible");
+                }, 500);
+            }, 500);
+        }
 
         }
       });
@@ -173,6 +230,8 @@ Kita harus disiplin dalam menjalankan anggaran yang sudah dibuat.
     observer.observe(document.getElementById("mengapakitaharusinvestasi"));
     observer.observe(document.getElementById("tipsandtrick"));
     observer.observe(document.getElementById("perencanaan"));
+    observer.observe(document.getElementById("manajemen"));
+    observer.observe(document.getElementById("perlindungan"));
   });
 </script>
 </body>

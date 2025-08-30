@@ -428,3 +428,70 @@ h4{
     right: 7%;
     font-family: "roboto";
 }
+
+#manajemen{
+    background-color: pink;
+    width: 990px;
+    position: relative;
+    border-radius: 60px;
+    margin-top: 10%;
+    margin-left: 2%;
+}
+
+#titlecontainer5{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    left: 5%;
+}
+
+#title5{
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 80px;
+    position: relative;
+    width: 980px;
+}
+
+#inside5{
+   max-width: 900px; 
+   font-family: "roboto";
+}
+
+#perlindungan{
+    background-color: khaki;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 1100px;   /* set width so it doesn't span 100% */
+    margin-left: 30%;  /* this pushes it to the right */
+    border-radius: 60px;
+    margin-top: 7%; 
+}
+
+#titlecontainer6{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;    
+}
+
+#title6{
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 80px;
+    position: relative;
+    right: 5%;
+    width: 980px;
+    
+}
+
+#inside6{
+    max-width: 900px;
+    position: relative;
+    right: 7%;
+    font-family: "roboto";
+}
