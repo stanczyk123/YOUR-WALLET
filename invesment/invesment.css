@@ -247,9 +247,11 @@ header:hover .header-border {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* push text to top, button to bottom */
     align-items: center;
     cursor: pointer;
-    padding: 20px; /* optional, to give spacing inside */
+    padding: 20px;
+    text-align: center; /* center text inside */
 }
 
 .pemula a,
@@ -293,3 +295,10 @@ header:hover .header-border {
     font-size: 60px;
 }
 
+h4{
+    font-family: "roboto";
+}
+
+#titlequiz{
+    font-size:xx-large;
+}
