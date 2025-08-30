@@ -119,41 +119,46 @@ Pada akhirnya, pengetahuan keuangan bukan hanya soal menghitung angka, melainkan
 
             <div class="material">
                 <img src="/favicons/budgeting.png" id="course-img">
-                <h3 class="course-name">Budgeting</h3>
+                <h3 class="course-name">Anggaran</h3>
             </div>
 
             <div class="material">
                 <img src="/favicons/understanding-debt.png" id="course-img">
-                <h3 class="course-name">Understanding Debt</h3>
+                <h3 class="course-name">Pengertian Utang</h3>
             </div>
 
             <div class="material">
                 <img src="/favicons/saving.png" id="course-img">
-                <h3 class="course-name">Saving & Emergency Fund</h3>
+                <h3 class="course-name">Tabungan & Dana darurat</h3>
             </div>
 
             <div class="material">
                 <img src="/favicons/basic-investing.png" id="course-img">
-                <h3 class="course-name">Investing Basics</h3>
+                <h3 class="course-name">Komponen Dasar dalam Keuangan</h3>
             </div>
 
             <div class="material">
                 <img src="/favicons/net-worth.png" id="course-img">
-                <h3 class="course-name">Net Worth Awareness</h3>
+                <h3 class="course-name">Kesadaran Kekayaan Bersih</h3>
             </div>
 
-            <div id="popup-modal">
-                <div id="popup-content">
-                    <header id="popup-header">
-                        <span id="close-btn">&times;</span>
-                        <img id="popup-img" src="" alt="">
-                        <h3 id="popup-title"></h3>
-                        <button id="description">Learn More</button>
-                        <button id="quiz">Quiz</button>
-                    </header>
-                    <p id="learning-material"></p>
-                </div>
-            </div>
+<div id="popup-modal">
+  <div id="popup-content">
+    <header id="popup-header">
+      <span id="close-btn">&times;</span>
+      <img id="popup-img" src="" alt="">
+      <h3 id="popup-title"></h3>
+
+      <div id="popup-buttons">
+        <button id="description">Learn More</button>
+        <button id="quiz">Quiz</button>
+      </div>
+    </header>
+
+    <p id="learning-material"></p>
+  </div>
+</div>
+
 
         <div>
             <button id="next">></button>
@@ -172,27 +177,27 @@ Pada akhirnya, pengetahuan keuangan bukan hanya soal menghitung angka, melainkan
 
         <div class="material">
             <img src="/favicons/asset.png" id="course-img">
-            <h3 class="course-name">Asset Allocation</h3>
+            <h3 class="course-name">Alokasi Asset</h3>
         </div>
 
         <div class="material">
             <img src="/favicons/tax.png" id="course-img">
-            <h3 class="course-name">Tax-Efficient Investing</h3>
+            <h3 class="course-name">Investasi Hemat Pajak</h3>
         </div>
 
         <div class="material">
            <img src="/favicons/retirement.png" id="course-img">
-           <h3 class="course-name">Retirement Plans</h3>
+           <h3 class="course-name">Rencana Pensiun</h3>
         </div>
 
         <div class="material">
            <img src="/favicons/purchase-power1.png" id="course-img">
-           <h3 class="course-name">Purchasing Power</h3>
+           <h3 class="course-name">Daya Beli</h3>
         </div>
 
         <div class="material">
            <img src="/favicons/Time-Value-of-Money.png" id="course-img">
-           <h3 class="course-name">Time Value of Money</h3>
+           <h3 class="course-name">Nilai Waktu dari Uang</h3>
         </div>
 
         <div>
@@ -210,28 +215,28 @@ Pada akhirnya, pengetahuan keuangan bukan hanya soal menghitung angka, melainkan
         </div>
         <div class="material">
             <img src="/favicons/advanced-invesment-strat.png" id="course-img">
-            <h3 class="course-name">Advanced Investment Strategies</h3>
+            <h3 class="course-name">Strategi Investasi Lanjut</h3>
             
         </div>
 
         <div class="material">
             <img src="/favicons/advanced-porto.png" id="course-img">
-            <h3 class="course-name">Advanced Portfolio Theory</h3>
+            <h3 class="course-name">Teori Portofolio Lanjutan</h3>
         </div>
 
         <div class="material">
            <img src="/favicons/behavioral-finance.png" id="course-img">
-           <h3 class="course-name">Behavioral Finance</h3>
+           <h3 class="course-name">Keuangan Perilaku</h3>
         </div>
 
         <div class="material">
            <img src="favicons/alternative-invesment.png" id="course-img">
-           <h3 class="course-name">Alternative Investments</h3>
+           <h3 class="course-name">Investasi Alternatif</h3>
         </div>
 
         <div class="material">
            <img src="/favicons/international-finance.png" id="course-img">
-           <h3 class="course-name">International Finance</h3>
+           <h3 class="course-name">Keuangan Internasional</h3>
         </div>
 
         <div>
@@ -242,35 +247,35 @@ Pada akhirnya, pengetahuan keuangan bukan hanya soal menghitung angka, melainkan
 
 <script>
 const materials = {
-  "Budgeting": "Budgeting is the process of creating a plan to spend your money wisely so that you have enough for your needs and goals. It helps you prioritize essential expenses, control unnecessary spending, and save for future purposes. A good budget gives you a clear roadmap for reaching both short-term and long-term financial goals.",
+  "Anggaran": "Anggaran adalah rencana tertulis yang memuat perkiraan penerimaan dan pengeluaran dalam jangka waktu tertentu, yang berfungsi sebagai pedoman dalam mengelola keuangan agar lebih terarah dan terkendali.",
 
-  "Understanding Debt": "Understanding debt means knowing how borrowing works, the cost of interest, and how to manage repayment effectively. Debt can be useful for building credit or funding important needs, but unmanaged debt can quickly become overwhelming. By understanding the different types of debt and repayment strategies, you can make smarter financial decisions.",
+  "Pengertian Utang": "Utang adalah kewajiban finansial seseorang atau suatu pihak kepada pihak lain yang harus dibayar kembali dalam jangka waktu tertentu, biasanya disertai dengan bunga atau syarat tertentu.",
 
-  "Saving & Emergency Fund": "An emergency fund is money set aside to cover unexpected expenses, helping you avoid debt in crises. It acts as a financial safety net for events like medical bills, job loss, or urgent repairs. Experts recommend saving three to six months of living expenses so you can handle emergencies without financial stress.",
+  "Tabungan & Dana darurat": "Dana darurat adalah uang yang disisihkan untuk menutupi pengeluaran tak terduga, membantu Anda menghindari utang saat krisis. Dana ini berfungsi sebagai jaring pengaman finansial untuk kejadian seperti tagihan medis, kehilangan pekerjaan, atau perbaikan mendesak. Para ahli menyarankan untuk menabung tiga hingga enam bulan biaya hidup agar Anda dapat menangani keadaan darurat tanpa tekanan finansial.",
 
-  "Investing Basics": "Investing involves putting money into assets with the goal of generating income or growth over time. Common investments include stocks, bonds, and real estate, each carrying different risks and rewards. The earlier you start investing, the more you can benefit from compounding, which helps your money grow faster.",
+  "Komponen Dasar dalam Keuangan": "Berinvestasi berarti menempatkan uang dalam aset dengan tujuan menghasilkan pendapatan atau pertumbuhan seiring waktu. Investasi yang umum meliputi saham, obligasi, dan properti, yang masing-masing memiliki risiko dan keuntungan yang berbeda. Semakin awal Anda mulai berinvestasi, semakin besar manfaat yang bisa Anda dapatkan dari compounding, yang membantu uang Anda tumbuh lebih cepat.",
 
-  "Net Worth Awareness": "Net worth is the difference between what you own and what you owe. Tracking it shows your overall financial health and helps you measure progress toward your goals. A positive and growing net worth means your assets are increasing faster than your debts, which is a strong financial sign.",
+  "Kesadaran Kekayaan Bersih": "Kekayaan bersih adalah selisih antara apa yang Anda miliki dan apa yang Anda utang. Memantau kekayaan bersih akan menunjukkan kesehatan keuangan Anda secara keseluruhan dan membantu Anda mengukur kemajuan dalam mencapai tujuan. Kekayaan bersih yang positif dan terus bertumbuh berarti aset Anda bertambah lebih cepat daripada utang Anda, yang merupakan indikator keuangan yang kuat.",
 
-  "Asset Allocation": "Asset allocation is the strategy of dividing investments among different categories to balance risk and reward. By spreading money across assets like stocks, bonds, and cash, you reduce the impact of losses in any single category. The right allocation depends on your age, risk tolerance, and financial goals.",
+  "Alokasi Asset": "Alokasi aset adalah strategi membagi investasi ke dalam berbagai kategori untuk menyeimbangkan risiko dan imbalan. Dengan mendistribusikan dana ke berbagai aset seperti saham, obligasi, dan uang tunai, Anda mengurangi dampak kerugian dalam satu kategori. Alokasi yang tepat bergantung pada usia, toleransi risiko, dan tujuan keuangan Anda.",
 
-  "Tax-Efficient Investing": "Tax-efficient investing reduces the tax impact on your returns through smart investment choices and timing. This might include using tax-advantaged accounts, holding investments longer to lower capital gains taxes, or choosing tax-friendly assets. Managing taxes wisely allows you to keep more of your investment growth over time.",
+  "Investasi Hemat Pajak": "Investasi yang efisien pajak mengurangi dampak pajak terhadap imbal hasil Anda melalui pilihan dan waktu investasi yang cerdas. Hal ini dapat mencakup penggunaan akun yang diuntungkan pajak, menahan investasi lebih lama untuk menurunkan pajak keuntungan modal, atau memilih aset yang ramah pajak. Mengelola pajak dengan bijak memungkinkan Anda mempertahankan lebih banyak pertumbuhan investasi seiring waktu.",
 
-  "Retirement Plans": "Retirement plans help you save and invest money for life after work, often with tax advantages. These accounts, such as pensions, 401(k)s, or IRAs, encourage long-term saving by offering benefits like employer matching or tax deferrals. Building a strong retirement plan early ensures financial stability in your later years.",
+  "Rencana Pensiun": "Rencana pensiun membantu Anda menabung dan menginvestasikan uang untuk kehidupan setelah bekerja, seringkali dengan keuntungan pajak. Rekening-rekening ini, seperti dana pensiun, 401(k), atau IRA, mendorong tabungan jangka panjang dengan menawarkan manfaat seperti pencocokan perusahaan atau penangguhan pajak. Membangun rencana pensiun yang kuat sejak dini menjamin stabilitas keuangan di masa tua Anda.",
 
-  "Purchasing Power": "Purchasing power is the value of money in terms of the amount of goods or services it can buy. Inflation reduces purchasing power over time, meaning the same amount of money buys less in the future. Protecting your purchasing power often involves saving wisely and investing in assets that grow faster than inflation.",
+  "Daya Beli": "Daya beli adalah nilai uang dalam hal jumlah barang atau jasa yang dapat dibelinya. Inflasi mengurangi daya beli seiring waktu, artinya jumlah uang yang sama akan membeli lebih sedikit di masa mendatang. Melindungi daya beli Anda sering kali melibatkan menabung dengan bijak dan berinvestasi pada aset yang pertumbuhannya lebih cepat daripada inflasi.",
 
-  "Time Value of Money": "The time value of money means money today is worth more than the same amount in the future due to earning potential. This principle is the foundation for interest, investments, and financial planning. Understanding it helps you make smarter decisions about saving, borrowing, and investing.",
+  "Nilai Waktu dari Uang": "Nilai waktu uang berarti uang saat ini lebih berharga daripada jumlah yang sama di masa mendatang karena potensi pendapatannya. Prinsip ini merupakan dasar bagi bunga, investasi, dan perencanaan keuangan. Memahaminya membantu Anda membuat keputusan yang lebih cerdas tentang menabung, meminjam, dan berinvestasi.",
 
-  "Advanced Investment Strategies": "These are sophisticated methods for maximizing returns and managing risks in complex markets. They can include options trading, hedging, leverage, and other tools that require deep knowledge of finance. While they offer opportunities for higher gains, they also carry higher risks and should be used carefully.",
+  "Strategi Investasi Lanjut": "These are sophisticated methods for maximizing returns and managing risks in complex markets. They can include options trading, hedging, leverage, and other tools that require deep knowledge of finance. While they offer opportunities for higher gains, they also carry higher risks and should be used carefully.",
 
-  "Advanced Portfolio Theory": "This focuses on optimizing investment portfolios to achieve the best possible return for a given level of risk. It uses concepts like diversification, risk-adjusted returns, and efficient frontiers to build smarter portfolios. Investors use this theory to balance safety with growth in their financial plans.",
+  "Teori Portofolio Lanjutan": "Fokusnya adalah mengoptimalkan portofolio investasi untuk mencapai imbal hasil terbaik dengan tingkat risiko tertentu. Konsep-konsep seperti diversifikasi, imbal hasil yang disesuaikan dengan risiko, dan batas efisien digunakan untuk membangun portofolio yang lebih cerdas. Investor menggunakan teori ini untuk menyeimbangkan keamanan dengan pertumbuhan dalam rencana keuangan mereka.",
 
-  "Behavioral Finance": "Behavioral finance studies how psychological influences and biases affect investors and financial markets. Emotions like fear, greed, and overconfidence often lead people to make poor financial choices. By understanding these behaviors, investors can work to reduce mistakes and improve their decision-making.",
+  "Keuangan Perilaku": "Keuangan perilaku mempelajari bagaimana pengaruh dan bias psikologis memengaruhi investor dan pasar keuangan. Emosi seperti ketakutan, keserakahan, dan rasa percaya diri yang berlebihan sering kali mendorong orang untuk membuat pilihan keuangan yang buruk. Dengan memahami perilaku-perilaku ini, investor dapat berupaya mengurangi kesalahan dan meningkatkan pengambilan keputusan mereka.",
 
-  "Alternative Investments": "Alternative investments include assets like real estate, commodities, and private equity outside traditional markets. They often behave differently from stocks and bonds, making them useful for diversification. However, they can also be less liquid, more complex, and require careful research before investing.",
+  "Investasi Alternatif": "Investasi alternatif mencakup aset seperti real estat, komoditas, dan ekuitas swasta di luar pasar tradisional. Aset-aset ini seringkali berperilaku berbeda dari saham dan obligasi, sehingga bermanfaat untuk diversifikasi. Namun, aset-aset ini juga bisa kurang likuid, lebih kompleks, dan memerlukan riset yang cermat sebelum berinvestasi.",
 
-  "International Finance": "International finance deals with monetary interactions between two or more countries, including trade and investment. It covers topics like exchange rates, global markets, and economic policies that affect international business. Understanding it is essential in today’s global economy, where financial systems are deeply connected."
+  "Keuangan Internasional": "Keuangan internasional berkaitan dengan interaksi moneter antara dua negara atau lebih, termasuk perdagangan dan investasi. Keuangan internasional mencakup topik-topik seperti nilai tukar, pasar global, dan kebijakan ekonomi yang memengaruhi bisnis internasional. Memahami hal ini sangat penting dalam ekonomi global saat ini, di mana sistem keuangan saling terhubung erat."
 };
 
 function openPopup() {

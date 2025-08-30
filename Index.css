@@ -420,20 +420,21 @@ color: white;
     }
 
 #popup-content {
-    background-color: rgb(37, 37, 37);
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 90%;
-    max-height: 90%;
-    overflow: auto;
-    text-align: center;
-    width: 700px;
-    height: 600px;
-    transform: scale(0.55);
-    transition: transform 0.4s ease;
-    overflow-x: hidden;
-    position: relative;
+  background-color: rgb(37, 37, 37);
+  border-radius: 12px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  text-align: center;
+  width: 700px;
+  height: 600px;
+  transform: scale(0.55);
+  transition: transform 0.4s ease;
+  overflow-x: hidden;
+  position: relative;
+  padding: 0; /* remove padding so header spans full width */
 }
+
 
     #popup-modal.show{
         transform: scale(1);
@@ -457,7 +458,6 @@ color: white;
         font-size: 40px;
         position: relative;
         bottom: 300px;
-        left: 60px;
     }
 
     #close-btn {
@@ -510,15 +510,15 @@ color: white;
 
 #learning-material{
     position: relative;
-    bottom: 1000px;
+    margin-top: -130px;
 }
 
     #quiz{
     font-size: x-large;
     font-family: "roboto";
     position: relative;
-    bottom: 320px;
-    left:150px;
+    bottom: 290px;
+    left:40px;
     cursor: pointer;
     background-color: rgb(63, 63, 63);
     border: none;
