@@ -118,7 +118,7 @@ header:hover .header-border {
     position: relative;
     left: 2%;
     border-radius: 60px;
-    margin-top: 3%;
+    margin-top: 15%;
     
 }
 
@@ -186,3 +186,110 @@ header:hover .header-border {
     font-family: "roboto";
 
 }
+
+#tipsandtrick{
+    background-color: lightblue;
+    width: 990px;
+    position: relative;
+    border-radius: 60px;
+    margin-top: 10%;
+    margin-left: 2%;
+}
+
+#titlecontainer3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    left: 5%;
+}
+
+#title3{
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 80px;
+    position: relative;
+    width: 980px;
+}
+
+#inside3{
+   max-width: 900px; 
+   font-family: "roboto";
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#buttoncontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    justify-content: center;
+    width: 100%;
+}
+
+.pemula,
+.sedang,
+.sulit {
+    border: 2px solid rgb(108, 108, 108);
+    width: 400px;
+    height: 270px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px; /* optional, to give spacing inside */
+}
+
+.pemula a,
+.sedang a,
+.sulit a {
+    margin-top: auto; /* pushes the button to the bottom */
+    text-decoration: none;
+}
+
+#quizbtn{
+    background-color: rgb(42, 42, 42);
+    color: rgb(182, 182, 182);
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    transition: all 0.4s ease; /* smooth expand & shrink */
+    cursor: pointer;
+}
+
+.pemula:hover #quizbtn,
+.sedang:hover #quizbtn,
+.sulit:hover #quizbtn {
+  width: 140px;   /* expand width */
+  height: 60px;   /* expand height */
+  transition: all 0.3s ease; /* smooth animation */
+  
+}
+
+#quizbtn:hover{
+    color: white;
+    font-size: x-large;
+}
+
+
+#quizcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 60px;
+}
+

@@ -41,11 +41,11 @@
 
     <br><br><br><br><br><br><br><br><br><br><br><br>
 
-    <div id="mengapakitaharusinvestasi">
+    <div id="mengapakitaharusinvestasi" class="fade-in">
         <div id="titlecontainer2">
-            <h1 id="title2">Mengapa kita harus investasi</h1>
+            <h1 id="title2" class="fade-in">Mengapa kita harus investasi</h1>
 
-            <div id="inside2">
+            <div id="inside2" class="fade-in">
                 <h3>1. Melindungi nilai uang dari inflasi
                     Nilai mata uang cenderung turun seiring waktu akibat inflasi. Dengan berinvestasi, uang kita tidak hanya diam, tetapi bisa berkembang sehingga tetap bernilai atau bahkan bertambah.
                     <br><br>
@@ -65,6 +65,117 @@
         </div>
     </div>
 
-        <br><br><br><br>
+    <div id="tipsandtrick" class="fade-in">
+        <div id="titlecontainer3">
+            <h1 id="title3" class="fade-in">Tips untuk investasi</h1>
+
+            <div id="inside3" class="fade-in">
+                <h3>
+                    Tips Investasi ala Warren Buffett untuk Pemula.
+                    <br><br>
+                    1. Investasikan pada hal yang Anda pahami
+                    Warren Buffett selalu menekankan pentingnya berinvestasi hanya pada bisnis atau instrumen yang benar-benar dipahami. Jangan tergoda oleh tren atau rumor pasar jika Anda belum memahami cara kerjanya.
+                    <br><br>
+                    2. Pikirkan jangka panjang
+                    <br><br>
+                    3. Investasi bukanlah cara cepat untuk menjadi kaya. Buffett menyarankan agar kita bersabar, karena hasil terbaik biasanya datang dari investasi yang dibiarkan tumbuh dalam waktu lama.
+                    <br><br>
+                    4. Utamakan kualitas, bukan sekadar harga murah
+                    Lebih baik membeli saham atau aset dari perusahaan yang baik dengan harga wajar, daripada membeli perusahaan biasa-biasa saja hanya karena terlihat murah.
+                    <br><br>
+                    5. Kendalikan emosi ketika berinvestasi
+                    Pasar akan selalu naik dan turun. Buffett mengatakan, “Investor yang sukses adalah mereka yang bisa tetap tenang ketika orang lain panik.” Jangan terburu-buru membeli ketika euforia, atau menjual ketika harga turun.
+                    <br><br>
+                    6. Diversifikasi seperlunya
+                    Untuk pemula, diversifikasi (menyebar investasi ke beberapa aset) penting agar risiko lebih terkontrol. Namun, Buffett juga menekankan agar tidak terlalu banyak menyebar hingga kehilangan fokus.
+                    <br><br>
+                    7. Hindari utang untuk investasi
+                    Buffett selalu mengingatkan bahwa berinvestasi dengan uang hasil pinjaman bisa sangat berbahaya, karena risiko kerugian bisa berlipat ganda.
+                    <br><br>
+                    8. Anggap investasi sebagai kepemilikan bisnis
+                    Saat membeli saham atau instrumen investasi, bayangkan bahwa Anda sedang membeli sebagian dari sebuah bisnis nyata. Dengan begitu, Anda akan lebih bijak dalam memilih.
+                </h3>
+            </div>
+        </div>
+    </div>
+
+        <br><br><br><br><hr>
+
+    <div id="quizcontainer">
+      <h1>Quiz</h1>
+    </div>
+
+
+    <div id="buttoncontainer">
+      <div class="pemula">
+        <h3>Pemula</h3>
+        <h4>Ujian pengetahuanmu tentang dasar dasar investasi</h4>
+        <a>
+          <button id="quizbtn">
+            Start
+          </button>
+        </a>
+      </div>
+
+      <div class="sedang">
+        <h3>Sedang</h3>
+        <h4></h4>
+        <a>
+          <button id="quizbtn">
+            Start
+          </button>
+        </a>
+      </div>
+
+      <div class="sulit">
+        <h3>Sulit</h3>
+        <h4></h4>
+        <a>
+          <button id="quizbtn">
+            Start
+          </button>
+        </a>
+      </div>
+    </div>
+
+<br><br>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Fade in section 1
+          if (entry.target.id === "mengapakitaharusinvestasi") {
+            entry.target.classList.add("visible");
+            setTimeout(() => {
+              document.getElementById("title2").classList.add("visible");
+              setTimeout(() => {
+                document.getElementById("inside2").classList.add("visible");
+              }, 500);
+            }, 500);
+          }
+
+          // Fade in section 2
+          if (entry.target.id === "tipsandtrick") {
+            entry.target.classList.add("visible");
+            setTimeout(() => {
+              document.getElementById("title3").classList.add("visible");
+              setTimeout(() => {
+                document.getElementById("inside3").classList.add("visible");
+              }, 500);
+            }, 500);
+          }
+        }
+      });
+    }, { threshold: 0.2 });
+
+    // Observe both sections
+    observer.observe(document.getElementById("mengapakitaharusinvestasi"));
+    observer.observe(document.getElementById("tipsandtrick"));
+  });
+</script>
+
 </body>
 </html>
