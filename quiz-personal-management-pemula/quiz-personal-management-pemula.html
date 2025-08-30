@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz investasi pemula</title>
+    <link rel="stylesheet" href="quiz-personal-management-pemula.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicons/walletFav.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <img src="/favicons/cloud1.png" id="cloud1">
+  <img src="/favicons/cloud2.png" id="cloud2">
+  <img src="/favicons/cloud1.png" id="cloud3">
+  <img src="/favicons/cloud2.png" id="cloud4">
+  <img src="/favicons/cloud1.png" id="cloud5">
+  <img src="/favicons/cloud2.png" id="cloud6">
+  <img src="/favicons/cloud2.png" id="cloud7">
+
+  <div id="questioncontainer">
+    <h2 id="question"></h2>
+
+    <div id="quiz-container">
+        <form id="quiz-form">
+        <label>
+            <input type="radio" name="answer" value="0">
+            <span id="option0"></span>
+        </label>
+        <label>
+            <input type="radio" name="answer" value="1">
+            <span id="option1"></span>
+        </label>
+        <label>
+            <input type="radio" name="answer" value="2">
+            <span id="option2"></span>
+        </label>
+        </form>
+    </div>
+
+    <h3 id="benaratausalah"></h3>
+  </div>
+
+  <button id="kembalibtn">Kembali</button>
+  <button id="selanjutnyabtn">Selanjutnya</button>
+  <button id="keluar">Keluar</button>
+
+  <div id="warning" class="hidden">
+    <h2>Anda yakin ingin keluar dari quiz ini?</h2>
+    <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
+    <button id="lanjutQuiz">Lanjut</button>
+    <a href="/personal-management/personal-management.html">
+        <button id="konfirmasiKeluar">Keluar</button>
+    </a>
+  </div>
+
+<script>
+const quiz = [
+  {
+    question: "Apa yang dimaksud dengan anggaran keuangan pribadi?",
+    options: ["Rencana belanja dan pemasukan", "Catatan nilai mata uang", "Daftar harga barang", "Laporan perusahaan"],
+    answer: 0
+  },
+  {
+    question: "Mengapa penting membuat anggaran bulanan?",
+    options: ["Agar uang cepat habis", "Untuk mengatur pemasukan dan pengeluaran", "Supaya tidak menabung", "Untuk membeli barang mewah"],
+    answer: 1
+  },
+  {
+    question: "Apa yang sebaiknya dilakukan dengan uang sisa gaji?",
+    options: ["Dihabiskan untuk hiburan", "Ditabung atau diinvestasikan", "Dipinjamkan ke semua orang", "Disembunyikan tanpa tujuan"],
+    answer: 1
+  },
+  {
+    question: "Contoh kebutuhan pokok adalah...",
+    options: ["Makan dan tempat tinggal", "Mainan", "Liburan mewah", "Perhiasan"],
+    answer: 0
+  },
+  {
+    question: "Contoh keinginan adalah...",
+    options: ["Makan sehari-hari", "Bayar listrik", "Beli baju baru setiap minggu", "Bayar air"],
+    answer: 2
+  },
+  {
+    question: "Mengapa penting membedakan kebutuhan dan keinginan?",
+    options: ["Agar tahu prioritas pengeluaran", "Agar uang cepat habis", "Supaya bisa berutang lebih banyak", "Untuk terlihat kaya"],
+    answer: 0
+  },
+  {
+    question: "Apa manfaat menabung di bank?",
+    options: ["Uang lebih aman", "Uang hilang", "Tidak bisa digunakan lagi", "Lebih boros"],
+    answer: 0
+  },
+  {
+    question: "Apa itu tabungan darurat?",
+    options: ["Uang untuk jajan", "Dana untuk keperluan mendadak", "Dana untuk pesta", "Dana untuk belanja baju"],
+    answer: 1
+  },
+  {
+    question: "Berapa persen idealnya menabung dari gaji?",
+    options: ["10-20%", "50%", "90%", "0%"],
+    answer: 0
+  },
+  {
+    question: "Apa manfaat investasi?",
+    options: ["Nilai uang bisa berkembang", "Uang jadi hilang", "Tidak bisa digunakan", "Uang cepat habis"],
+    answer: 0
+  },
+  {
+    question: "Contoh investasi jangka panjang adalah...",
+    options: ["Beli properti", "Beli makanan", "Beli pulsa", "Beli tiket bioskop"],
+    answer: 0
+  },
+  {
+    question: "Apa yang dimaksud dengan hutang produktif?",
+    options: ["Hutang untuk usaha atau pendidikan", "Hutang untuk liburan", "Hutang untuk beli baju", "Hutang untuk jajan"],
+    answer: 0
+  },
+  {
+    question: "Mengapa perlu mencatat pengeluaran?",
+    options: ["Agar tahu kemana uang dipakai", "Agar uang cepat habis", "Untuk menambah hutang", "Supaya tidak menabung"],
+    answer: 0
+  },
+  {
+    question: "Apa tujuan memiliki asuransi?",
+    options: ["Perlindungan dari risiko finansial", "Agar uang cepat habis", "Untuk membuang uang", "Supaya bisa berutang"],
+    answer: 0
+  },
+  {
+    question: "Jika gaji Rp3.000.000, berapa minimal tabungan (10%)?",
+    options: ["Rp300.000", "Rp30.000", "Rp3.000.000", "Rp1.500.000"],
+    answer: 0
+  },
+  {
+    question: "Apa itu inflasi?",
+    options: ["Kenaikan harga barang", "Penurunan harga barang", "Jumlah uang berkurang", "Nilai gaji meningkat"],
+    answer: 0
+  },
+  {
+    question: "Mengapa inflasi berbahaya bagi uang?",
+    options: ["Nilai uang jadi berkurang", "Nilai uang bertambah", "Uang jadi tidak hilang", "Gaji lebih tinggi"],
+    answer: 0
+  },
+  {
+    question: "Apa itu gaya hidup hemat?",
+    options: ["Mengatur pengeluaran dengan bijak", "Menghabiskan semua uang", "Selalu berutang", "Boros dalam belanja"],
+    answer: 0
+  },
+  {
+    question: "Contoh pengeluaran rutin bulanan adalah...",
+    options: ["Listrik dan air", "Liburan ke luar negeri", "Beli gadget baru", "Pesta ulang tahun"],
+    answer: 0
+  },
+  {
+    question: "Apa manfaat mencatat pemasukan?",
+    options: ["Tahu dari mana uang berasal", "Membuat uang hilang", "Mengurangi gaji", "Meningkatkan pengeluaran"],
+    answer: 0
+  },
+  {
+    question: "Apa itu prioritas keuangan?",
+    options: ["Hal yang paling penting digunakan uang", "Semua barang yang diinginkan", "Uang untuk jajan", "Tidak menabung"],
+    answer: 0
+  },
+  {
+    question: "Apa contoh pengeluaran tidak terduga?",
+    options: ["Biaya berobat mendadak", "Bayar listrik bulanan", "Beli beras", "Bayar air"],
+    answer: 0
+  },
+  {
+    question: "Apa manfaat membandingkan harga sebelum membeli?",
+    options: ["Menghemat uang", "Mengurangi kualitas barang", "Membuat lebih boros", "Meningkatkan hutang"],
+    answer: 0
+  },
+  {
+    question: "Apa itu pendapatan pasif?",
+    options: ["Uang dari investasi atau usaha tanpa kerja aktif", "Uang gaji utama", "Uang pinjaman", "Uang jajan"],
+    answer: 0
+  },
+  {
+    question: "Jika seseorang selalu berutang untuk keinginan, akibatnya?",
+    options: ["Keuangan tidak sehat", "Tabungan bertambah", "Investasi meningkat", "Lebih kaya"],
+    answer: 0
+  },
+  {
+    question: "Apa langkah pertama untuk mengelola uang dengan baik?",
+    options: ["Membuat anggaran", "Membeli barang mahal", "Berhutang", "Menghabiskan gaji"],
+    answer: 0
+  },
+  {
+    question: "Apa itu rekening tabungan?",
+    options: ["Tempat menyimpan uang di bank", "Tempat belanja online", "Tempat berhutang", "Tempat bermain"],
+    answer: 0
+  },
+  {
+    question: "Mengapa penting menabung sejak dini?",
+    options: ["Agar terbiasa disiplin keuangan", "Supaya boros", "Supaya cepat berutang", "Agar uang cepat habis"],
+    answer: 0
+  },
+  {
+    question: "Apa manfaat punya tujuan keuangan?",
+    options: ["Agar lebih terarah dalam menggunakan uang", "Supaya uang habis", "Untuk berutang lebih banyak", "Supaya tidak menabung"],
+    answer: 0
+  },
+  {
+    question: "Apa arti hidup sesuai kemampuan?",
+    options: ["Menggunakan uang sesuai penghasilan", "Berhutang untuk gaya hidup", "Membeli semua keinginan", "Menghabiskan tabungan"],
+    answer: 0
+  }
+];
+
+ let currentQuestion = 0;
+    const questionEl = document.getElementById("question");
+    const optionEls = [
+      document.getElementById("option0"),
+      document.getElementById("option1"),
+      document.getElementById("option2")
+    ];
+    const feedbackEl = document.getElementById("benaratausalah");
+
+    function loadQuestion() {
+      const q = quiz[currentQuestion];
+      questionEl.textContent = (currentQuestion+1) + ". " + q.question;
+      q.options.forEach((opt, i) => {
+        optionEls[i].textContent = opt;
+      });
+      feedbackEl.textContent = ""; 
+      document.querySelectorAll('input[name="answer"]').forEach(r => r.checked = false);
+    }
+
+    document.getElementById("selanjutnyabtn").addEventListener("click", () => {
+      const selected = document.querySelector('input[name="answer"]:checked');
+      if (!selected) {
+        feedbackEl.textContent = "⚠️ Pilih salah satu jawaban dulu!";
+        feedbackEl.style.color = "orange";
+        return;
+      }
+
+      const answer = parseInt(selected.value);
+      if (answer === quiz[currentQuestion].answer) {
+        feedbackEl.textContent = "✅ Jawaban benar!";
+        feedbackEl.style.color = "green";
+      } else {
+        const correctText = quiz[currentQuestion].options[quiz[currentQuestion].answer];
+        feedbackEl.textContent = "❌ Jawaban salah. Yang benar: " + correctText;
+        feedbackEl.style.color = "red";
+      }
+
+      // lanjut soal setelah 1,5 detik
+      setTimeout(() => {
+        if (currentQuestion < quiz.length - 1) {
+          currentQuestion++;
+          loadQuestion();
+        } else {
+          questionEl.textContent = "🎉 Kuis selesai!";
+          feedbackEl.textContent = "";
+          document.getElementById("selanjutnyabtn").disabled = true;
+          document.getElementById("kembalibtn").disabled = true;
+        }
+      }, 1500);
+    });
+
+    document.getElementById("kembalibtn").addEventListener("click", () => {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        loadQuestion();
+      } else {
+        feedbackEl.textContent = "Ini soal pertama!";
+        feedbackEl.style.color = "orange";
+      }
+    });
+
+    loadQuestion();
+
+</script>
+
+</style>
+
+<div id="overlay" class="hidden"></div>
+
+<script>
+  const btnKeluar = document.getElementById("keluar");
+  const warning = document.getElementById("warning");
+  const overlay = document.getElementById("overlay");
+  const btnLanjut = document.getElementById("lanjutQuiz");
+  const btnKonfirmasiKeluar = document.getElementById("konfirmasiKeluar");
+
+  // Saat klik tombol keluar → fade in popup
+  btnKeluar.addEventListener("click", () => {
+    warning.classList.add("show");
+    warning.classList.remove("hidden");
+    overlay.classList.add("show");
+    overlay.classList.remove("hidden");
+  });
+
+  // Saat klik lanjut → fade out popup
+  btnLanjut.addEventListener("click", () => {
+    warning.classList.remove("show");
+    warning.classList.add("hidden");
+    overlay.classList.remove("show");
+    overlay.classList.add("hidden");
+  });
+
+  // Saat klik keluar di dalam warning → reset quiz
+  btnKonfirmasiKeluar.addEventListener("click", () => {
+    location.reload(); // reload halaman, progress hilang
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz investasi pemula</title>
+    <link rel="stylesheet" href="quiz-personal-management-sulit.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicons/walletFav.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <img src="/favicons/cloud1.png" id="cloud1">
+  <img src="/favicons/cloud2.png" id="cloud2">
+  <img src="/favicons/cloud1.png" id="cloud3">
+  <img src="/favicons/cloud2.png" id="cloud4">
+  <img src="/favicons/cloud1.png" id="cloud5">
+  <img src="/favicons/cloud2.png" id="cloud6">
+  <img src="/favicons/cloud2.png" id="cloud7">
+
+  <div id="questioncontainer">
+    <h2 id="question"></h2>
+
+    <div id="quiz-container">
+        <form id="quiz-form">
+        <label>
+            <input type="radio" name="answer" value="0">
+            <span id="option0"></span>
+        </label>
+        <label>
+            <input type="radio" name="answer" value="1">
+            <span id="option1"></span>
+        </label>
+        <label>
+            <input type="radio" name="answer" value="2">
+            <span id="option2"></span>
+        </label>
+        </form>
+    </div>
+
+    <h3 id="benaratausalah"></h3>
+  </div>
+
+  <button id="kembalibtn">Kembali</button>
+  <button id="selanjutnyabtn">Selanjutnya</button>
+  <button id="keluar">Keluar</button>
+
+  <div id="warning" class="hidden">
+    <h2>Anda yakin ingin keluar dari quiz ini?</h2>
+    <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
+    <button id="lanjutQuiz">Lanjut</button>
+    <a href="/personal-management/personal-management.html">
+        <button id="konfirmasiKeluar">Keluar</button>
+    </a>
+  </div>
+
+<script>
+const quiz = [
+  {
+    question: "Bagaimana cara menghitung kekayaan bersih (net worth) seseorang?",
+    options: ["Aset dikurangi utang", "Pendapatan ditambah tabungan", "Pengeluaran dikurangi aset", "Utang ditambah aset"],
+    answer: 0
+  },
+  {
+    question: "Apa yang dimaksud dengan debt to income ratio?",
+    options: ["Perbandingan antara utang dan total aset", "Perbandingan antara pengeluaran dan pemasukan", "Perbandingan antara jumlah utang dan pendapatan", "Perbandingan antara tabungan dan pendapatan"],
+    answer: 2
+  },
+  {
+    question: "Mengapa diversifikasi investasi penting?",
+    options: ["Mengurangi risiko kerugian", "Meningkatkan utang", "Mengurangi pendapatan", "Menurunkan aset"],
+    answer: 0
+  },
+  {
+    question: "Apa dampak inflasi terhadap tabungan jangka panjang?",
+    options: ["Nilai uang berkurang", "Nilai uang bertambah", "Utang berkurang", "Risiko investasi hilang"],
+    answer: 0
+  },
+  {
+    question: "Likuiditas dalam keuangan pribadi berarti?",
+    options: ["Kemampuan membayar utang jangka panjang", "Kemampuan mengubah aset menjadi uang tunai", "Jumlah aset yang dimiliki", "Jumlah tabungan bulanan"],
+    answer: 1
+  },
+  {
+    question: "Solvabilitas berarti?",
+    options: ["Kemampuan membayar utang jangka panjang", "Jumlah tabungan jangka pendek", "Risiko inflasi", "Keuntungan dari investasi"],
+    answer: 0
+  },
+  {
+    question: "Mengapa time value of money penting dalam investasi?",
+    options: ["Uang sekarang lebih berharga daripada uang masa depan", "Uang masa depan lebih berharga dari uang sekarang", "Tidak ada pengaruhnya", "Untuk menambah jumlah utang"],
+    answer: 0
+  },
+  {
+    question: "Risiko dari hanya memiliki satu sumber pendapatan adalah?",
+    options: ["Diversifikasi meningkat", "Pendapatan menjadi tidak stabil", "Utang otomatis berkurang", "Pengeluaran lebih kecil"],
+    answer: 1
+  },
+  {
+    question: "Mengapa dana darurat harus disimpan pada instrumen yang likuid?",
+    options: ["Agar mudah diakses saat dibutuhkan", "Agar nilainya berkurang", "Untuk jangka panjang", "Untuk meningkatkan utang"],
+    answer: 0
+  },
+  {
+    question: "Rasio tabungan ideal menurut prinsip 50/30/20 adalah?",
+    options: ["20% dari pendapatan", "30% dari pendapatan", "50% dari pendapatan", "70% dari pendapatan"],
+    answer: 0
+  },
+  {
+    question: "Mengapa memiliki asuransi merupakan bagian penting dari manajemen keuangan pribadi?",
+    options: ["Untuk melindungi dari risiko finansial mendadak", "Untuk menambah pendapatan", "Untuk meningkatkan utang", "Untuk mengurangi likuiditas"],
+    answer: 0
+  },
+  {
+    question: "Jika inflasi 5% per tahun, apa dampak terhadap daya beli dalam 10 tahun?",
+    options: ["Daya beli turun", "Daya beli naik", "Tidak berubah", "Utang hilang"],
+    answer: 0
+  },
+  {
+    question: "Apa tujuan utama membuat anggaran keuangan pribadi?",
+    options: ["Mengontrol pengeluaran dan mengatur prioritas keuangan", "Mengurangi aset", "Menambah utang", "Menghilangkan tabungan"],
+    answer: 0
+  },
+  {
+    question: "Mengapa penting menghitung rasio beban utang (debt service ratio)?",
+    options: ["Untuk mengetahui kemampuan membayar cicilan", "Untuk menambah tabungan", "Untuk meningkatkan inflasi", "Untuk mengurangi aset"],
+    answer: 0
+  },
+  {
+    question: "Apa risiko terbesar jika tidak memiliki dana darurat?",
+    options: ["Kesulitan menghadapi keadaan darurat finansial", "Utang otomatis berkurang", "Pengeluaran lebih kecil", "Investasi selalu untung"],
+    answer: 0
+  },
+  {
+    question: "Bagaimana cara mengelola risiko dalam investasi?",
+    options: ["Dengan diversifikasi portofolio", "Dengan mengambil semua utang", "Dengan menabung tanpa rencana", "Dengan mengurangi tabungan"],
+    answer: 0
+  },
+  {
+    question: "Mengapa memiliki utang konsumtif berlebihan berbahaya?",
+    options: ["Meningkatkan beban keuangan dan mengurangi tabungan", "Meningkatkan nilai aset", "Mengurangi inflasi", "Meningkatkan solvabilitas"],
+    answer: 0
+  },
+  {
+    question: "Apa arti passive income dalam keuangan pribadi?",
+    options: ["Pendapatan dari aset/investasi tanpa harus bekerja aktif", "Pendapatan utama dari pekerjaan", "Pengeluaran bulanan", "Dana darurat"],
+    answer: 0
+  },
+  {
+    question: "Bagaimana cara melindungi keuangan pribadi dari inflasi?",
+    options: ["Berinvestasi pada aset produktif", "Meningkatkan utang", "Menyimpan semua uang di rumah", "Mengurangi diversifikasi"],
+    answer: 0
+  },
+  {
+    question: "Mengapa perencanaan pensiun harus dilakukan sejak dini?",
+    options: ["Untuk memanfaatkan compound interest", "Untuk menambah utang", "Untuk mengurangi pendapatan", "Untuk menghindari tabungan"],
+    answer: 0
+  },
+  {
+    question: "Apa itu compound interest?",
+    options: ["Bunga berbunga yang menambah nilai investasi dari waktu ke waktu", "Bunga yang selalu tetap", "Pengeluaran bulanan", "Rasio utang"],
+    answer: 0
+  },
+  {
+    question: "Mengapa aset tidak likuid seperti properti kurang cocok untuk dana darurat?",
+    options: ["Sulit dicairkan dengan cepat", "Selalu rugi", "Tidak memiliki nilai", "Meningkatkan pendapatan langsung"],
+    answer: 0
+  },
+  {
+    question: "Apa fungsi utama laporan arus kas pribadi?",
+    options: ["Mengetahui pemasukan dan pengeluaran secara rinci", "Mengurangi utang", "Mengurangi tabungan", "Mengurangi aset"],
+    answer: 0
+  },
+  {
+    question: "Jika seseorang menghabiskan 70% pendapatannya untuk konsumsi, apa risikonya?",
+    options: ["Tabungan dan investasi sangat kecil", "Aset meningkat", "Utang berkurang", "Risiko inflasi hilang"],
+    answer: 0
+  },
+  {
+    question: "Bagaimana cara menilai kesehatan keuangan pribadi?",
+    options: ["Dengan menghitung rasio keuangan seperti DSR, savings ratio, dan net worth", "Dengan menambah utang", "Dengan mengurangi pendapatan", "Dengan menambah pengeluaran"],
+    answer: 0
+  },
+  {
+    question: "Apa akibat dari tidak memiliki rencana pengelolaan keuangan pribadi?",
+    options: ["Kesulitan mencapai tujuan finansial", "Peningkatan kekayaan", "Stabilitas keuangan terjamin", "Risiko utang hilang"],
+    answer: 0
+  },
+  {
+    question: "Mengapa investasi berisiko tinggi sebaiknya tidak digunakan untuk dana jangka pendek?",
+    options: ["Karena nilai investasi bisa berfluktuasi", "Karena selalu rugi", "Karena tidak memiliki bunga", "Karena inflasi hilang"],
+    answer: 0
+  },
+  {
+    question: "Apa risiko jika seseorang hanya menabung tanpa berinvestasi?",
+    options: ["Nilai uang berkurang akibat inflasi", "Uang bertambah lebih cepat", "Risiko utang hilang", "Tabungan selalu meningkat nilainya"],
+    answer: 0
+  },
+  {
+    question: "Mengapa penting memiliki tujuan keuangan yang jelas?",
+    options: ["Agar perencanaan keuangan lebih terarah dan terukur", "Untuk menambah pengeluaran", "Untuk mengurangi pendapatan", "Untuk meningkatkan utang"],
+    answer: 0
+  },
+  {
+    question: "Apa peran anggaran dalam mencegah gaya hidup konsumtif?",
+    options: ["Membatasi pengeluaran sesuai prioritas", "Meningkatkan utang", "Mengurangi aset", "Meningkatkan pengeluaran"],
+    answer: 0
+  }
+];
+
+
+ let currentQuestion = 0;
+    const questionEl = document.getElementById("question");
+    const optionEls = [
+      document.getElementById("option0"),
+      document.getElementById("option1"),
+      document.getElementById("option2")
+    ];
+    const feedbackEl = document.getElementById("benaratausalah");
+
+    function loadQuestion() {
+      const q = quiz[currentQuestion];
+      questionEl.textContent = (currentQuestion+1) + ". " + q.question;
+      q.options.forEach((opt, i) => {
+        optionEls[i].textContent = opt;
+      });
+      feedbackEl.textContent = ""; 
+      document.querySelectorAll('input[name="answer"]').forEach(r => r.checked = false);
+    }
+
+    document.getElementById("selanjutnyabtn").addEventListener("click", () => {
+      const selected = document.querySelector('input[name="answer"]:checked');
+      if (!selected) {
+        feedbackEl.textContent = "⚠️ Pilih salah satu jawaban dulu!";
+        feedbackEl.style.color = "orange";
+        return;
+      }
+
+      const answer = parseInt(selected.value);
+      if (answer === quiz[currentQuestion].answer) {
+        feedbackEl.textContent = "✅ Jawaban benar!";
+        feedbackEl.style.color = "green";
+      } else {
+        const correctText = quiz[currentQuestion].options[quiz[currentQuestion].answer];
+        feedbackEl.textContent = "❌ Jawaban salah. Yang benar: " + correctText;
+        feedbackEl.style.color = "red";
+      }
+
+      // lanjut soal setelah 1,5 detik
+      setTimeout(() => {
+        if (currentQuestion < quiz.length - 1) {
+          currentQuestion++;
+          loadQuestion();
+        } else {
+          questionEl.textContent = "🎉 Kuis selesai!";
+          feedbackEl.textContent = "";
+          document.getElementById("selanjutnyabtn").disabled = true;
+          document.getElementById("kembalibtn").disabled = true;
+        }
+      }, 1500);
+    });
+
+    document.getElementById("kembalibtn").addEventListener("click", () => {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        loadQuestion();
+      } else {
+        feedbackEl.textContent = "Ini soal pertama!";
+        feedbackEl.style.color = "orange";
+      }
+    });
+
+    loadQuestion();
+
+</script>
+
+</style>
+
+<div id="overlay" class="hidden"></div>
+
+<script>
+  const btnKeluar = document.getElementById("keluar");
+  const warning = document.getElementById("warning");
+  const overlay = document.getElementById("overlay");
+  const btnLanjut = document.getElementById("lanjutQuiz");
+  const btnKonfirmasiKeluar = document.getElementById("konfirmasiKeluar");
+
+  // Saat klik tombol keluar → fade in popup
+  btnKeluar.addEventListener("click", () => {
+    warning.classList.add("show");
+    warning.classList.remove("hidden");
+    overlay.classList.add("show");
+    overlay.classList.remove("hidden");
+  });
+
+  // Saat klik lanjut → fade out popup
+  btnLanjut.addEventListener("click", () => {
+    warning.classList.remove("show");
+    warning.classList.add("hidden");
+    overlay.classList.remove("show");
+    overlay.classList.add("hidden");
+  });
+
+  // Saat klik keluar di dalam warning → reset quiz
+  btnKonfirmasiKeluar.addEventListener("click", () => {
+    location.reload(); // reload halaman, progress hilang
+  });
+</script>
+
+</body>
+</html>
