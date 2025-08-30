@@ -143,22 +143,34 @@ Pada akhirnya, pengetahuan keuangan bukan hanya soal menghitung angka, melainkan
             </div>
 
 <div id="popup-modal">
-  <div id="popup-content">
+  <div id="popup-content" class="active">
     <header id="popup-header">
       <span id="close-btn">&times;</span>
       <img id="popup-img" src="" alt="">
       <h3 id="popup-title"></h3>
 
       <div id="popup-buttons">
-        <button id="description">Learn More</button>
+        <button id="description">Pelajari Lanjut</button>
         <button id="quiz">Quiz</button>
       </div>
     </header>
-
     <p id="learning-material"></p>
   </div>
-</div>
 
+  <div id="extended-content">
+    <header id="extended-header">
+      <span id="closeextended-btn">&times;</span>
+      <img id="extended-img" src="" alt="">
+      <h1 id="extended-title"></h1>
+
+      <div id="extended-button">
+        <button id="back-btn">Kembali</button>
+        <button id="extended-quizbtn">Quiz</button>
+      </div>
+    </header>
+    <p id="extended-material"></p>
+  </div>
+</div>
 
         <div>
             <button id="next">></button>
@@ -357,6 +369,33 @@ window.addEventListener('click', (e) => {
 });
 </script>
 
+<script>
+const descriptionBtn = document.getElementById("description");
+const backBtn = document.getElementById("back-btn");
+
+const popupContent = document.getElementById("popup-content");
+const extendedContent = document.getElementById("extended-content");
+
+// Pelajari Lanjut → go to extended
+descriptionBtn.addEventListener("click", () => {
+  // Copy image, title, and learning material
+  document.getElementById("extended-img").src = document.getElementById("popup-img").src;
+  document.getElementById("extended-img").alt = document.getElementById("popup-img").alt;
+  document.getElementById("extended-title").textContent = document.getElementById("popup-title").textContent;
+  document.getElementById("extended-material").textContent = document.getElementById("learning-material").textContent;
+
+  // Switch views
+  popupContent.classList.remove("active");
+  extendedContent.classList.add("active");
+});
+
+// Kembali → go back to popup
+backBtn.addEventListener("click", () => {
+  extendedContent.classList.remove("active");
+  popupContent.classList.add("active");
+});
+
+</script>
 
 
 

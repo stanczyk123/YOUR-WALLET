@@ -418,21 +418,107 @@ color: white;
       visibility: hidden;
       transition: opacity 0.4s ease;
     }
-
-#popup-content {
-  background-color: rgb(37, 37, 37);
+#popup-content,
+#extended-content {
+  background: #252525;
   border-radius: 12px;
-  max-width: 90%;
-  max-height: 90%;
-  overflow: auto;
-  text-align: center;
   width: 700px;
   height: 600px;
-  transform: scale(0.55);
-  transition: transform 0.4s ease;
-  overflow-x: hidden;
-  position: relative;
-  padding: 0; /* remove padding so header spans full width */
+  overflow: auto;
+  padding: 1.5rem;
+  position: absolute;
+  transform: scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+/* Show active content */
+#popup-content.active,
+#extended-content.active {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+#extended-content{
+    width: 800px;
+    height: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#extended-header{
+    background-color: rgb(63, 63, 63);
+    height: 200px;
+    width: 100%;          /* Make it span full width of popup */
+    position: relative;   /* Keep it inside popup instead of fixed */
+    top: 0;
+    left: 0;
+    border-bottom-left-radius: 12px;   /* match popup’s rounded corners */
+    border-bottom-right-radius: 12px;    
+}
+
+#closeextended-btn{
+    position: absolute;
+    top: 1rem;
+    left: 730px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;    
+}
+
+#extended-img{
+    width: 300px;
+    position: relative;
+    left: -270px;
+    top:70px;
+}
+
+#extended-title{
+    position: relative;
+    font-size: xx-large;
+    top: -250px;
+}
+
+#extended-button{
+    position: relative;
+    top: -230px;
+    cursor: pointer;
+}
+
+#extended-material{
+    position: relative;
+    top: 100px;
+    max-width: 700px;
+    
+}
+
+
+#back-btn{
+    cursor: pointer;
+    background-color: rgb(63, 63, 63);
+    border: none;
+    color: white;
+    padding-bottom: 3px; /* space for the underline */
+    font-size: x-large;
+    font-family: "roboto";
+    position: relative;
+}
+
+#extended-quizbtn{
+    font-size: x-large;
+    font-family: "roboto";
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(63, 63, 63);
+    border: none;
+    color: white;
+    padding-bottom: 3px; /* space for the underline */ 
+    margin-left: 50px;   
 }
 
 
@@ -476,8 +562,8 @@ color: white;
     position: relative;   /* Keep it inside popup instead of fixed */
     top: 0;
     left: 0;
-    border-top-left-radius: 12px;   /* match popup’s rounded corners */
-    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;   /* match popup’s rounded corners */
+    border-bottom-right-radius: 12px;
 }
 
 #description {
