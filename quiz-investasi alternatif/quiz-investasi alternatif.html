@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz investasi pemula</title>
-    <link rel="stylesheet" href="quiz-perencanaan-anggaran-sulit.css">
+    <title>Investasi Alternatif</title>
+    <link rel="stylesheet" href="quiz-investasi alternatif.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicons/walletFav.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-  <img src="/favicons/cloud1.png" id="cloud1">
+    <img src="/favicons/cloud1.png" id="cloud1">
   <img src="/favicons/cloud2.png" id="cloud2">
   <img src="/favicons/cloud1.png" id="cloud3">
   <img src="/favicons/cloud2.png" id="cloud4">
@@ -53,7 +52,7 @@
     <h2>Anda yakin ingin keluar dari quiz ini?</h2>
     <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
     <button id="lanjutQuiz">Lanjut</button>
-    <a href="/perencanaan-budget/perencanaan-budget.html">
+    <a href="/Index.html">
         <button id="konfirmasiKeluar">Keluar</button>
     </a>
   </div>
@@ -61,263 +60,290 @@
 <script>
 const quiz = [
   {
-    question: "Mengapa perencanaan anggaran harus mempertimbangkan faktor inflasi jangka panjang?",
+    question: "Apa yang dimaksud dengan investasi alternatif?",
     options: [
-      "Karena inflasi menurunkan nilai uang",
-      "Karena inflasi meningkatkan daya beli",
-      "Karena inflasi membuat harga tetap stabil"
+      "Investasi di luar instrumen tradisional dengan karakteristik unik",
+      "Investasi di saham, obligasi, dan deposito",
+      "Investasi jangka pendek pada pasar modal"
     ],
     answer: 0
   },
   {
-    question: "Bagaimana cara mengantisipasi pengeluaran darurat dalam perencanaan anggaran?",
+    question: "Tujuan utama dari investasi alternatif adalah...",
     options: [
-      "Menyediakan dana darurat terpisah",
-      "Menggunakan pinjaman saja",
-      "Mengurangi kebutuhan pokok"
-    ],
-    answer: 0
-  },
-  {
-    question: "Mengapa alokasi anggaran untuk investasi jangka panjang penting?",
-    options: [
-      "Untuk menjaga likuiditas jangka pendek",
-      "Untuk meningkatkan nilai aset di masa depan",
-      "Untuk mengurangi pengeluaran bulanan"
+      "Hanya untuk mendapatkan keuntungan besar",
+      "Mengurangi risiko portofolio yang bergantung pada pasar tradisional",
+      "Mengurangi modal yang dibutuhkan"
     ],
     answer: 1
   },
   {
-    question: "Bagaimana cara menyeimbangkan antara kebutuhan, keinginan, dan tabungan dalam anggaran?",
+    question: "Salah satu karakteristik investasi alternatif adalah...",
     options: [
-      "Mengalokasikan dana sesuai skema 50-30-20",
-      "Mengalokasikan seluruh dana untuk kebutuhan",
-      "Mendahulukan keinginan daripada tabungan"
+      "Jangka waktu investasi lebih pendek",
+      "Perlu pengetahuan khusus untuk menilai keuntungan",
+      "Risikonya selalu lebih rendah"
+    ],
+    answer: 1
+  },
+  {
+    question: "Contoh investasi alternatif adalah...",
+    options: [
+      "Properti dan barang koleksi",
+      "Deposito bank",
+      "Tabungan harian"
     ],
     answer: 0
   },
   {
-    question: "Mengapa melakukan evaluasi anggaran secara berkala diperlukan?",
+    question: "Keuntungan dari investasi properti antara lain...",
     options: [
-      "Untuk menyesuaikan anggaran dengan perubahan kondisi",
-      "Agar tidak perlu membuat anggaran baru",
-      "Agar lebih boros dalam keuangan"
+      "Potensi nilai aset meningkat seiring waktu",
+      "Likuiditas lebih tinggi dibanding saham",
+      "Bebas risiko kerugian"
     ],
     answer: 0
   },
   {
-    question: "Jika pengeluaran selalu lebih besar dari pendapatan, apa langkah strategis pertama?",
+    question: "Kekurangan dari investasi properti adalah...",
     options: [
-      "Mengurangi atau menghapuskan pos pengeluaran non-prioritas",
-      "Mengabaikan masalah",
-      "Menambah pengeluaran lagi"
+      "Mudah dijual kapan saja",
+      "Membutuhkan modal besar dan tidak likuid",
+      "Tidak memerlukan perawatan aset"
+    ],
+    answer: 1
+  },
+  {
+    question: "Investasi pada barang koleksi cenderung...",
+    options: [
+      "Dipengaruhi oleh tren dan selera pasar",
+      "Selalu memberikan keuntungan tinggi",
+      "Memiliki risiko yang sangat kecil"
     ],
     answer: 0
   },
   {
-    question: "Apa tujuan utama dari diversifikasi dalam anggaran investasi?",
+    question: "Contoh barang koleksi yang dijadikan investasi adalah...",
     options: [
-      "Mengurangi risiko kerugian",
-      "Meningkatkan konsumsi",
-      "Mengurangi tabungan"
+      "Lukisan, koin langka, dan mobil klasik",
+      "Emas batangan",
+      "Obligasi pemerintah"
     ],
     answer: 0
   },
   {
-    question: "Mengapa penting memiliki prioritas dalam menyusun perencanaan anggaran?",
+    question: "Investasi alternatif seringkali...",
     options: [
-      "Agar dapat fokus pada pengeluaran yang mendesak",
-      "Supaya semua pengeluaran sama penting",
-      "Untuk mengurangi pendapatan"
+      "Tidak tersedia untuk semua orang karena keterbatasan akses",
+      "Selalu lebih aman daripada deposito",
+      "Tidak memerlukan pengetahuan khusus"
     ],
     answer: 0
   },
   {
-    question: "Apa dampak jika seseorang tidak memiliki rencana anggaran?",
+    question: "Hedge fund merupakan contoh...",
     options: [
-      "Sering mengalami kesulitan keuangan",
-      "Pendapatan otomatis meningkat",
-      "Semua kebutuhan pasti terpenuhi"
+      "Investasi tradisional",
+      "Investasi alternatif",
+      "Simpanan jangka pendek"
+    ],
+    answer: 1
+  },
+  {
+    question: "Ciri utama dari hedge fund adalah...",
+    options: [
+      "Menggunakan strategi beragam dengan tujuan keuntungan tinggi",
+      "Tidak menggunakan manajer investasi",
+      "Risikonya lebih kecil daripada tabungan"
     ],
     answer: 0
   },
   {
-    question: "Mengapa penting mencatat setiap pemasukan dan pengeluaran?",
+    question: "Private equity berarti investasi pada...",
     options: [
-      "Untuk melacak arus kas dan evaluasi anggaran",
-      "Untuk mengurangi jumlah tabungan",
-      "Agar semua uang habis"
+      "Perusahaan yang belum terdaftar di bursa",
+      "Saham perusahaan publik",
+      "Deposito berjangka"
     ],
     answer: 0
   },
   {
-    question: "Bagaimana anggaran dapat membantu seseorang mencapai tujuan jangka panjang?",
+    question: "Salah satu keuntungan private equity adalah...",
     options: [
-      "Dengan menyediakan arah penggunaan dana",
-      "Dengan membatasi pendapatan",
-      "Dengan menghapus tabungan"
+      "Potensi imbal hasil tinggi jika perusahaan berkembang",
+      "Likuiditas tinggi",
+      "Bebas risiko kerugian"
     ],
     answer: 0
   },
   {
-    question: "Apa perbedaan antara anggaran statis dan anggaran fleksibel?",
+    question: "Risiko terbesar dari private equity adalah...",
     options: [
-      "Anggaran statis tidak berubah, anggaran fleksibel menyesuaikan kondisi",
-      "Anggaran statis selalu berubah, fleksibel tidak pernah berubah",
-      "Tidak ada perbedaan"
+      "Perusahaan gagal berkembang sehingga investasi hilang",
+      "Likuiditas yang sangat tinggi",
+      "Nilai selalu naik tanpa risiko"
     ],
     answer: 0
   },
   {
-    question: "Apa akibat jika dana darurat tidak disiapkan dalam perencanaan anggaran?",
+    question: "Reksa dana pasar uang termasuk...",
     options: [
-      "Mengandalkan pinjaman yang berisiko",
-      "Lebih hemat",
-      "Pengeluaran tetap terkendali"
+      "Instrumen investasi tradisional",
+      "Jenis investasi alternatif",
+      "Barang koleksi"
     ],
     answer: 0
   },
   {
-    question: "Mengapa perlu menetapkan target keuangan dalam perencanaan anggaran?",
+    question: "Komoditas seperti emas dan minyak sering dianggap...",
     options: [
-      "Agar ada motivasi dan arah dalam pengelolaan keuangan",
-      "Agar bisa berbelanja lebih banyak",
-      "Agar kebutuhan selalu diabaikan"
+      "Instrumen investasi alternatif",
+      "Instrumen dengan risiko nol",
+      "Instrumen tradisional jangka panjang"
     ],
     answer: 0
   },
   {
-    question: "Bagaimana anggaran dapat membantu mengurangi risiko utang konsumtif?",
+    question: "Investasi pada emas memiliki keunggulan dalam...",
     options: [
-      "Dengan membatasi pengeluaran sesuai kemampuan",
-      "Dengan menunda tabungan",
-      "Dengan menghapus kebutuhan pokok"
+      "Melindungi nilai kekayaan dari inflasi",
+      "Selalu menghasilkan dividen",
+      "Tidak ada fluktuasi harga"
     ],
     answer: 0
   },
   {
-    question: "Apa langkah strategis ketika pendapatan tidak stabil?",
+    question: "Kelemahan dari investasi komoditas adalah...",
     options: [
-      "Membuat anggaran fleksibel dan menambah tabungan darurat",
-      "Menghabiskan uang ketika ada",
-      "Mengandalkan kartu kredit"
+      "Harganya dipengaruhi kondisi global",
+      "Selalu naik tanpa risiko",
+      "Tidak ada biaya transaksi"
     ],
     answer: 0
   },
   {
-    question: "Mengapa pengendalian emosi berperan penting dalam perencanaan anggaran?",
+    question: "Crowdfunding merupakan...",
     options: [
-      "Karena keputusan emosional sering menimbulkan pemborosan",
-      "Karena emosi membuat pendapatan naik",
-      "Karena emosi tidak berhubungan dengan keuangan"
+      "Metode investasi dengan mengumpulkan dana dari banyak orang",
+      "Penyimpanan uang di bank",
+      "Asuransi kesehatan"
     ],
     answer: 0
   },
   {
-    question: "Apa yang dimaksud dengan opportunity cost dalam perencanaan anggaran?",
+    question: "Keuntungan dari crowdfunding investasi adalah...",
     options: [
-      "Biaya yang muncul akibat memilih satu pilihan dan mengorbankan yang lain",
-      "Biaya tambahan hiburan",
-      "Biaya tetap bulanan"
+      "Akses mudah untuk investor kecil",
+      "Tidak ada risiko gagal",
+      "Likuiditas selalu tinggi"
     ],
     answer: 0
   },
   {
-    question: "Mengapa anggaran investasi tidak boleh diambil dari dana darurat?",
+    question: "Kekurangan crowdfunding adalah...",
     options: [
-      "Karena dana darurat bersifat likuid dan untuk kebutuhan mendesak",
-      "Karena dana darurat hanya untuk hiburan",
-      "Karena dana darurat dapat diabaikan"
+      "Risiko proyek gagal",
+      "Selalu menguntungkan",
+      "Tidak membutuhkan riset"
     ],
     answer: 0
   },
   {
-    question: "Bagaimana cara membedakan kebutuhan dan keinginan dalam anggaran?",
+    question: "Cryptocurrency adalah...",
     options: [
-      "Kebutuhan adalah hal pokok, keinginan bersifat tambahan",
-      "Kebutuhan sama dengan hiburan",
-      "Keinginan lebih penting daripada kebutuhan"
+      "Mata uang digital berbasis teknologi blockchain",
+      "Mata uang resmi negara",
+      "Surat berharga pemerintah"
     ],
     answer: 0
   },
   {
-    question: "Mengapa perlu membuat proyeksi jangka panjang dalam anggaran?",
+    question: "Kelebihan cryptocurrency adalah...",
     options: [
-      "Untuk memastikan kestabilan keuangan masa depan",
-      "Untuk menambah pengeluaran konsumsi",
-      "Agar selalu berutang"
+      "Transaksi cepat dan bersifat global",
+      "Selalu stabil tanpa fluktuasi",
+      "Dilindungi pemerintah sepenuhnya"
     ],
     answer: 0
   },
   {
-    question: "Bagaimana cara menilai efektivitas perencanaan anggaran?",
+    question: "Risiko cryptocurrency yang utama adalah...",
     options: [
-      "Dengan membandingkan realisasi keuangan dengan rencana",
-      "Dengan mengabaikan pencatatan",
-      "Dengan menghabiskan semua uang"
+      "Volatilitas harga sangat tinggi",
+      "Dijamin aman oleh bank",
+      "Tidak dipengaruhi pasar"
     ],
     answer: 0
   },
   {
-    question: "Mengapa penting untuk disiplin terhadap rencana anggaran?",
+    question: "NFT (Non-Fungible Token) biasanya digunakan untuk...",
     options: [
-      "Agar tujuan keuangan dapat tercapai",
-      "Agar lebih mudah boros",
-      "Agar tabungan berkurang"
+      "Membuktikan kepemilikan karya digital",
+      "Tabungan di bank",
+      "Saham perusahaan publik"
     ],
     answer: 0
   },
   {
-    question: "Bagaimana cara menyesuaikan anggaran ketika pendapatan menurun?",
+    question: "Karakteristik NFT adalah...",
     options: [
-      "Mengurangi pos pengeluaran non-prioritas",
-      "Meningkatkan pengeluaran hiburan",
-      "Mengabaikan kebutuhan pokok"
+      "Unik dan tidak dapat diganti dengan aset lain",
+      "Selalu sama dengan token lain",
+      "Dikeluarkan oleh bank sentral"
     ],
     answer: 0
   },
   {
-    question: "Mengapa dana pensiun perlu dimasukkan dalam perencanaan anggaran?",
+    question: "Risiko dari NFT adalah...",
     options: [
-      "Untuk menjamin keuangan di masa tua",
-      "Untuk memperbesar utang",
-      "Untuk mengurangi pendapatan"
+      "Nilai sangat bergantung pada permintaan pasar",
+      "Tidak ada risiko sama sekali",
+      "Selalu memiliki harga minimum"
     ],
     answer: 0
   },
   {
-    question: "Apa risiko utama jika perencanaan anggaran hanya fokus pada jangka pendek?",
+    question: "Diversifikasi portofolio berarti...",
     options: [
-      "Tidak siap menghadapi kebutuhan jangka panjang",
-      "Investasi selalu meningkat",
-      "Pengeluaran lebih stabil"
+      "Menyebar investasi ke berbagai instrumen untuk mengurangi risiko",
+      "Hanya menaruh uang di satu aset saja",
+      "Mengurangi keuntungan dengan sengaja"
     ],
     answer: 0
   },
   {
-    question: "Mengapa perencanaan anggaran harus realistis?",
+    question: "Mengapa investasi alternatif cocok untuk diversifikasi?",
     options: [
-      "Agar dapat dilaksanakan sesuai kemampuan",
-      "Agar kebutuhan diabaikan",
-      "Agar tabungan tidak ada"
+      "Karena tidak selalu mengikuti pergerakan pasar tradisional",
+      "Karena tidak memerlukan modal",
+      "Karena selalu bebas risiko"
     ],
     answer: 0
   },
   {
-    question: "Bagaimana cara anggaran membantu meningkatkan kesehatan finansial?",
+    question: "Likuiditas rendah pada investasi alternatif berarti...",
     options: [
-      "Dengan mengendalikan pengeluaran, menambah tabungan, dan mengurangi utang",
-      "Dengan meningkatkan belanja impulsif",
-      "Dengan mengabaikan pendapatan"
+      "Sulit untuk cepat dicairkan menjadi uang tunai",
+      "Mudah dijual kapan saja",
+      "Tidak ada biaya transaksi"
     ],
     answer: 0
   },
   {
-    question: "Apa peran teknologi dalam perencanaan anggaran modern?",
+    question: "Sebelum berinvestasi pada alternatif, investor perlu...",
     options: [
-      "Membantu mencatat, memantau, dan menganalisis keuangan lebih mudah",
-      "Menghapus kebutuhan membuat anggaran",
-      "Menambah pengeluaran tidak terkontrol"
+      "Memahami risiko dan melakukan riset mendalam",
+      "Hanya ikut-ikutan tren",
+      "Tidak perlu pertimbangan khusus"
+    ],
+    answer: 0
+  },
+  {
+    question: "Peran teknologi dalam investasi alternatif adalah...",
+    options: [
+      "Memudahkan akses ke instrumen baru seperti crowdfunding dan crypto",
+      "Menghilangkan semua risiko",
+      "Menjamin keuntungan"
     ],
     answer: 0
   }
@@ -421,7 +447,6 @@ const quiz = [
   btnKonfirmasiKeluar.addEventListener("click", () => {
     location.reload(); // reload halaman, progress hilang
   });
-</script>
-
+</script>      
 </body>
 </html>

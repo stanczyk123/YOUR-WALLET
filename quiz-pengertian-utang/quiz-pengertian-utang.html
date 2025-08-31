@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz investasi pemula</title>
-    <link rel="stylesheet" href="quiz-personal-management-pemula.css">
+    <title>Quiz Perngertian Utang</title>
+    <link rel="stylesheet" href="quiz-pengertian-utang.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicons/walletFav.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
-
+   
 </head>
 <body>
-  <img src="/favicons/cloud1.png" id="cloud1">
+    <img src="/favicons/cloud1.png" id="cloud1">
   <img src="/favicons/cloud2.png" id="cloud2">
   <img src="/favicons/cloud1.png" id="cloud3">
   <img src="/favicons/cloud2.png" id="cloud4">
@@ -53,7 +53,7 @@
     <h2>Anda yakin ingin keluar dari quiz ini?</h2>
     <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
     <button id="lanjutQuiz">Lanjut</button>
-    <a href="/personal-management/personal-management.html">
+    <a href="/Index.html">
         <button id="konfirmasiKeluar">Keluar</button>
     </a>
   </div>
@@ -61,156 +61,241 @@
 <script>
 const quiz = [
   {
-    question: "Apa yang dimaksud dengan anggaran keuangan pribadi?",
-    options: ["Rencana belanja dan pemasukan", "Catatan nilai mata uang", "Laporan perusahaan"],
+    question: "Apa yang dimaksud dengan utang?",
+    options: [
+      "Kewajiban finansial kepada pihak lain yang harus dibayar kembali dalam jangka waktu tertentu",
+      "Dana simpanan untuk masa depan",
+      "Kewajiban finansial yang tidak perlu dibayar"
+    ],
     answer: 0
   },
   {
-    question: "Mengapa penting membuat anggaran bulanan?",
-    options: ["Untuk mengatur pemasukan dan pengeluaran", "Supaya tidak menabung", "Untuk membeli barang mewah"],
-    answer: 0
-  },
-  {
-    question: "Apa yang sebaiknya dilakukan dengan uang sisa gaji?",
-    options: ["Dihabiskan untuk hiburan", "Ditabung atau diinvestasikan", "Dipinjamkan ke semua orang"],
+    question: "Apa yang biasanya menyertai perjanjian utang?",
+    options: [
+      "Hadiah dan bonus",
+      "Bunga atau syarat tertentu",
+      "Tabungan tambahan"
+    ],
     answer: 1
   },
   {
-    question: "Contoh kebutuhan pokok adalah...",
-    options: ["Makan dan tempat tinggal", "Mainan", "Liburan mewah"],
+    question: "Utang Jangka Pendek biasanya memiliki jangka waktu pelunasan kurang dari?",
+    options: ["6 bulan", "1 tahun", "5 tahun"],
+    answer: 1
+  },
+  {
+    question: "Contoh utang jangka pendek adalah?",
+    options: ["Kredit pemilikan rumah", "Utang tagihan listrik dan air", "Kredit kendaraan bermotor"],
+    answer: 1
+  },
+  {
+    question: "Utang Jangka Panjang memiliki periode pelunasan lebih dari?",
+    options: ["1 tahun", "3 tahun", "6 bulan"],
     answer: 0
   },
   {
-    question: "Contoh keinginan adalah...",
-    options: ["Makan sehari-hari", "Bayar listrik", "Beli baju baru setiap minggu"],
+    question: "Kredit pemilikan rumah (KPR) termasuk jenis?",
+    options: ["Utang konsumtif", "Utang darurat", "Utang jangka panjang"],
     answer: 2
   },
   {
-    question: "Mengapa penting membedakan kebutuhan dan keinginan?",
-    options: ["Agar tahu prioritas pengeluaran", "Agar uang cepat habis", "Supaya bisa berutang lebih banyak"],
+    question: "Utang Konsumtif digunakan untuk?",
+    options: [
+      "Membiayai kebutuhan konsumsi atau gaya hidup",
+      "Membeli aset produktif",
+      "Membangun usaha"
+    ],
     answer: 0
   },
   {
-    question: "Apa manfaat menabung di bank?",
-    options: ["Uang lebih aman", "Uang hilang", "Lebih boros"],
-    answer: 0
-  },
-  {
-    question: "Apa itu tabungan darurat?",
-    options: ["Uang untuk jajan", "Dana untuk keperluan mendadak", "Dana untuk pesta"],
+    question: "Contoh utang konsumtif adalah?",
+    options: [
+      "Pinjaman untuk modal usaha",
+      "Utang kartu kredit untuk membeli gadget",
+      "Kredit pemilikan rumah"
+    ],
     answer: 1
   },
   {
-    question: "Berapa persen idealnya menabung dari gaji?",
-    options: ["10-20%", "50%", "0%"],
+    question: "Utang Produktif digunakan untuk?",
+    options: [
+      "Biaya liburan",
+      "Kegiatan yang menghasilkan keuntungan atau aset di masa depan",
+      "Membeli barang mewah"
+    ],
+    answer: 1
+  },
+  {
+    question: "Contoh utang produktif adalah?",
+    options: [
+      "Pinjaman untuk modal usaha",
+      "Utang kartu kredit untuk belanja fashion",
+      "Pinjaman untuk liburan"
+    ],
     answer: 0
   },
   {
-    question: "Apa manfaat investasi?",
-    options: ["Nilai uang bisa berkembang", "Uang jadi hilang", "Uang cepat habis"],
+    question: "Apa fungsi utama utang dalam kondisi darurat?",
+    options: [
+      "Sebagai alat memenuhi kebutuhan mendesak ketika dana tidak mencukupi",
+      "Sebagai investasi jangka panjang",
+      "Sebagai cara menambah tabungan"
+    ],
     answer: 0
   },
   {
-    question: "Contoh investasi jangka panjang adalah...",
-    options: ["Beli properti", "Beli makanan", "Beli tiket bioskop"],
+    question: "Utang produktif dapat menjadi leverage yang menguntungkan jika?",
+    options: [
+      "Menghasilkan return lebih tinggi dari biaya pinjaman",
+      "Dikelola sembarangan",
+      "Digunakan untuk konsumsi"
+    ],
     answer: 0
   },
   {
-    question: "Apa yang dimaksud dengan hutang produktif?",
-    options: ["Hutang untuk usaha atau pendidikan", "Hutang untuk liburan", "Hutang untuk beli baju"],
+    question: "Utang dapat membantu mengelola arus kas, terutama bagi?",
+    options: [
+      "Bisnis yang stabil",
+      "Bisnis dengan fluktuasi pendapatan",
+      "Investor besar"
+    ],
+    answer: 1
+  },
+  {
+    question: "Debt-to-income ratio idealnya tidak melebihi?",
+    options: ["20-25%", "30-36%", "50%"],
+    answer: 1
+  },
+  {
+    question: "Utang konsumtif dengan bunga tinggi yang harus diprioritaskan untuk dilunasi adalah?",
+    options: ["Kredit rumah", "Pinjaman pendidikan", "Kartu kredit"],
+    answer: 2
+  },
+  {
+    question: "Apa itu strategi debt snowball?",
+    options: [
+      "Melunasi utang terkecil dulu untuk motivasi psikologis",
+      "Melunasi utang terbesar terlebih dahulu",
+      "Tidak membayar utang"
+    ],
     answer: 0
   },
   {
-    question: "Mengapa perlu mencatat pengeluaran?",
-    options: ["Agar tahu kemana uang dipakai", "Agar uang cepat habis", "Supaya tidak menabung"],
+    question: "Apa itu strategi debt avalanche?",
+    options: [
+      "Melunasi utang berbunga tertinggi dulu",
+      "Melunasi utang terkecil dulu",
+      "Melunasi tanpa perencanaan"
+    ],
     answer: 0
   },
   {
-    question: "Apa tujuan memiliki asuransi?",
-    options: ["Perlindungan dari risiko finansial", "Agar uang cepat habis", "Supaya bisa berutang"],
+    question: "Menggunakan utang untuk gaya hidup di luar kemampuan termasuk?",
+    options: [
+      "Utang konsumtif yang tidak sehat",
+      "Investasi produktif",
+      "Perencanaan matang"
+    ],
     answer: 0
   },
   {
-    question: "Jika gaji Rp3.000.000, berapa minimal tabungan (10%)?",
-    options: ["Rp300.000", "Rp30.000", "Rp1.500.000"],
+    question: "Dana darurat diperlukan agar?",
+    options: [
+      "Tidak tergantung utang untuk kebutuhan mendesak",
+      "Bisa belanja konsumtif",
+      "Membayar bunga lebih tinggi"
+    ],
     answer: 0
   },
   {
-    question: "Apa itu inflasi?",
-    options: ["Kenaikan harga barang", "Penurunan harga barang", "Nilai gaji meningkat"],
+    question: "Utang bukan hanya pinjaman uang, tetapi juga?",
+    options: [
+      "Bentuk tanggung jawab hukum dan moral",
+      "Dana darurat",
+      "Sumber pendapatan"
+    ],
     answer: 0
   },
   {
-    question: "Mengapa inflasi berbahaya bagi uang?",
-    options: ["Nilai uang jadi berkurang", "Nilai uang bertambah", "Gaji lebih tinggi"],
+    question: "Utang jangka panjang biasanya melibatkan?",
+    options: [
+      "Jumlah dana kecil",
+      "Jumlah dana besar dan periode panjang",
+      "Tanpa bunga"
+    ],
+    answer: 1
+  },
+  {
+    question: "Mengapa utang konsumtif berisiko?",
+    options: [
+      "Karena tidak menghasilkan aset produktif",
+      "Karena mudah dilunasi",
+      "Karena tidak memiliki bunga"
+    ],
     answer: 0
   },
   {
-    question: "Apa itu gaya hidup hemat?",
-    options: ["Mengatur pengeluaran dengan bijak", "Menghabiskan semua uang", "Boros dalam belanja"],
+    question: "Pinjaman pendidikan dapat digolongkan sebagai?",
+    options: ["Utang konsumtif", "Utang produktif", "Utang darurat"],
+    answer: 1
+  },
+  {
+    question: "Menggunakan utang untuk investasi properti termasuk?",
+    options: ["Utang produktif", "Utang konsumtif", "Utang jangka pendek"],
     answer: 0
   },
   {
-    question: "Contoh pengeluaran rutin bulanan adalah...",
-    options: ["Listrik dan air", "Liburan ke luar negeri", "Pesta ulang tahun"],
+    question: "Utang dapat mempercepat pencapaian tujuan finansial jika?",
+    options: [
+      "Return lebih tinggi dari bunga",
+      "Tidak ada dana darurat",
+      "Tidak memiliki rencana pelunasan"
+    ],
     answer: 0
   },
   {
-    question: "Apa manfaat mencatat pemasukan?",
-    options: ["Tahu dari mana uang berasal", "Membuat uang hilang", "Meningkatkan pengeluaran"],
+    question: "Fungsi utang dalam bisnis dengan arus kas fluktuatif adalah?",
+    options: [
+      "Menjembatani kesenjangan pengeluaran dan penerimaan",
+      "Meningkatkan risiko",
+      "Mengurangi laba"
+    ],
     answer: 0
   },
   {
-    question: "Apa itu prioritas keuangan?",
-    options: ["Hal yang paling penting digunakan uang", "Semua barang yang diinginkan", "Tidak menabung"],
+    question: "Utang dengan bunga rendah umumnya adalah?",
+    options: ["Utang konsumtif", "Utang produktif", "Utang jangka pendek"],
+    answer: 1
+  },
+  {
+    question: "Salah satu risiko utang jangka panjang adalah?",
+    options: [
+      "Berdampak signifikan pada cash flow jangka panjang",
+      "Tidak perlu perencanaan",
+      "Tidak ada bunga"
+    ],
     answer: 0
   },
   {
-    question: "Apa contoh pengeluaran tidak terduga?",
-    options: ["Biaya berobat mendadak", "Bayar listrik bulanan", "Beli beras"],
+    question: "Mengapa penting membuat perencanaan sebelum berutang?",
+    options: [
+      "Agar sesuai kemampuan bayar dan rencana realistis",
+      "Agar utang digunakan untuk konsumsi",
+      "Agar utang tidak dilunasi"
+    ],
     answer: 0
   },
   {
-    question: "Apa manfaat membandingkan harga sebelum membeli?",
-    options: ["Menghemat uang", "Membuat lebih boros", "Meningkatkan hutang"],
-    answer: 0
-  },
-  {
-    question: "Apa itu pendapatan pasif?",
-    options: ["Uang dari investasi atau usaha tanpa kerja aktif", "Uang gaji utama", "Uang pinjaman"],
-    answer: 0
-  },
-  {
-    question: "Jika seseorang selalu berutang untuk keinginan, akibatnya?",
-    options: ["Keuangan tidak sehat", "Tabungan bertambah", "Lebih kaya"],
-    answer: 0
-  },
-  {
-    question: "Apa langkah pertama untuk mengelola uang dengan baik?",
-    options: ["Membuat anggaran", "Membeli barang mahal", "Menghabiskan gaji"],
-    answer: 0
-  },
-  {
-    question: "Apa itu rekening tabungan?",
-    options: ["Tempat menyimpan uang di bank", "Tempat belanja online", "Tempat berhutang"],
-    answer: 0
-  },
-  {
-    question: "Mengapa penting menabung sejak dini?",
-    options: ["Agar terbiasa disiplin keuangan", "Supaya cepat berutang", "Agar uang cepat habis"],
-    answer: 0
-  },
-  {
-    question: "Apa manfaat punya tujuan keuangan?",
-    options: ["Agar lebih terarah dalam menggunakan uang", "Untuk berutang lebih banyak", "Supaya tidak menabung"],
-    answer: 0
-  },
-  {
-    question: "Apa arti hidup sesuai kemampuan?",
-    options: ["Menggunakan uang sesuai penghasilan", "Berhutang untuk gaya hidup", "Menghabiskan tabungan"],
+    question: "Utang sebagai leverage dapat mempercepat?",
+    options: [
+      "Pencapaian tujuan finansial",
+      "Pengeluaran konsumtif",
+      "Ketergantungan pada bunga"
+    ],
     answer: 0
   }
 ];
+
 
 
  let currentQuestion = 0;
@@ -309,7 +394,6 @@ const quiz = [
   btnKonfirmasiKeluar.addEventListener("click", () => {
     location.reload(); // reload halaman, progress hilang
   });
-</script>
-
+</script>  
 </body>
 </html>

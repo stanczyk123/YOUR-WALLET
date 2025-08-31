@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz investasi pemula</title>
-    <link rel="stylesheet" href="quiz-personal-management-pemula.css">
+    <title>Quiz Rencana Pensiun</title>
+    <link rel="stylesheet" href="quiz-rencana-pensiun.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicons/walletFav.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-  <img src="/favicons/cloud1.png" id="cloud1">
+    <img src="/favicons/cloud1.png" id="cloud1">
   <img src="/favicons/cloud2.png" id="cloud2">
   <img src="/favicons/cloud1.png" id="cloud3">
   <img src="/favicons/cloud2.png" id="cloud4">
@@ -53,7 +52,7 @@
     <h2>Anda yakin ingin keluar dari quiz ini?</h2>
     <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
     <button id="lanjutQuiz">Lanjut</button>
-    <a href="/personal-management/personal-management.html">
+    <a href="/Index.html">
         <button id="konfirmasiKeluar">Keluar</button>
     </a>
   </div>
@@ -61,156 +60,157 @@
 <script>
 const quiz = [
   {
-    question: "Apa yang dimaksud dengan anggaran keuangan pribadi?",
-    options: ["Rencana belanja dan pemasukan", "Catatan nilai mata uang", "Laporan perusahaan"],
-    answer: 0
-  },
-  {
-    question: "Mengapa penting membuat anggaran bulanan?",
-    options: ["Untuk mengatur pemasukan dan pengeluaran", "Supaya tidak menabung", "Untuk membeli barang mewah"],
-    answer: 0
-  },
-  {
-    question: "Apa yang sebaiknya dilakukan dengan uang sisa gaji?",
-    options: ["Dihabiskan untuk hiburan", "Ditabung atau diinvestasikan", "Dipinjamkan ke semua orang"],
+    question: "Apa tujuan utama dari rencana pensiun?",
+    options: ["Memperoleh keuntungan investasi", "Mempertahankan standar hidup saat tidak lagi bekerja", "Mengurangi kewajiban pajak"],
     answer: 1
   },
   {
-    question: "Contoh kebutuhan pokok adalah...",
-    options: ["Makan dan tempat tinggal", "Mainan", "Liburan mewah"],
+    question: "Apa prinsip dasar dari perencanaan pensiun?",
+    options: ["Mulai sedini mungkin, konsisten, dan terukur", "Menghindari risiko dengan menabung saja", "Hanya mengandalkan program pemerintah"],
     answer: 0
   },
   {
-    question: "Contoh keinginan adalah...",
-    options: ["Makan sehari-hari", "Bayar listrik", "Beli baju baru setiap minggu"],
+    question: "Salah satu tantangan perencanaan pensiun modern adalah?",
+    options: ["Gaji tetap", "Inflasi", "Utang produktif"],
+    answer: 1
+  },
+  {
+    question: "Program Jaminan Hari Tua (JHT) iuran berasal dari?",
+    options: ["5.7% (3.7% pemberi kerja + 2% pekerja)", "3% (2% pekerja + 1% pemberi kerja)", "Hanya dari pemerintah"],
+    answer: 0
+  },
+  {
+    question: "Manfaat dari Jaminan Pensiun (JP) adalah?",
+    options: ["Dana lump sum saat resign", "Manfaat pensiun bulanan seumur hidup", "Pajak lebih rendah"],
+    answer: 1
+  },
+  {
+    question: "Taspen memberikan tunjangan berikut untuk PNS, kecuali?",
+    options: ["Pensiun pokok", "Tunjangan Hari Tua", "Dana pensiun syariah"],
     answer: 2
   },
   {
-    question: "Mengapa penting membedakan kebutuhan dan keinginan?",
-    options: ["Agar tahu prioritas pengeluaran", "Agar uang cepat habis", "Supaya bisa berutang lebih banyak"],
-    answer: 0
-  },
-  {
-    question: "Apa manfaat menabung di bank?",
-    options: ["Uang lebih aman", "Uang hilang", "Lebih boros"],
-    answer: 0
-  },
-  {
-    question: "Apa itu tabungan darurat?",
-    options: ["Uang untuk jajan", "Dana untuk keperluan mendadak", "Dana untuk pesta"],
+    question: "Apa keunggulan Dana Pensiun Lembaga Keuangan (DPLK)?",
+    options: ["Tidak fleksibel", "Portabilitas tinggi dan tax benefit", "Tidak bisa dipindahkan antar pekerjaan"],
     answer: 1
   },
   {
-    question: "Berapa persen idealnya menabung dari gaji?",
-    options: ["10-20%", "50%", "0%"],
+    question: "Replacement ratio yang ideal untuk pensiun adalah?",
+    options: ["30-40%", "50-60%", "70-80%"],
+    answer: 2
+  },
+  {
+    question: "Rumus Present Value untuk menghitung kebutuhan pensiun adalah?",
+    options: ["FV × (1+r)^n", "PV = FV ÷ (1 + r)^n", "PV = FV × r × n"],
+    answer: 1
+  },
+  {
+    question: "Rule of 72 digunakan untuk?",
+    options: ["Menghitung inflasi", "Menghitung waktu penggandaan investasi", "Mengurangi risiko investasi"],
+    answer: 1
+  },
+  {
+    question: "Pada usia 20-30 tahun, alokasi saham yang disarankan adalah?",
+    options: ["50-60%", "70-80%", "80-90%"],
+    answer: 2
+  },
+  {
+    question: "Fokus utama portofolio pada fase pensiun (usia 56+)?",
+    options: ["Growth maksimal", "Income generation dan capital preservation", "Spekulasi pasar"],
+    answer: 1
+  },
+  {
+    question: "Salah satu contoh instrumen equity untuk pensiun adalah?",
+    options: ["Obligasi pemerintah", "Saham blue chip", "REITs"],
+    answer: 1
+  },
+  {
+    question: "Instrumen fixed income yang aman dan predictable adalah?",
+    options: ["Obligasi korporasi", "Obligasi pemerintah", "Commodities"],
+    answer: 1
+  },
+  {
+    question: "Gold dalam portofolio pensiun berfungsi sebagai?",
+    options: ["Hedge inflasi dan diversifikasi", "Pendapatan tetap", "Instrumen syariah"],
     answer: 0
   },
   {
-    question: "Apa manfaat investasi?",
-    options: ["Nilai uang bisa berkembang", "Uang jadi hilang", "Uang cepat habis"],
+    question: "Dalam simulasi fresh graduate usia 25, investasi bulanan yang diperlukan adalah?",
+    options: ["Rp 1 juta", "Rp 2.8 juta", "Rp 5 juta"],
+    answer: 1
+  },
+  {
+    question: "Dalam simulasi mid-career professional usia 40, investasi bulanan yang diperlukan adalah?",
+    options: ["Rp 5 juta", "Rp 8.5 juta", "Rp 10 juta"],
+    answer: 1
+  },
+  {
+    question: "Asuransi unit link menggabungkan apa?",
+    options: ["Proteksi dan investasi", "Pensiun dan obligasi", "Hanya proteksi"],
     answer: 0
   },
   {
-    question: "Contoh investasi jangka panjang adalah...",
-    options: ["Beli properti", "Beli makanan", "Beli tiket bioskop"],
+    question: "Jenis asuransi tradisional yang memberikan pembayaran berkala saat pensiun adalah?",
+    options: ["Endowment", "Annuity", "Unit Link"],
+    answer: 1
+  },
+  {
+    question: "Program pensiun syariah menggunakan instrumen?",
+    options: ["ETF", "Sukuk", "REITs"],
+    answer: 1
+  },
+  {
+    question: "DPLK memberikan tax deduction maksimal berapa persen dari penghasilan bruto?",
+    options: ["2%", "5%", "10%"],
+    answer: 1
+  },
+  {
+    question: "Maksimal limit iuran DPLK yang mendapat tax benefit adalah?",
+    options: ["Rp 1 juta/bulan", "Rp 2.4 juta/bulan", "Rp 3 juta/bulan"],
+    answer: 1
+  },
+  {
+    question: "Strategi withdrawal yang mengonversi dana menjadi anuitas disebut?",
+    options: ["Lump Sum", "Systematic Withdrawal Plan", "Annuitization"],
+    answer: 2
+  },
+  {
+    question: "Aplikasi seperti Bibit berfungsi sebagai?",
+    options: ["Bank digital", "Robo-advisor dengan goal-based investing", "Marketplace emas"],
+    answer: 1
+  },
+  {
+    question: "Safe Withdrawal Rate yang umum digunakan adalah?",
+    options: ["3%", "4%", "6%"],
+    answer: 1
+  },
+  {
+    question: "Glide Path dalam investasi pensiun berarti?",
+    options: ["Peningkatan risiko saat tua", "Perubahan alokasi aset seiring waktu", "Strategi pajak pensiun"],
+    answer: 1
+  },
+  {
+    question: "Salah satu kesalahan umum dalam perencanaan pensiun adalah?",
+    options: ["Underestimate kebutuhan", "Diversifikasi portofolio", "Automasi investasi"],
     answer: 0
   },
   {
-    question: "Apa yang dimaksud dengan hutang produktif?",
-    options: ["Hutang untuk usaha atau pendidikan", "Hutang untuk liburan", "Hutang untuk beli baju"],
+    question: "Best practice dalam pensiun adalah?",
+    options: ["Set and forget", "Automate investasi", "Panic selling saat krisis"],
+    answer: 1
+  },
+  {
+    question: "Pada tahap assessment, hal pertama yang dilakukan adalah?",
+    options: ["Financial health check", "Annual rebalancing", "Product selection"],
     answer: 0
   },
   {
-    question: "Mengapa perlu mencatat pengeluaran?",
-    options: ["Agar tahu kemana uang dipakai", "Agar uang cepat habis", "Supaya tidak menabung"],
-    answer: 0
-  },
-  {
-    question: "Apa tujuan memiliki asuransi?",
-    options: ["Perlindungan dari risiko finansial", "Agar uang cepat habis", "Supaya bisa berutang"],
-    answer: 0
-  },
-  {
-    question: "Jika gaji Rp3.000.000, berapa minimal tabungan (10%)?",
-    options: ["Rp300.000", "Rp30.000", "Rp1.500.000"],
-    answer: 0
-  },
-  {
-    question: "Apa itu inflasi?",
-    options: ["Kenaikan harga barang", "Penurunan harga barang", "Nilai gaji meningkat"],
-    answer: 0
-  },
-  {
-    question: "Mengapa inflasi berbahaya bagi uang?",
-    options: ["Nilai uang jadi berkurang", "Nilai uang bertambah", "Gaji lebih tinggi"],
-    answer: 0
-  },
-  {
-    question: "Apa itu gaya hidup hemat?",
-    options: ["Mengatur pengeluaran dengan bijak", "Menghabiskan semua uang", "Boros dalam belanja"],
-    answer: 0
-  },
-  {
-    question: "Contoh pengeluaran rutin bulanan adalah...",
-    options: ["Listrik dan air", "Liburan ke luar negeri", "Pesta ulang tahun"],
-    answer: 0
-  },
-  {
-    question: "Apa manfaat mencatat pemasukan?",
-    options: ["Tahu dari mana uang berasal", "Membuat uang hilang", "Meningkatkan pengeluaran"],
-    answer: 0
-  },
-  {
-    question: "Apa itu prioritas keuangan?",
-    options: ["Hal yang paling penting digunakan uang", "Semua barang yang diinginkan", "Tidak menabung"],
-    answer: 0
-  },
-  {
-    question: "Apa contoh pengeluaran tidak terduga?",
-    options: ["Biaya berobat mendadak", "Bayar listrik bulanan", "Beli beras"],
-    answer: 0
-  },
-  {
-    question: "Apa manfaat membandingkan harga sebelum membeli?",
-    options: ["Menghemat uang", "Membuat lebih boros", "Meningkatkan hutang"],
-    answer: 0
-  },
-  {
-    question: "Apa itu pendapatan pasif?",
-    options: ["Uang dari investasi atau usaha tanpa kerja aktif", "Uang gaji utama", "Uang pinjaman"],
-    answer: 0
-  },
-  {
-    question: "Jika seseorang selalu berutang untuk keinginan, akibatnya?",
-    options: ["Keuangan tidak sehat", "Tabungan bertambah", "Lebih kaya"],
-    answer: 0
-  },
-  {
-    question: "Apa langkah pertama untuk mengelola uang dengan baik?",
-    options: ["Membuat anggaran", "Membeli barang mahal", "Menghabiskan gaji"],
-    answer: 0
-  },
-  {
-    question: "Apa itu rekening tabungan?",
-    options: ["Tempat menyimpan uang di bank", "Tempat belanja online", "Tempat berhutang"],
-    answer: 0
-  },
-  {
-    question: "Mengapa penting menabung sejak dini?",
-    options: ["Agar terbiasa disiplin keuangan", "Supaya cepat berutang", "Agar uang cepat habis"],
-    answer: 0
-  },
-  {
-    question: "Apa manfaat punya tujuan keuangan?",
-    options: ["Agar lebih terarah dalam menggunakan uang", "Untuk berutang lebih banyak", "Supaya tidak menabung"],
-    answer: 0
-  },
-  {
-    question: "Apa arti hidup sesuai kemampuan?",
-    options: ["Menggunakan uang sesuai penghasilan", "Berhutang untuk gaya hidup", "Menghabiskan tabungan"],
-    answer: 0
+    question: "Checklist financial readiness untuk pensiun termasuk?",
+    options: ["Utang konsumtif tinggi", "Emergency fund 6-12 bulan", "Tidak diversifikasi"],
+    answer: 1
   }
 ];
+
 
 
  let currentQuestion = 0;
@@ -309,7 +309,6 @@ const quiz = [
   btnKonfirmasiKeluar.addEventListener("click", () => {
     location.reload(); // reload halaman, progress hilang
   });
-</script>
-
+</script>     
 </body>
 </html>

@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz investasi pemula</title>
-    <link rel="stylesheet" href="quiz-personal-management-pemula.css">
+    <title>Quiz Kesadaran Kekayaan Bersih</title>
+    <link rel="stylesheet" href="quiz-Kesadaran-Kekayaan-Bersih.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicons/walletFav.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-  <img src="/favicons/cloud1.png" id="cloud1">
+    <img src="/favicons/cloud1.png" id="cloud1">
   <img src="/favicons/cloud2.png" id="cloud2">
   <img src="/favicons/cloud1.png" id="cloud3">
   <img src="/favicons/cloud2.png" id="cloud4">
@@ -53,7 +52,7 @@
     <h2>Anda yakin ingin keluar dari quiz ini?</h2>
     <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
     <button id="lanjutQuiz">Lanjut</button>
-    <a href="/personal-management/personal-management.html">
+    <a href="/Index.html">
         <button id="konfirmasiKeluar">Keluar</button>
     </a>
   </div>
@@ -61,153 +60,273 @@
 <script>
 const quiz = [
   {
-    question: "Apa yang dimaksud dengan anggaran keuangan pribadi?",
-    options: ["Rencana belanja dan pemasukan", "Catatan nilai mata uang", "Laporan perusahaan"],
-    answer: 0
-  },
-  {
-    question: "Mengapa penting membuat anggaran bulanan?",
-    options: ["Untuk mengatur pemasukan dan pengeluaran", "Supaya tidak menabung", "Untuk membeli barang mewah"],
-    answer: 0
-  },
-  {
-    question: "Apa yang sebaiknya dilakukan dengan uang sisa gaji?",
-    options: ["Dihabiskan untuk hiburan", "Ditabung atau diinvestasikan", "Dipinjamkan ke semua orang"],
+    question: "Apa yang dimaksud dengan kekayaan bersih?",
+    options: [
+      "Jumlah tabungan di bank",
+      "Total aset dikurangi total kewajiban",
+      "Jumlah pendapatan bulanan"
+    ],
     answer: 1
   },
   {
-    question: "Contoh kebutuhan pokok adalah...",
-    options: ["Makan dan tempat tinggal", "Mainan", "Liburan mewah"],
+    question: "Rumus sederhana menghitung kekayaan bersih adalah?",
+    options: [
+      "Pendapatan – Pengeluaran",
+      "Aset – Kewajiban",
+      "Aset + Utang"
+    ],
+    answer: 1
+  },
+  {
+    question: "Yang termasuk aset adalah?",
+    options: [
+      "Deposito dan properti",
+      "Utang kartu kredit",
+      "Cicilan kendaraan"
+    ],
     answer: 0
   },
   {
-    question: "Contoh keinginan adalah...",
-    options: ["Makan sehari-hari", "Bayar listrik", "Beli baju baru setiap minggu"],
+    question: "Kewajiban dalam konteks keuangan berarti?",
+    options: [
+      "Barang berharga yang dimiliki",
+      "Utang atau tanggungan finansial",
+      "Investasi jangka panjang"
+    ],
+    answer: 1
+  },
+  {
+    question: "Mengapa penting mengetahui kekayaan bersih?",
+    options: [
+      "Agar bisa berutang lebih banyak",
+      "Mengetahui posisi keuangan secara akurat",
+      "Membuat laporan bulanan saja"
+    ],
+    answer: 1
+  },
+  {
+    question: "Jika aset Rp200 juta dan utang Rp50 juta, kekayaan bersihnya?",
+    options: [
+      "Rp150 juta",
+      "Rp200 juta",
+      "Rp250 juta"
+    ],
+    answer: 0
+  },
+  {
+    question: "Contoh kewajiban jangka panjang adalah?",
+    options: [
+      "Pinjaman rumah (KPR)",
+      "Tagihan listrik bulan ini",
+      "Tabungan deposito"
+    ],
+    answer: 0
+  },
+  {
+    question: "Investasi termasuk dalam kategori?",
+    options: [
+      "Kewajiban",
+      "Aset",
+      "Beban"
+    ],
+    answer: 1
+  },
+  {
+    question: "Utang kartu kredit adalah contoh?",
+    options: [
+      "Aset lancar",
+      "Kewajiban jangka pendek",
+      "Kewajiban jangka panjang"
+    ],
+    answer: 1
+  },
+  {
+    question: "Menghitung kekayaan bersih membantu dalam?",
+    options: [
+      "Mengetahui kemampuan finansial",
+      "Meningkatkan jumlah cicilan",
+      "Mengurangi aset"
+    ],
+    answer: 0
+  },
+  {
+    question: "Jika aset Rp100 juta dan kewajiban Rp120 juta, maka?",
+    options: [
+      "Surplus Rp20 juta",
+      "Defisit Rp20 juta",
+      "Kekayaan bersih nol"
+    ],
+    answer: 1
+  },
+  {
+    question: "Kekayaan bersih negatif berarti?",
+    options: [
+      "Aset lebih besar dari kewajiban",
+      "Utang lebih besar dari aset",
+      "Tidak memiliki aset sama sekali"
+    ],
+    answer: 1
+  },
+  {
+    question: "Contoh aset lancar adalah?",
+    options: [
+      "Tabungan dan deposito",
+      "Rumah tinggal",
+      "Pinjaman usaha"
+    ],
+    answer: 0
+  },
+  {
+    question: "Contoh aset tidak lancar adalah?",
+    options: [
+      "Uang tunai",
+      "Tanah dan bangunan",
+      "Tabungan bulanan"
+    ],
+    answer: 1
+  },
+  {
+    question: "Tabungan Rp10 juta dan emas Rp5 juta termasuk?",
+    options: [
+      "Beban",
+      "Aset",
+      "Kewajiban"
+    ],
+    answer: 1
+  },
+  {
+    question: "Utang yang harus dibayar dalam waktu dekat disebut?",
+    options: [
+      "Kewajiban jangka pendek",
+      "Kewajiban jangka panjang",
+      "Aset lancar"
+    ],
+    answer: 0
+  },
+  {
+    question: "Menghitung kekayaan bersih sebaiknya dilakukan?",
+    options: [
+      "Hanya sekali seumur hidup",
+      "Secara berkala",
+      "Setiap hari"
+    ],
+    answer: 1
+  },
+  {
+    question: "Seseorang dengan banyak aset dan sedikit utang akan?",
+    options: [
+      "Memiliki kekayaan bersih tinggi",
+      "Sulit mencapai kebebasan finansial",
+      "Tidak punya keuntungan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Jika total aset Rp500 juta dan utang Rp100 juta, maka kekayaan bersih?",
+    options: [
+      "Rp600 juta",
+      "Rp400 juta",
+      "Rp500 juta"
+    ],
+    answer: 1
+  },
+  {
+    question: "Dana darurat termasuk kategori?",
+    options: [
+      "Aset",
+      "Kewajiban",
+      "Beban"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mengapa utang konsumtif berbahaya?",
+    options: [
+      "Mengurangi aset jangka panjang",
+      "Selalu meningkatkan kekayaan",
+      "Bisa meningkatkan pendapatan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Jika aset = kewajiban, maka kekayaan bersih?",
+    options: [
+      "Positif",
+      "Negatif",
+      "Nol"
+    ],
     answer: 2
   },
   {
-    question: "Mengapa penting membedakan kebutuhan dan keinginan?",
-    options: ["Agar tahu prioritas pengeluaran", "Agar uang cepat habis", "Supaya bisa berutang lebih banyak"],
-    answer: 0
-  },
-  {
-    question: "Apa manfaat menabung di bank?",
-    options: ["Uang lebih aman", "Uang hilang", "Lebih boros"],
-    answer: 0
-  },
-  {
-    question: "Apa itu tabungan darurat?",
-    options: ["Uang untuk jajan", "Dana untuk keperluan mendadak", "Dana untuk pesta"],
+    question: "Asuransi kesehatan termasuk?",
+    options: [
+      "Aset",
+      "Perlindungan finansial",
+      "Kewajiban"
+    ],
     answer: 1
   },
   {
-    question: "Berapa persen idealnya menabung dari gaji?",
-    options: ["10-20%", "50%", "0%"],
+    question: "Contoh aset produktif adalah?",
+    options: [
+      "Saham dan obligasi",
+      "Pinjaman kartu kredit",
+      "Tagihan listrik"
+    ],
     answer: 0
   },
   {
-    question: "Apa manfaat investasi?",
-    options: ["Nilai uang bisa berkembang", "Uang jadi hilang", "Uang cepat habis"],
+    question: "Mengelola kekayaan bersih dapat membantu?",
+    options: [
+      "Mencapai tujuan finansial",
+      "Menambah jumlah utang",
+      "Mengurangi pendapatan"
+    ],
     answer: 0
   },
   {
-    question: "Contoh investasi jangka panjang adalah...",
-    options: ["Beli properti", "Beli makanan", "Beli tiket bioskop"],
+    question: "Ciri-ciri aset produktif adalah?",
+    options: [
+      "Memberikan penghasilan",
+      "Selalu menambah kewajiban",
+      "Mengurangi investasi"
+    ],
     answer: 0
   },
   {
-    question: "Apa yang dimaksud dengan hutang produktif?",
-    options: ["Hutang untuk usaha atau pendidikan", "Hutang untuk liburan", "Hutang untuk beli baju"],
+    question: "Cicilan kendaraan adalah contoh?",
+    options: [
+      "Aset",
+      "Kewajiban",
+      "Penghasilan"
+    ],
+    answer: 1
+  },
+  {
+    question: "Kekayaan bersih yang terus bertambah menunjukkan?",
+    options: [
+      "Pengelolaan keuangan baik",
+      "Utang yang semakin banyak",
+      "Pengeluaran lebih besar dari pendapatan"
+    ],
     answer: 0
   },
   {
-    question: "Mengapa perlu mencatat pengeluaran?",
-    options: ["Agar tahu kemana uang dipakai", "Agar uang cepat habis", "Supaya tidak menabung"],
+    question: "Apa yang terjadi jika kewajiban lebih kecil dari aset?",
+    options: [
+      "Kekayaan bersih positif",
+      "Kekayaan bersih negatif",
+      "Tidak ada kekayaan bersih"
+    ],
     answer: 0
   },
   {
-    question: "Apa tujuan memiliki asuransi?",
-    options: ["Perlindungan dari risiko finansial", "Agar uang cepat habis", "Supaya bisa berutang"],
-    answer: 0
-  },
-  {
-    question: "Jika gaji Rp3.000.000, berapa minimal tabungan (10%)?",
-    options: ["Rp300.000", "Rp30.000", "Rp1.500.000"],
-    answer: 0
-  },
-  {
-    question: "Apa itu inflasi?",
-    options: ["Kenaikan harga barang", "Penurunan harga barang", "Nilai gaji meningkat"],
-    answer: 0
-  },
-  {
-    question: "Mengapa inflasi berbahaya bagi uang?",
-    options: ["Nilai uang jadi berkurang", "Nilai uang bertambah", "Gaji lebih tinggi"],
-    answer: 0
-  },
-  {
-    question: "Apa itu gaya hidup hemat?",
-    options: ["Mengatur pengeluaran dengan bijak", "Menghabiskan semua uang", "Boros dalam belanja"],
-    answer: 0
-  },
-  {
-    question: "Contoh pengeluaran rutin bulanan adalah...",
-    options: ["Listrik dan air", "Liburan ke luar negeri", "Pesta ulang tahun"],
-    answer: 0
-  },
-  {
-    question: "Apa manfaat mencatat pemasukan?",
-    options: ["Tahu dari mana uang berasal", "Membuat uang hilang", "Meningkatkan pengeluaran"],
-    answer: 0
-  },
-  {
-    question: "Apa itu prioritas keuangan?",
-    options: ["Hal yang paling penting digunakan uang", "Semua barang yang diinginkan", "Tidak menabung"],
-    answer: 0
-  },
-  {
-    question: "Apa contoh pengeluaran tidak terduga?",
-    options: ["Biaya berobat mendadak", "Bayar listrik bulanan", "Beli beras"],
-    answer: 0
-  },
-  {
-    question: "Apa manfaat membandingkan harga sebelum membeli?",
-    options: ["Menghemat uang", "Membuat lebih boros", "Meningkatkan hutang"],
-    answer: 0
-  },
-  {
-    question: "Apa itu pendapatan pasif?",
-    options: ["Uang dari investasi atau usaha tanpa kerja aktif", "Uang gaji utama", "Uang pinjaman"],
-    answer: 0
-  },
-  {
-    question: "Jika seseorang selalu berutang untuk keinginan, akibatnya?",
-    options: ["Keuangan tidak sehat", "Tabungan bertambah", "Lebih kaya"],
-    answer: 0
-  },
-  {
-    question: "Apa langkah pertama untuk mengelola uang dengan baik?",
-    options: ["Membuat anggaran", "Membeli barang mahal", "Menghabiskan gaji"],
-    answer: 0
-  },
-  {
-    question: "Apa itu rekening tabungan?",
-    options: ["Tempat menyimpan uang di bank", "Tempat belanja online", "Tempat berhutang"],
-    answer: 0
-  },
-  {
-    question: "Mengapa penting menabung sejak dini?",
-    options: ["Agar terbiasa disiplin keuangan", "Supaya cepat berutang", "Agar uang cepat habis"],
-    answer: 0
-  },
-  {
-    question: "Apa manfaat punya tujuan keuangan?",
-    options: ["Agar lebih terarah dalam menggunakan uang", "Untuk berutang lebih banyak", "Supaya tidak menabung"],
-    answer: 0
-  },
-  {
-    question: "Apa arti hidup sesuai kemampuan?",
-    options: ["Menggunakan uang sesuai penghasilan", "Berhutang untuk gaya hidup", "Menghabiskan tabungan"],
+    question: "Meningkatkan kekayaan bersih bisa dilakukan dengan?",
+    options: [
+      "Mengurangi utang dan menambah aset",
+      "Meningkatkan konsumsi",
+      "Menambah kewajiban"
+    ],
     answer: 0
   }
 ];
@@ -309,7 +428,6 @@ const quiz = [
   btnKonfirmasiKeluar.addEventListener("click", () => {
     location.reload(); // reload halaman, progress hilang
   });
-</script>
-
+</script>      
 </body>
 </html>

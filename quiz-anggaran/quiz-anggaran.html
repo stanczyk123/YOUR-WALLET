@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz investasi pemula</title>
-    <link rel="stylesheet" href="quiz-personal-management-pemula.css">
+    <title>Quiz Anggaran</title>
+    <link rel="stylesheet" href="quiz-anggaran.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicons/walletFav.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-  <img src="/favicons/cloud1.png" id="cloud1">
+      <img src="/favicons/cloud1.png" id="cloud1">
   <img src="/favicons/cloud2.png" id="cloud2">
   <img src="/favicons/cloud1.png" id="cloud3">
   <img src="/favicons/cloud2.png" id="cloud4">
@@ -53,7 +52,7 @@
     <h2>Anda yakin ingin keluar dari quiz ini?</h2>
     <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
     <button id="lanjutQuiz">Lanjut</button>
-    <a href="/personal-management/personal-management.html">
+    <a href="/Index.html">
         <button id="konfirmasiKeluar">Keluar</button>
     </a>
   </div>
@@ -61,154 +60,154 @@
 <script>
 const quiz = [
   {
-    question: "Apa yang dimaksud dengan anggaran keuangan pribadi?",
-    options: ["Rencana belanja dan pemasukan", "Catatan nilai mata uang", "Laporan perusahaan"],
+    question: "Apa yang dimaksud dengan anggaran dalam pengelolaan keuangan?",
+    options: ["Rencana strategis pemasukan dan pengeluaran", "Pencatatan pengeluaran saja", "Dokumen akuntansi perusahaan"],
     answer: 0
   },
   {
-    question: "Mengapa penting membuat anggaran bulanan?",
-    options: ["Untuk mengatur pemasukan dan pengeluaran", "Supaya tidak menabung", "Untuk membeli barang mewah"],
-    answer: 0
-  },
-  {
-    question: "Apa yang sebaiknya dilakukan dengan uang sisa gaji?",
-    options: ["Dihabiskan untuk hiburan", "Ditabung atau diinvestasikan", "Dipinjamkan ke semua orang"],
+    question: "Metode 50/30/20 dalam anggaran mengalokasikan 20% penghasilan untuk apa?",
+    options: ["Keinginan", "Investasi dan tabungan", "Pengeluaran tidak terduga"],
     answer: 1
   },
   {
-    question: "Contoh kebutuhan pokok adalah...",
-    options: ["Makan dan tempat tinggal", "Mainan", "Liburan mewah"],
+    question: "Mengapa anggaran harus fleksibel?",
+    options: ["Untuk mempermudah pencatatan", "Agar dapat disesuaikan dengan kondisi yang berubah", "Agar bisa dipakai selamanya"],
+    answer: 1
+  },
+  {
+    question: "Review bulanan terhadap anggaran berfungsi untuk?",
+    options: ["Memahami pola pengeluaran dan optimasi", "Menambah hutang", "Menghitung laba"],
     answer: 0
   },
   {
-    question: "Contoh keinginan adalah...",
-    options: ["Makan sehari-hari", "Bayar listrik", "Beli baju baru setiap minggu"],
+    question: "Anggaran operasional digunakan untuk?",
+    options: ["Kegiatan sehari-hari organisasi", "Kegiatan sosial", "Investasi jangka panjang"],
+    answer: 0
+  },
+  {
+    question: "Contoh anggaran investasi adalah?",
+    options: ["Pembelian mesin", "Bahan baku", "Pembayaran listrik"],
+    answer: 0
+  },
+  {
+    question: "Anggaran tradisional disusun berdasarkan?",
+    options: ["Pendapatan rata-rata nasional", "Realisasi tahun sebelumnya", "Analisis psikologis"],
+    answer: 1
+  },
+  {
+    question: "Apa ciri utama anggaran Zero-Based Budgeting?",
+    options: ["Mengacu pada anggaran tahun lalu", "Disusun dari nol tanpa acuan sebelumnya", "Tidak perlu justifikasi"],
+    answer: 1
+  },
+  {
+    question: "Anggaran tahunan berlaku untuk periode?",
+    options: ["1 tahun", "Hanya 1 proyek", "1 bulan"],
+    answer: 0
+  },
+  {
+    question: "Anggaran proyek disusun untuk?",
+    options: ["Proyek tertentu dengan timeline spesifik", "Semua kebutuhan rumah tangga", "Kegiatan rutin perusahaan"],
+    answer: 0
+  },
+  {
+    question: "Tujuan utama dari perencanaan keuangan dalam anggaran adalah?",
+    options: ["Mengalokasikan sumber daya optimal", "Mencatat pengeluaran pribadi", "Mengurangi pajak"],
+    answer: 0
+  },
+  {
+    question: "Pengendalian keuangan berfungsi untuk?",
+    options: ["Mengurangi kebutuhan pokok", "Memantau pengeluaran sesuai rencana", "Menentukan gaji karyawan"],
+    answer: 1
+  },
+  {
+    question: "Evaluasi kinerja dalam anggaran dilakukan dengan cara?",
+    options: ["Mengurangi biaya operasional", "Menambah tabungan", "Membandingkan realisasi dengan rencana"],
     answer: 2
   },
   {
-    question: "Mengapa penting membedakan kebutuhan dan keinginan?",
-    options: ["Agar tahu prioritas pengeluaran", "Agar uang cepat habis", "Supaya bisa berutang lebih banyak"],
-    answer: 0
-  },
-  {
-    question: "Apa manfaat menabung di bank?",
-    options: ["Uang lebih aman", "Uang hilang", "Lebih boros"],
-    answer: 0
-  },
-  {
-    question: "Apa itu tabungan darurat?",
-    options: ["Uang untuk jajan", "Dana untuk keperluan mendadak", "Dana untuk pesta"],
+    question: "Pengambilan keputusan berdasarkan anggaran dapat membantu dalam?",
+    options: ["Mengurangi jumlah pekerja", "Menentukan strategi investasi dan pengembangan", "Meningkatkan pinjaman"],
     answer: 1
   },
   {
-    question: "Berapa persen idealnya menabung dari gaji?",
-    options: ["10-20%", "50%", "0%"],
+    question: "Prinsip kejelasan tujuan dalam penyusunan anggaran berarti?",
+    options: ["Tujuan harus jelas dan terukur", "Anggaran disusun hanya untuk jangka pendek", "Tujuan tidak perlu jelas"],
     answer: 0
   },
   {
-    question: "Apa manfaat investasi?",
-    options: ["Nilai uang bisa berkembang", "Uang jadi hilang", "Uang cepat habis"],
+    question: "Prinsip konsistensi dalam penyusunan anggaran menekankan?",
+    options: ["Fokus pada pengeluaran saja", "Sesuai dengan tujuan jangka panjang", "Harus selalu berbeda setiap tahun"],
+    answer: 1
+  },
+  {
+    question: "Mengapa fleksibilitas penting dalam anggaran?",
+    options: ["Untuk menyesuaikan dengan situasi yang berubah", "Untuk membuat anggaran tetap sederhana", "Untuk mengurangi jumlah item"],
     answer: 0
   },
   {
-    question: "Contoh investasi jangka panjang adalah...",
-    options: ["Beli properti", "Beli makanan", "Beli tiket bioskop"],
+    question: "Prinsip efisiensi dalam anggaran berarti?",
+    options: ["Setiap pengeluaran harus memberikan manfaat maksimal dengan biaya minimum", "Semua biaya harus sama", "Pengeluaran harus besar"],
     answer: 0
   },
   {
-    question: "Apa yang dimaksud dengan hutang produktif?",
-    options: ["Hutang untuk usaha atau pendidikan", "Hutang untuk liburan", "Hutang untuk beli baju"],
+    question: "Keterlibatan pihak terkait dalam penyusunan anggaran bertujuan agar?",
+    options: ["Anggaran bisa lebih mahal", "Anggaran tidak digunakan", "Semua stakeholder merasa dilibatkan dan anggaran realistis"],
+    answer: 2
+  },
+  {
+    question: "Aplikasi budgeting membantu dalam?",
+    options: ["Mengurangi pendapatan", "Tracking pemasukan dan pengeluaran lebih akurat", "Menambah biaya"],
+    answer: 1
+  },
+  {
+    question: "Metode 50/30/20 mengalokasikan 30% penghasilan untuk?",
+    options: ["Investasi", "Darurat", "Keinginan"],
+    answer: 2
+  },
+  {
+    question: "Contoh kebutuhan pokok dalam anggaran adalah?",
+    options: ["Biaya makan dan tempat tinggal", "Liburan", "Hiburan"],
     answer: 0
   },
   {
-    question: "Mengapa perlu mencatat pengeluaran?",
-    options: ["Agar tahu kemana uang dipakai", "Agar uang cepat habis", "Supaya tidak menabung"],
+    question: "Anggaran bulanan digunakan untuk?",
+    options: ["Mengelola pajak perusahaan", "Perencanaan detail setiap bulan", "Analisis ekonomi nasional"],
+    answer: 1
+  },
+  {
+    question: "Fungsi utama review anggaran bulanan adalah?",
+    options: ["Mengoptimalkan pengeluaran", "Meningkatkan pinjaman", "Menambah jumlah hutang"],
     answer: 0
   },
   {
-    question: "Apa tujuan memiliki asuransi?",
-    options: ["Perlindungan dari risiko finansial", "Agar uang cepat habis", "Supaya bisa berutang"],
+    question: "Zero-Based Budgeting mewajibkan apa?",
+    options: ["Mengabaikan biaya", "Justifikasi setiap biaya secara detail", "Menaikkan semua biaya"],
+    answer: 1
+  },
+  {
+    question: "Salah satu contoh anggaran operasional adalah?",
+    options: ["Pembayaran gaji karyawan", "Membangun cabang baru", "Investasi saham"],
     answer: 0
   },
   {
-    question: "Jika gaji Rp3.000.000, berapa minimal tabungan (10%)?",
-    options: ["Rp300.000", "Rp30.000", "Rp1.500.000"],
+    question: "Anggaran tradisional cenderung memiliki kelemahan karena?",
+    options: ["Terlalu bergantung pada anggaran tahun lalu", "Tidak ada kontrol biaya", "Tidak bisa digunakan perusahaan"],
     answer: 0
   },
   {
-    question: "Apa itu inflasi?",
-    options: ["Kenaikan harga barang", "Penurunan harga barang", "Nilai gaji meningkat"],
+    question: "Prinsip efektivitas dalam anggaran berarti?",
+    options: ["Pengeluaran harus tepat sasaran sesuai tujuan", "Biaya harus lebih besar", "Tidak ada keterlibatan stakeholder"],
     answer: 0
   },
   {
-    question: "Mengapa inflasi berbahaya bagi uang?",
-    options: ["Nilai uang jadi berkurang", "Nilai uang bertambah", "Gaji lebih tinggi"],
+    question: "Perbedaan utama antara anggaran investasi dan operasional adalah?",
+    options: ["Operasional untuk kegiatan rutin, investasi untuk jangka panjang", "Operasional selalu lebih besar", "Investasi hanya untuk tabungan pribadi"],
     answer: 0
   },
   {
-    question: "Apa itu gaya hidup hemat?",
-    options: ["Mengatur pengeluaran dengan bijak", "Menghabiskan semua uang", "Boros dalam belanja"],
-    answer: 0
-  },
-  {
-    question: "Contoh pengeluaran rutin bulanan adalah...",
-    options: ["Listrik dan air", "Liburan ke luar negeri", "Pesta ulang tahun"],
-    answer: 0
-  },
-  {
-    question: "Apa manfaat mencatat pemasukan?",
-    options: ["Tahu dari mana uang berasal", "Membuat uang hilang", "Meningkatkan pengeluaran"],
-    answer: 0
-  },
-  {
-    question: "Apa itu prioritas keuangan?",
-    options: ["Hal yang paling penting digunakan uang", "Semua barang yang diinginkan", "Tidak menabung"],
-    answer: 0
-  },
-  {
-    question: "Apa contoh pengeluaran tidak terduga?",
-    options: ["Biaya berobat mendadak", "Bayar listrik bulanan", "Beli beras"],
-    answer: 0
-  },
-  {
-    question: "Apa manfaat membandingkan harga sebelum membeli?",
-    options: ["Menghemat uang", "Membuat lebih boros", "Meningkatkan hutang"],
-    answer: 0
-  },
-  {
-    question: "Apa itu pendapatan pasif?",
-    options: ["Uang dari investasi atau usaha tanpa kerja aktif", "Uang gaji utama", "Uang pinjaman"],
-    answer: 0
-  },
-  {
-    question: "Jika seseorang selalu berutang untuk keinginan, akibatnya?",
-    options: ["Keuangan tidak sehat", "Tabungan bertambah", "Lebih kaya"],
-    answer: 0
-  },
-  {
-    question: "Apa langkah pertama untuk mengelola uang dengan baik?",
-    options: ["Membuat anggaran", "Membeli barang mahal", "Menghabiskan gaji"],
-    answer: 0
-  },
-  {
-    question: "Apa itu rekening tabungan?",
-    options: ["Tempat menyimpan uang di bank", "Tempat belanja online", "Tempat berhutang"],
-    answer: 0
-  },
-  {
-    question: "Mengapa penting menabung sejak dini?",
-    options: ["Agar terbiasa disiplin keuangan", "Supaya cepat berutang", "Agar uang cepat habis"],
-    answer: 0
-  },
-  {
-    question: "Apa manfaat punya tujuan keuangan?",
-    options: ["Agar lebih terarah dalam menggunakan uang", "Untuk berutang lebih banyak", "Supaya tidak menabung"],
-    answer: 0
-  },
-  {
-    question: "Apa arti hidup sesuai kemampuan?",
-    options: ["Menggunakan uang sesuai penghasilan", "Berhutang untuk gaya hidup", "Menghabiskan tabungan"],
-    answer: 0
+    question: "Anggaran sebagai alat pengambilan keputusan bermanfaat bagi?",
+    options: ["Hanya investor", "Manajemen dalam menentukan strategi ke depan", "Tidak ada pihak tertentu"],
+    answer: 1
   }
 ];
 
@@ -310,6 +309,5 @@ const quiz = [
     location.reload(); // reload halaman, progress hilang
   });
 </script>
-
 </body>
 </html>

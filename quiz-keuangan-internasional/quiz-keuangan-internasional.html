@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz investasi Menegah</title>
-    <link rel="stylesheet" href="quiz-invesment-sedang.css">
+    <title>Keuangan Internasional</title>
+    <link rel="stylesheet" href="quiz-keuangan-internasional.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicons/walletFav.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-  <img src="/favicons/cloud1.png" id="cloud1">
+    <img src="/favicons/cloud1.png" id="cloud1">
   <img src="/favicons/cloud2.png" id="cloud2">
   <img src="/favicons/cloud1.png" id="cloud3">
   <img src="/favicons/cloud2.png" id="cloud4">
@@ -53,7 +52,7 @@
     <h2>Anda yakin ingin keluar dari quiz ini?</h2>
     <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
     <button id="lanjutQuiz">Lanjut</button>
-    <a href="/invesment/invesment.html">
+    <a href="/Index.html">
         <button id="konfirmasiKeluar">Keluar</button>
     </a>
   </div>
@@ -61,272 +60,263 @@
 <script>
 const quiz = [
   {
-    question: "1. Apa tujuan utama dari diversifikasi portofolio investasi?",
+    question: "Apa pengertian utama dari keuangan internasional?",
     options: [
-      "Mengurangi risiko dengan menyebar aset",
-      "Menghindari pajak investasi",
-      "Meningkatkan risiko"
+      "Studi tentang transaksi finansial lintas negara",
+      "Ilmu yang mempelajari perpajakan domestik",
+      "Ilmu yang fokus pada kebijakan fiskal nasional"
     ],
     answer: 0
   },
   {
-    question: "2. Saham perusahaan dengan kapitalisasi besar biasanya disebut sebagai?",
+    question: "Tujuan utama dari keuangan internasional adalah...",
     options: [
-      "Growth stocks",
-      "Blue chip stocks",
-      "Penny stocks"
+      "Meningkatkan konsumsi domestik",
+      "Memahami dinamika ekonomi global dan mengelola risiko",
+      "Meningkatkan belanja pemerintah"
     ],
     answer: 1
   },
   {
-    question: "3. Manakah instrumen investasi yang umumnya memiliki risiko paling rendah?",
+    question: "Ruang lingkup keuangan internasional TIDAK mencakup...",
     options: [
-      "Obligasi pemerintah",
-      "Mata uang kripto",
-      "Reksa dana saham"
-    ],
-    answer: 0
-  },
-  {
-    question: "4. Istilah 'compound interest' dalam investasi berarti?",
-    options: [
-      "Bunga yang dihitung dari pokok + bunga sebelumnya",
-      "Bunga yang ditentukan investor",
-      "Bunga yang dibayarkan sekali saja"
-    ],
-    answer: 0
-  },
-  {
-    question: "5. Jika investor membeli obligasi, artinya dia adalah?",
-    options: [
-      "Pemberi pinjaman kepada penerbit obligasi",
-      "Pemilik perusahaan",
-      "Pengendali manajemen perusahaan"
-    ],
-    answer: 0
-  },
-  {
-    question: "6. Apa fungsi utama dari indeks saham (misalnya IHSG)?",
-    options: [
-      "Menentukan kurs mata uang",
-      "Sebagai ukuran kinerja pasar modal",
-      "Mengatur suku bunga bank"
-    ],
-    answer: 1
-  },
-  {
-    question: "7. Dalam analisis fundamental, rasio P/E digunakan untuk mengukur?",
-    options: [
-      "Harga saham terhadap pendapatan perusahaan",
-      "Jumlah utang perusahaan",
-      "Dividen yang dibagikan"
-    ],
-    answer: 0
-  },
-  {
-    question: "8. Instrumen derivatif seperti futures dan options digunakan untuk?",
-    options: [
-      "Menabung jangka panjang",
-      "Spekulasi dan lindung nilai (hedging)",
-      "Mengurangi dividen"
-    ],
-    answer: 1
-  },
-  {
-    question: "9. Apa perbedaan utama antara saham biasa dan saham preferen?",
-    options: [
-      "Saham biasa tidak memiliki hak suara",
-      "Saham preferen selalu mendapat dividen tetap",
-      "Saham preferen tidak bisa diperdagangkan"
-    ],
-    answer: 1
-  },
-  {
-    question: "10. Risiko perubahan nilai tukar mata uang dikenal dengan istilah?",
-    options: [
-      "Risiko kredit",
-      "Risiko valuta asing",
-      "Risiko inflasi"
-    ],
-    answer: 1
-  },
-  {
-    question: "11. Reksa dana campuran berinvestasi pada?",
-    options: [
-      "Hanya deposito",
-      "Gabungan saham, obligasi, dan instrumen pasar uang",
-      "Hanya saham"
-    ],
-    answer: 1
-  },
-  {
-    question: "12. Dalam analisis teknikal, moving average digunakan untuk?",
-    options: [
-      "Menghitung inflasi",
-      "Mendeteksi tren harga",
-      "Mengukur laba bersih"
-    ],
-    answer: 1
-  },
-  {
-    question: "13. Beta dalam saham digunakan untuk mengukur?",
-    options: [
-      "Jumlah laba per saham",
-      "Risiko sistematis dibandingkan pasar",
-      "Nilai buku perusahaan"
-    ],
-    answer: 1
-  },
-  {
-    question: "14. Return on Equity (ROE) mengukur?",
-    options: [
-      "Kemampuan perusahaan menghasilkan laba dari modal sendiri",
-      "Jumlah utang perusahaan",
-      "Tingkat inflasi"
-    ],
-    answer: 0
-  },
-  {
-    question: "15. Jika suku bunga naik, harga obligasi cenderung?",
-    options: [
-      "Tetap",
-      "Naik",
-      "Turun"
+      "Perdagangan internasional",
+      "Pasar valuta asing",
+      "Akuntansi biaya perusahaan lokal"
     ],
     answer: 2
   },
   {
-    question: "16. Apa yang dimaksud dengan dollar-cost averaging?",
+    question: "Apa fungsi utama valuta asing dalam keuangan internasional?",
     options: [
-      "Membeli aset secara rutin dengan jumlah dana tetap",
-      "Menjual aset dalam jangka pendek",
-      "Mengurangi biaya broker"
+      "Sebagai alat tukar antarnegara",
+      "Sebagai instrumen perpajakan",
+      "Sebagai pengganti saham domestik"
     ],
     answer: 0
   },
   {
-    question: "17. Apa keuntungan utama dari investasi jangka panjang?",
+    question: "Risiko utama dalam transaksi valuta asing adalah...",
     options: [
-      "Menghindari volatilitas jangka pendek",
-      "Menghilangkan semua risiko",
-      "Membebaskan dari pajak"
-    ],
-    answer: 0
-  },
-  {
-    question: "18. Istilah IPO (Initial Public Offering) berarti?",
-    options: [
-      "Perusahaan membagikan dividen",
-      "Perusahaan pertama kali menjual saham ke publik",
-      "Penurunan harga saham"
+      "Keterlambatan pembayaran pajak",
+      "Fluktuasi nilai tukar",
+      "Biaya transportasi barang"
     ],
     answer: 1
   },
   {
-    question: "19. Dalam investasi properti, cash flow positif artinya?",
+    question: "Foreign Direct Investment (FDI) adalah...",
     options: [
-      "Nilai properti menurun",
-      "Pengeluaran lebih besar dari pemasukan",
-      "Pemasukan sewa lebih besar dari biaya"
+      "Investasi jangka panjang dengan kepemilikan langsung",
+      "Investasi dalam bentuk deposito domestik",
+      "Investasi jangka pendek pada pasar uang"
+    ],
+    answer: 0
+  },
+  {
+    question: "Foreign Portfolio Investment (FPI) adalah...",
+    options: [
+      "Investasi saham dan obligasi tanpa kontrol langsung",
+      "Investasi berupa ekspor dan impor",
+      "Investasi dengan kontrol langsung atas perusahaan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Ekspor berarti...",
+    options: [
+      "Penjualan barang atau jasa ke luar negeri",
+      "Penjualan barang ke dalam negeri",
+      "Pembelian barang dari luar negeri"
+    ],
+    answer: 0
+  },
+  {
+    question: "Impor berarti...",
+    options: [
+      "Menjual barang ke luar negeri",
+      "Membeli barang atau jasa dari luar negeri",
+      "Menyimpan dana di bank asing"
+    ],
+    answer: 1
+  },
+  {
+    question: "Faktor yang memengaruhi perdagangan internasional adalah...",
+    options: [
+      "Tarif dan kuota",
+      "Semua benar",
+      "Kebijakan perdagangan"
+    ],
+    answer: 1
+  },
+  {
+    question: "Pasar modal global mencakup...",
+    options: [
+      "Bursa saham internasional dan obligasi global",
+      "Distribusi pertanian dunia",
+      "Ekspor barang mentah"
+    ],
+    answer: 0
+  },
+  {
+    question: "Kebijakan moneter internasional dapat memengaruhi...",
+    options: [
+      "Arus modal dan stabilitas ekonomi global",
+      "Harga bahan baku dalam negeri",
+      "Jumlah penduduk suatu negara"
+    ],
+    answer: 0
+  },
+  {
+    question: "Salah satu keuntungan keuangan internasional adalah...",
+    options: [
+      "Diversifikasi portofolio global",
+      "Meningkatkan beban fiskal",
+      "Meningkatkan risiko domestik"
+    ],
+    answer: 0
+  },
+  {
+    question: "Keuntungan lain dari keuangan internasional adalah...",
+    options: [
+      "Mengurangi investasi asing",
+      "Akses ke modal lebih besar",
+      "Menurunkan nilai mata uang domestik"
+    ],
+    answer: 1
+  },
+  {
+    question: "Investasi asing dapat membawa...",
+    options: [
+      "Transfer teknologi dan pengetahuan",
+      "Pengurangan tenaga kerja",
+      "Kenaikan tarif impor"
+    ],
+    answer: 0
+  },
+  {
+    question: "Risiko nilai tukar adalah...",
+    options: [
+      "Risiko gagal bayar obligasi",
+      "Risiko yang muncul karena perubahan nilai mata uang",
+      "Risiko kenaikan harga tanah"
+    ],
+    answer: 1
+  },
+  {
+    question: "Risiko politik internasional terjadi karena...",
+    options: [
+      "Ketidakstabilan politik dan regulasi pemerintah",
+      "Stabilitas kurs mata uang",
+      "Kenaikan harga transportasi"
+    ],
+    answer: 0
+  },
+  {
+    question: "Risiko likuiditas internasional adalah...",
+    options: [
+      "Risiko sulitnya menjual aset di pasar global",
+      "Risiko kenaikan tarif pajak",
+      "Risiko menurunnya cadangan devisa"
+    ],
+    answer: 0
+  },
+  {
+    question: "Risiko kredit lintas negara berarti...",
+    options: [
+      "Pihak lawan tidak dapat memenuhi kewajibannya",
+      "Perusahaan tidak mampu mengekspor barang",
+      "Kenaikan harga impor"
+    ],
+    answer: 0
+  },
+  {
+    question: "Krisis ekonomi di satu negara dapat menimbulkan...",
+    options: [
+      "Dampak global pada pasar dan investasi",
+      "Penurunan perdagangan internasional saja",
+      "Kenaikan produksi dalam negeri"
+    ],
+    answer: 0
+  },
+  {
+    question: "Salah satu tips manajemen keuangan internasional adalah...",
+    options: [
+      "Diversifikasi aset global",
+      "Menaruh semua investasi di satu negara",
+      "Mengabaikan fluktuasi nilai tukar"
+    ],
+    answer: 0
+  },
+  {
+    question: "Hedging dalam keuangan internasional digunakan untuk...",
+    options: [
+      "Mengurangi risiko fluktuasi nilai tukar",
+      "Menghapuskan kebijakan perdagangan",
+      "Meningkatkan biaya investasi"
+    ],
+    answer: 0
+  },
+  {
+    question: "Instrumen hedging meliputi...",
+    options: [
+      "Kontrak forward dan opsi mata uang",
+      "Tabungan berjangka",
+      "Ekspor pertanian"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mengapa evaluasi portofolio secara berkala penting?",
+    options: [
+      "Agar sesuai dengan perubahan kondisi ekonomi global",
+      "Agar menambah risiko",
+      "Agar mengurangi perdagangan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Siapa yang sebaiknya dikonsultasikan dalam manajemen keuangan internasional?",
+    options: [
+      "Ahli keuangan internasional",
+      "Ahli geografi",
+      "Ahli pertanian"
+    ],
+    answer: 0
+  },
+  {
+    question: "Salah satu manfaat fluktuasi nilai tukar adalah...",
+    options: [
+      "Meningkatkan risiko kredit",
+      "Mengurangi perdagangan global",
+      "Meningkatkan keuntungan investasi"
     ],
     answer: 2
   },
   {
-    question: "20. Salah satu keunggulan ETF dibanding reksa dana konvensional adalah?",
+    question: "Globalisasi ekonomi berpengaruh pada...",
     options: [
-      "Diperdagangkan di bursa layaknya saham",
-      "Bebas risiko",
-      "Selalu memberikan dividen tetap"
-    ],
-    answer: 0
-  },
-  {
-    question: "21. Apa yang dimaksud dengan 'margin trading'?",
-    options: [
-      "Membeli saham menggunakan kartu kredit",
-      "Membeli saham dengan uang pinjaman dari broker",
-      "Menyimpan saham dalam jangka panjang"
-    ],
-    answer: 1
-  },
-  {
-    question: "22. Apa arti istilah 'high risk high return'?",
-    options: [
-      "Risiko tinggi berpotensi memberi imbal hasil lebih besar",
-      "Risiko tinggi sama dengan risiko rendah",
-      "Risiko tinggi selalu rugi"
-    ],
-    answer: 0
-  },
-  {
-    question: "23. Yield obligasi adalah?",
-    options: [
-      "Pendapatan bunga yang diterima dibanding harga obligasi",
-      "Jumlah saham yang diterbitkan",
-      "Nilai nominal obligasi"
-    ],
-    answer: 0
-  },
-  {
-    question: "24. Saham yang cenderung memberikan dividen rutin disebut?",
-    options: [
-      "Penny stocks",
-      "Income stocks",
-      "Growth stocks"
-    ],
-    answer: 1
-  },
-  {
-    question: "25. Apa itu capital gain?",
-    options: [
-      "Kerugian dari penurunan harga",
-      "Dividen yang diterima",
-      "Keuntungan dari selisih harga jual lebih tinggi dari harga beli"
+      "Jumlah penduduk",
+      "Sumber daya mineral",
+      "Transaksi lintas negara"
     ],
     answer: 2
   },
   {
-    question: "26. Likuiditas dalam investasi berarti?",
+    question: "Pasar valuta asing memengaruhi...",
     options: [
-      "Kemudahan mengubah aset menjadi uang tunai",
-      "Jumlah investor dalam suatu instrumen",
-      "Nilai laba bersih"
-    ],
-    answer: 0
-  },
-  {
-    question: "27. Risiko gagal bayar pada obligasi disebut?",
-    options: [
-      "Risiko kredit",
-      "Risiko pasar",
-      "Risiko inflasi"
-    ],
-    answer: 0
-  },
-  {
-    question: "28. Apa arti istilah 'time horizon' dalam investasi?",
-    options: [
-      "Jenis instrumen yang dipilih",
-      "Tingkat inflasi tahunan",
-      "Lama waktu investor berencana menahan investasinya"
-    ],
-    answer: 2
-  },
-  {
-    question: "29. Strategi 'buy and hold' dalam investasi saham berarti?",
-    options: [
-      "Membeli saham dengan pinjaman",
-      "Membeli saham dan menahannya dalam jangka panjang",
-      "Membeli saham hanya saat harga tinggi"
+      "Konsumsi pangan lokal",
+      "Harga barang impor/ekspor",
+      "Produksi pertanian"
     ],
     answer: 1
   },
   {
-    question: "30. Apa fungsi utama dari manajer investasi?",
+    question: "Diversifikasi portofolio internasional bertujuan untuk...",
     options: [
-      "Mengatur nilai tukar mata uang",
-      "Mengelola dana investor dalam instrumen sesuai tujuan investasi",
-      "Menentukan suku bunga bank"
+      "Meningkatkan risiko politik",
+      "Mengurangi risiko investasi",
+      "Menambah inflasi"
     ],
     answer: 1
   }
@@ -429,6 +419,6 @@ const quiz = [
   btnKonfirmasiKeluar.addEventListener("click", () => {
     location.reload(); // reload halaman, progress hilang
   });
-</script>
+</script>   
 </body>
 </html>

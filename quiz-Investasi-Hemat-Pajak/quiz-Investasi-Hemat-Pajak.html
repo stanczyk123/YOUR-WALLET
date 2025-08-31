@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz investasi Menegah</title>
-    <link rel="stylesheet" href="quiz-invesment-sedang.css">
+    <title>Quiz Investasi Hemat Pajak</title>
+    <link rel="stylesheet" href="quiz-Investasi-Hemat-Pajak.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicons/walletFav.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-  <img src="/favicons/cloud1.png" id="cloud1">
+    <img src="/favicons/cloud1.png" id="cloud1">
   <img src="/favicons/cloud2.png" id="cloud2">
   <img src="/favicons/cloud1.png" id="cloud3">
   <img src="/favicons/cloud2.png" id="cloud4">
@@ -53,7 +52,7 @@
     <h2>Anda yakin ingin keluar dari quiz ini?</h2>
     <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
     <button id="lanjutQuiz">Lanjut</button>
-    <a href="/invesment/invesment.html">
+    <a href="/Index.html">
         <button id="konfirmasiKeluar">Keluar</button>
     </a>
   </div>
@@ -61,274 +60,274 @@
 <script>
 const quiz = [
   {
-    question: "1. Apa tujuan utama dari diversifikasi portofolio investasi?",
+    question: "Apa yang dimaksud dengan investasi hemat pajak?",
     options: [
-      "Mengurangi risiko dengan menyebar aset",
-      "Menghindari pajak investasi",
-      "Meningkatkan risiko"
+      "Investasi yang tidak memiliki risiko sama sekali",
+      "Strategi penempatan dana pada instrumen yang memberikan keuntungan pajak",
+      "Strategi spekulasi untuk menghindari risiko pasar"
+    ],
+    answer: 1
+  },
+  {
+    question: "Tujuan utama dari investasi hemat pajak adalah?",
+    options: [
+      "Memaksimalkan return setelah pajak",
+      "Menghindari regulasi pemerintah",
+      "Mengurangi risiko investasi"
     ],
     answer: 0
   },
   {
-    question: "2. Saham perusahaan dengan kapitalisasi besar biasanya disebut sebagai?",
+    question: "Prinsip dasar investasi hemat pajak adalah?",
     options: [
-      "Growth stocks",
-      "Blue chip stocks",
-      "Penny stocks"
+      "Menunda pembayaran pajak",
+      "Memanfaatkan peraturan perpajakan secara legal",
+      "Mengabaikan aturan pajak"
     ],
     answer: 1
   },
   {
-    question: "3. Manakah instrumen investasi yang umumnya memiliki risiko paling rendah?",
+    question: "Keuntungan capital gain pada reksa dana saham dikenakan pajak?",
     options: [
-      "Obligasi pemerintah",
-      "Mata uang kripto",
-      "Reksa dana saham"
+      "Ya, 15%",
+      "Tidak, bebas pajak final",
+      "Ya, 10%"
+    ],
+    answer: 1
+  },
+  {
+    question: "Dividen dari reksa dana pendapatan tetap dikenakan pajak di tingkat investor?",
+    options: [
+      "Ya, 15%",
+      "Tidak dikenakan pajak",
+      "Ya, 10%"
+    ],
+    answer: 1
+  },
+  {
+    question: "Dividen dari saham bagi investor individu dikenakan pajak sebesar?",
+    options: [
+      "20%",
+      "10%",
+      "5%"
+    ],
+    answer: 1
+  },
+  {
+    question: "Capital gain dari saham untuk investor individu dikenakan pajak?",
+    options: [
+      "Tidak, bebas pajak final",
+      "Ya, 10%",
+      "Ya, 15%"
     ],
     answer: 0
   },
   {
-    question: "4. Istilah 'compound interest' dalam investasi berarti?",
+    question: "Kupon ORI dikenakan pajak final sebesar?",
     options: [
-      "Bunga yang dihitung dari pokok + bunga sebelumnya",
-      "Bunga yang ditentukan investor",
-      "Bunga yang dibayarkan sekali saja"
+      "15%",
+      "5%",
+      "10%"
     ],
     answer: 0
   },
   {
-    question: "5. Jika investor membeli obligasi, artinya dia adalah?",
+    question: "Sukuk Ritel dikenakan pajak final atas imbal hasil sebesar?",
     options: [
-      "Pemberi pinjaman kepada penerbit obligasi",
-      "Pemilik perusahaan",
-      "Pengendali manajemen perusahaan"
+      "15%",
+      "20%",
+      "25%"
     ],
     answer: 0
   },
   {
-    question: "6. Apa fungsi utama dari indeks saham (misalnya IHSG)?",
+    question: "Capital gain dari emas fisik dikenakan pajak?",
     options: [
-      "Menentukan kurs mata uang",
-      "Sebagai ukuran kinerja pasar modal",
-      "Mengatur suku bunga bank"
-    ],
-    answer: 1
-  },
-  {
-    question: "7. Dalam analisis fundamental, rasio P/E digunakan untuk mengukur?",
-    options: [
-      "Harga saham terhadap pendapatan perusahaan",
-      "Jumlah utang perusahaan",
-      "Dividen yang dibagikan"
+      "Tidak dikenakan pajak",
+      "Ya, 10%",
+      "Ya, 5%"
     ],
     answer: 0
   },
   {
-    question: "8. Instrumen derivatif seperti futures dan options digunakan untuk?",
+    question: "Strategi Tax Loss Harvesting bertujuan untuk?",
     options: [
-      "Menabung jangka panjang",
-      "Spekulasi dan lindung nilai (hedging)",
-      "Mengurangi dividen"
+      "Meningkatkan dividen",
+      "Merealisasikan kerugian untuk mengurangi pajak",
+      "Menghindari risiko likuiditas"
     ],
     answer: 1
   },
   {
-    question: "9. Apa perbedaan utama antara saham biasa dan saham preferen?",
+    question: "Dalam asset location strategy, instrumen dengan pajak tinggi sebaiknya ditempatkan di?",
     options: [
-      "Saham biasa tidak memiliki hak suara",
-      "Saham preferen selalu mendapat dividen tetap",
-      "Saham preferen tidak bisa diperdagangkan"
-    ],
-    answer: 1
-  },
-  {
-    question: "10. Risiko perubahan nilai tukar mata uang dikenal dengan istilah?",
-    options: [
-      "Risiko kredit",
-      "Risiko valuta asing",
-      "Risiko inflasi"
-    ],
-    answer: 1
-  },
-  {
-    question: "11. Reksa dana campuran berinvestasi pada?",
-    options: [
-      "Hanya deposito",
-      "Gabungan saham, obligasi, dan instrumen pasar uang",
-      "Hanya saham"
-    ],
-    answer: 1
-  },
-  {
-    question: "12. Dalam analisis teknikal, moving average digunakan untuk?",
-    options: [
-      "Menghitung inflasi",
-      "Mendeteksi tren harga",
-      "Mengukur laba bersih"
-    ],
-    answer: 1
-  },
-  {
-    question: "13. Beta dalam saham digunakan untuk mengukur?",
-    options: [
-      "Jumlah laba per saham",
-      "Risiko sistematis dibandingkan pasar",
-      "Nilai buku perusahaan"
-    ],
-    answer: 1
-  },
-  {
-    question: "14. Return on Equity (ROE) mengukur?",
-    options: [
-      "Kemampuan perusahaan menghasilkan laba dari modal sendiri",
-      "Jumlah utang perusahaan",
-      "Tingkat inflasi"
+      "Akun pensiun",
+      "Akun darurat",
+      "Akun kena pajak"
     ],
     answer: 0
   },
   {
-    question: "15. Jika suku bunga naik, harga obligasi cenderung?",
+    question: "Timing strategy dalam investasi hemat pajak mencakup?",
     options: [
-      "Tetap",
-      "Naik",
-      "Turun"
+      "Mengabaikan fluktuasi pasar",
+      "Short-term vs Long-term holding",
+      "Mencari dividen tertinggi"
+    ],
+    answer: 1
+  },
+  {
+    question: "Perencanaan pajak tahunan sebaiknya dilakukan dengan cara?",
+    options: [
+      "Menghitung proyeksi pajak dan review portofolio",
+      "Menghindari pencatatan transaksi",
+      "Membeli instrumen berisiko tinggi"
+    ],
+    answer: 0
+  },
+  {
+    question: "Diversifikasi tax-efficient berarti?",
+    options: [
+      "Mengalokasikan aset secara acak",
+      "Mengalokasikan aset dengan mempertimbangkan efisiensi pajak",
+      "Mengutamakan satu jenis instrumen saja"
+    ],
+    answer: 1
+  },
+  {
+    question: "Estate planning dalam konteks pajak bertujuan untuk?",
+    options: [
+      "Mengatur warisan dengan efisiensi pajak",
+      "Mengoptimalkan suku bunga",
+      "Mengurangi modal awal"
+    ],
+    answer: 0
+  },
+  {
+    question: "Formula After-Tax Return adalah?",
+    options: [
+      "Pre-Tax Return - Tax Rate",
+      "Pre-Tax Return × (1 - Tax Rate)",
+      "Pre-Tax Return ÷ Tax Rate"
+    ],
+    answer: 1
+  },
+  {
+    question: "Tax-Equivalent Yield digunakan untuk?",
+    options: [
+      "Menghitung IRR",
+      "Menghitung payback period",
+      "Membandingkan yield bebas pajak dengan kena pajak"
     ],
     answer: 2
   },
   {
-    question: "16. Apa yang dimaksud dengan dollar-cost averaging?",
+    question: "Risiko utama dari regulasi perpajakan adalah?",
     options: [
-      "Membeli aset secara rutin dengan jumlah dana tetap",
-      "Menjual aset dalam jangka pendek",
-      "Mengurangi biaya broker"
+      "Perubahan aturan dan interpretasi pajak",
+      "Fluktuasi harga pasar",
+      "Risiko kredit"
     ],
     answer: 0
   },
   {
-    question: "17. Apa keuntungan utama dari investasi jangka panjang?",
+    question: "Risiko investasi pada instrumen tetap berlaku, contohnya?",
     options: [
-      "Menghindari volatilitas jangka pendek",
-      "Menghilangkan semua risiko",
-      "Membebaskan dari pajak"
-    ],
-    answer: 0
-  },
-  {
-    question: "18. Istilah IPO (Initial Public Offering) berarti?",
-    options: [
-      "Perusahaan membagikan dividen",
-      "Perusahaan pertama kali menjual saham ke publik",
-      "Penurunan harga saham"
+      "Tax avoidance risk",
+      "Market risk, liquidity risk, credit risk",
+      "Regulatory risk"
     ],
     answer: 1
   },
   {
-    question: "19. Dalam investasi properti, cash flow positif artinya?",
+    question: "Kompleksitas administrasi dalam investasi hemat pajak termasuk?",
     options: [
-      "Nilai properti menurun",
-      "Pengeluaran lebih besar dari pemasukan",
-      "Pemasukan sewa lebih besar dari biaya"
-    ],
-    answer: 2
-  },
-  {
-    question: "20. Salah satu keunggulan ETF dibanding reksa dana konvensional adalah?",
-    options: [
-      "Diperdagangkan di bursa layaknya saham",
-      "Bebas risiko",
-      "Selalu memberikan dividen tetap"
-    ],
-    answer: 0
-  },
-  {
-    question: "21. Apa yang dimaksud dengan 'margin trading'?",
-    options: [
-      "Membeli saham menggunakan kartu kredit",
-      "Membeli saham dengan uang pinjaman dari broker",
-      "Menyimpan saham dalam jangka panjang"
+      "Mengabaikan dokumen pajak",
+      "Pencatatan detail dan laporan akurat",
+      "Tidak perlu konsultasi profesional"
     ],
     answer: 1
   },
   {
-    question: "22. Apa arti istilah 'high risk high return'?",
+    question: "Do's yang harus dilakukan investor adalah?",
     options: [
-      "Risiko tinggi berpotensi memberi imbal hasil lebih besar",
-      "Risiko tinggi sama dengan risiko rendah",
-      "Risiko tinggi selalu rugi"
-    ],
-    answer: 0
-  },
-  {
-    question: "23. Yield obligasi adalah?",
-    options: [
-      "Pendapatan bunga yang diterima dibanding harga obligasi",
-      "Jumlah saham yang diterbitkan",
-      "Nilai nominal obligasi"
-    ],
-    answer: 0
-  },
-  {
-    question: "24. Saham yang cenderung memberikan dividen rutin disebut?",
-    options: [
-      "Penny stocks",
-      "Income stocks",
-      "Growth stocks"
+      "Mengabaikan aturan pajak",
+      "Konsultasi dengan tax advisor profesional",
+      "Spekulasi berlebihan"
     ],
     answer: 1
   },
   {
-    question: "25. Apa itu capital gain?",
+    question: "Don'ts yang harus dihindari adalah?",
     options: [
-      "Kerugian dari penurunan harga",
-      "Dividen yang diterima",
-      "Keuntungan dari selisih harga jual lebih tinggi dari harga beli"
-    ],
-    answer: 2
-  },
-  {
-    question: "26. Likuiditas dalam investasi berarti?",
-    options: [
-      "Kemudahan mengubah aset menjadi uang tunai",
-      "Jumlah investor dalam suatu instrumen",
-      "Nilai laba bersih"
-    ],
-    answer: 0
-  },
-  {
-    question: "27. Risiko gagal bayar pada obligasi disebut?",
-    options: [
-      "Risiko kredit",
-      "Risiko pasar",
-      "Risiko inflasi"
-    ],
-    answer: 0
-  },
-  {
-    question: "28. Apa arti istilah 'time horizon' dalam investasi?",
-    options: [
-      "Jenis instrumen yang dipilih",
-      "Tingkat inflasi tahunan",
-      "Lama waktu investor berencana menahan investasinya"
-    ],
-    answer: 2
-  },
-  {
-    question: "29. Strategi 'buy and hold' dalam investasi saham berarti?",
-    options: [
-      "Membeli saham dengan pinjaman",
-      "Membeli saham dan menahannya dalam jangka panjang",
-      "Membeli saham hanya saat harga tinggi"
+      "Dokumentasi transaksi",
+      "Menggunakan skema pajak yang diragukan legalitasnya",
+      "Diversifikasi portofolio"
     ],
     answer: 1
   },
   {
-    question: "30. Apa fungsi utama dari manajer investasi?",
+    question: "Studi kasus investor saham jangka panjang sebaiknya fokus pada?",
     options: [
-      "Mengatur nilai tukar mata uang",
-      "Mengelola dana investor dalam instrumen sesuai tujuan investasi",
-      "Menentukan suku bunga bank"
+      "Obligasi jangka pendek",
+      "Capital gain bebas pajak",
+      "Trading harian"
     ],
     answer: 1
+  },
+  {
+    question: "Strategi utama investor obligasi pensiunan adalah?",
+    options: [
+      "ORI dan SBR untuk cash flow stabil",
+      "Spekulasi derivatif",
+      "Menjual emas secara berkala"
+    ],
+    answer: 0
+  },
+  {
+    question: "Key takeaways: Pajak dalam investasi harus dipandang sebagai?",
+    options: [
+      "Bagian dari strategi holistik",
+      "Hal yang bisa diabaikan",
+      "Satu-satunya alasan investasi"
+    ],
+    answer: 0
+  },
+  {
+    question: "Rekomendasi utama untuk investor adalah?",
+    options: [
+      "Spekulasi jangka pendek",
+      "Evaluasi portofolio dengan sudut pandang pajak",
+      "Fokus pada dividen semata"
+    ],
+    answer: 1
+  },
+  {
+    question: "NPV, IRR, dan Payback period dalam analisis investasi hemat pajak harus dihitung dengan?",
+    options: [
+      "Menggunakan data non-finansial",
+      "Mempertimbangkan pajak",
+      "Hanya menghitung return bruto"
+    ],
+    answer: 1
+  },
+  {
+    question: "Mengapa konsistensi dalam strategi investasi hemat pajak penting?",
+    options: [
+      "Supaya bisa menghindari regulasi",
+      "Agar strategi bisa berkelanjutan",
+      "Untuk spekulasi cepat"
+    ],
+    answer: 1
+  },
+  {
+    question: "Action item pertama yang harus dilakukan investor terkait pajak adalah?",
+    options: [
+      "Evaluasi portofolio dari sisi pajak",
+      "Menghentikan investasi",
+      "Spekulasi derivatif"
+    ],
+    answer: 0
   }
 ];
 
@@ -429,6 +428,6 @@ const quiz = [
   btnKonfirmasiKeluar.addEventListener("click", () => {
     location.reload(); // reload halaman, progress hilang
   });
-</script>
+</script>   
 </body>
 </html>

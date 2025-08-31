@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz investasi pemula</title>
-    <link rel="stylesheet" href="quiz-personal-management-pemula.css">
+    <title>Quiz Nilai Waktu dari Uang</title>
+    <link rel="stylesheet" href="quiz-Nilai-Waktu-dari-Uang.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicons/walletFav.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-  <img src="/favicons/cloud1.png" id="cloud1">
+    <img src="/favicons/cloud1.png" id="cloud1">
   <img src="/favicons/cloud2.png" id="cloud2">
   <img src="/favicons/cloud1.png" id="cloud3">
   <img src="/favicons/cloud2.png" id="cloud4">
@@ -53,7 +52,7 @@
     <h2>Anda yakin ingin keluar dari quiz ini?</h2>
     <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
     <button id="lanjutQuiz">Lanjut</button>
-    <a href="/personal-management/personal-management.html">
+    <a href="/Index.html">
         <button id="konfirmasiKeluar">Keluar</button>
     </a>
   </div>
@@ -61,157 +60,156 @@
 <script>
 const quiz = [
   {
-    question: "Apa yang dimaksud dengan anggaran keuangan pribadi?",
-    options: ["Rencana belanja dan pemasukan", "Catatan nilai mata uang", "Laporan perusahaan"],
-    answer: 0
-  },
-  {
-    question: "Mengapa penting membuat anggaran bulanan?",
-    options: ["Untuk mengatur pemasukan dan pengeluaran", "Supaya tidak menabung", "Untuk membeli barang mewah"],
-    answer: 0
-  },
-  {
-    question: "Apa yang sebaiknya dilakukan dengan uang sisa gaji?",
-    options: ["Dihabiskan untuk hiburan", "Ditabung atau diinvestasikan", "Dipinjamkan ke semua orang"],
-    answer: 1
-  },
-  {
-    question: "Contoh kebutuhan pokok adalah...",
-    options: ["Makan dan tempat tinggal", "Mainan", "Liburan mewah"],
-    answer: 0
-  },
-  {
-    question: "Contoh keinginan adalah...",
-    options: ["Makan sehari-hari", "Bayar listrik", "Beli baju baru setiap minggu"],
+    question: "Apa prinsip fundamental dari Time Value of Money (TVM)?",
+    options: ["Uang hari ini sama dengan uang besok", "Uang hari ini bernilai lebih tinggi daripada uang besok", "Uang besok lebih tinggi nilainya daripada uang hari ini"],
     answer: 2
   },
   {
-    question: "Mengapa penting membedakan kebutuhan dan keinginan?",
-    options: ["Agar tahu prioritas pengeluaran", "Agar uang cepat habis", "Supaya bisa berutang lebih banyak"],
-    answer: 0
+    question: "Komponen utama TVM meliputi Present Value, Future Value, Interest Rate, Number of Periods, dan ____?",
+    options: ["Coupon", "Payment (PMT)", "Yield"],
+    answer: 2
   },
   {
-    question: "Apa manfaat menabung di bank?",
-    options: ["Uang lebih aman", "Uang hilang", "Lebih boros"],
-    answer: 0
+    question: "Formula Future Value dengan bunga sederhana adalah?",
+    options: ["FV = PV × (1 + r)^n", "FV = PV × (1 + r × n)", "FV = PV ÷ (1 + r)^n"],
+    answer: 2
   },
   {
-    question: "Apa itu tabungan darurat?",
-    options: ["Uang untuk jajan", "Dana untuk keperluan mendadak", "Dana untuk pesta"],
+    question: "Jika PV = Rp 10 juta, r = 12%, n = 10 tahun (compound interest), maka FV mendekati?",
+    options: ["Rp 31.1 juta", "Rp 15 juta", "Rp 20 juta"],
     answer: 1
   },
   {
-    question: "Berapa persen idealnya menabung dari gaji?",
-    options: ["10-20%", "50%", "0%"],
-    answer: 0
+    question: "Formula Present Value untuk single sum adalah?",
+    options: ["PV = FV ÷ (1 + r)^n", "PV = FV × (1 + r)^n", "PV = FV ÷ r×n"],
+    answer: 1
   },
   {
-    question: "Apa manfaat investasi?",
-    options: ["Nilai uang bisa berkembang", "Uang jadi hilang", "Uang cepat habis"],
-    answer: 0
+    question: "Annuity Present Value digunakan untuk menghitung?",
+    options: ["Cicilan dan cash flow berkala", "Harga saham", "Nilai obligasi zero-coupon"],
+    answer: 1
   },
   {
-    question: "Contoh investasi jangka panjang adalah...",
-    options: ["Beli properti", "Beli makanan", "Beli tiket bioskop"],
-    answer: 0
+    question: "Formula Future Value of Annuity adalah?",
+    options: ["FV = PMT × [(1 - (1 + r)^-n) ÷ r]", "FV = PMT × [((1 + r)^n - 1) ÷ r]", "FV = PV × (1 + r)^n"],
+    answer: 2
   },
   {
-    question: "Apa yang dimaksud dengan hutang produktif?",
-    options: ["Hutang untuk usaha atau pendidikan", "Hutang untuk liburan", "Hutang untuk beli baju"],
-    answer: 0
+    question: "Net Present Value (NPV) layak jika hasilnya?",
+    options: ["= 0", "< 0", "> 0"],
+    answer: 3
   },
   {
-    question: "Mengapa perlu mencatat pengeluaran?",
-    options: ["Agar tahu kemana uang dipakai", "Agar uang cepat habis", "Supaya tidak menabung"],
-    answer: 0
+    question: "Internal Rate of Return (IRR) adalah?",
+    options: ["Tingkat return yang membuat NPV = 0", "Tingkat bunga deposito", "Biaya modal perusahaan"],
+    answer: 1
   },
   {
-    question: "Apa tujuan memiliki asuransi?",
-    options: ["Perlindungan dari risiko finansial", "Agar uang cepat habis", "Supaya bisa berutang"],
-    answer: 0
+    question: "Payback Period mengukur?",
+    options: ["Berapa lama investasi kembali modal", "Return tahunan rata-rata", "NPV proyek"],
+    answer: 1
   },
   {
-    question: "Jika gaji Rp3.000.000, berapa minimal tabungan (10%)?",
-    options: ["Rp300.000", "Rp30.000", "Rp1.500.000"],
-    answer: 0
+    question: "Sharpe Ratio digunakan untuk?",
+    options: ["Menghitung nilai properti", "Mengukur return disesuaikan risiko", "Mencari bunga pinjaman"],
+    answer: 2
   },
   {
-    question: "Apa itu inflasi?",
-    options: ["Kenaikan harga barang", "Penurunan harga barang", "Nilai gaji meningkat"],
-    answer: 0
+    question: "Dalam perencanaan pendidikan, FV biaya kuliah Rp 200 juta dengan inflasi 15% selama 15 tahun adalah?",
+    options: ["Rp 1.64 miliar", "Rp 500 juta", "Rp 2 miliar"],
+    answer: 1
   },
   {
-    question: "Mengapa inflasi berbahaya bagi uang?",
-    options: ["Nilai uang jadi berkurang", "Nilai uang bertambah", "Gaji lebih tinggi"],
-    answer: 0
+    question: "Continuous Compounding formula adalah?",
+    options: ["FV = PV × e^(r×t)", "FV = PV × (1 + r×t)", "FV = PV ÷ (1 + r)^n"],
+    answer: 1
   },
   {
-    question: "Apa itu gaya hidup hemat?",
-    options: ["Mengatur pengeluaran dengan bijak", "Menghabiskan semua uang", "Boros dalam belanja"],
-    answer: 0
+    question: "Fisher Equation menghubungkan?",
+    options: ["Nominal rate, real rate, inflation", "PV, FV, r", "Risk-free rate, beta, return"],
+    answer: 1
   },
   {
-    question: "Contoh pengeluaran rutin bulanan adalah...",
-    options: ["Listrik dan air", "Liburan ke luar negeri", "Pesta ulang tahun"],
-    answer: 0
+    question: "Risk premium dalam CAPM digunakan untuk?",
+    options: ["Mengurangi bunga pinjaman", "Mengompensasi risiko tambahan", "Mengukur likuiditas aset"],
+    answer: 2
   },
   {
-    question: "Apa manfaat mencatat pemasukan?",
-    options: ["Tahu dari mana uang berasal", "Membuat uang hilang", "Meningkatkan pengeluaran"],
-    answer: 0
+    question: "Fungsi PV, FV, PMT di Excel digunakan untuk?",
+    options: ["Analisis gambar", "Perhitungan TVM", "Desain grafik"],
+    answer: 2
   },
   {
-    question: "Apa itu prioritas keuangan?",
-    options: ["Hal yang paling penting digunakan uang", "Semua barang yang diinginkan", "Tidak menabung"],
-    answer: 0
+    question: "Present Bias adalah kecenderungan untuk?",
+    options: ["Melebih-lebihkan reward masa depan", "Overweight reward langsung", "Mengabaikan inflasi"],
+    answer: 2
   },
   {
-    question: "Apa contoh pengeluaran tidak terduga?",
-    options: ["Biaya berobat mendadak", "Bayar listrik bulanan", "Beli beras"],
-    answer: 0
+    question: "Kasus startup dengan NPV Rp 255 juta berarti?",
+    options: ["Investasi ditolak", "Investasi layak", "Investasi harus ditunda"],
+    answer: 2
   },
   {
-    question: "Apa manfaat membandingkan harga sebelum membeli?",
-    options: ["Menghemat uang", "Membuat lebih boros", "Meningkatkan hutang"],
-    answer: 0
+    question: "Lease vs Buy: Jika PV pembayaran lease lebih rendah daripada harga beli, maka?",
+    options: ["Lebih baik beli", "Lebih baik sewa", "Tidak ada bedanya"],
+    answer: 2
   },
   {
-    question: "Apa itu pendapatan pasif?",
-    options: ["Uang dari investasi atau usaha tanpa kerja aktif", "Uang gaji utama", "Uang pinjaman"],
-    answer: 0
+    question: "PPP (Purchasing Power Parity) adalah konsep tentang?",
+    options: ["Harga sama di negara berbeda", "Nilai tukar pasar uang", "Inflasi domestik"],
+    answer: 1
   },
   {
-    question: "Jika seseorang selalu berutang untuk keinginan, akibatnya?",
-    options: ["Keuangan tidak sehat", "Tabungan bertambah", "Lebih kaya"],
-    answer: 0
+    question: "Forward Rate dalam Interest Rate Parity dihitung dari?",
+    options: ["Spot rate dan perbedaan suku bunga", "Harga emas", "Inflasi dan pajak"],
+    answer: 1
   },
   {
-    question: "Apa langkah pertama untuk mengelola uang dengan baik?",
-    options: ["Membuat anggaran", "Membeli barang mahal", "Menghabiskan gaji"],
-    answer: 0
+    question: "Monte Carlo simulation digunakan untuk?",
+    options: ["Menentukan harga tetap", "Proyeksi probabilistik", "Mengurangi suku bunga"],
+    answer: 2
   },
   {
-    question: "Apa itu rekening tabungan?",
-    options: ["Tempat menyimpan uang di bank", "Tempat belanja online", "Tempat berhutang"],
-    answer: 0
+    question: "Black-Scholes model digunakan untuk valuasi?",
+    options: ["Saham biasa", "Obligasi", "Options"],
+    answer: 3
   },
   {
-    question: "Mengapa penting menabung sejak dini?",
-    options: ["Agar terbiasa disiplin keuangan", "Supaya cepat berutang", "Agar uang cepat habis"],
-    answer: 0
+    question: "Macaulay Duration mengukur?",
+    options: ["Yield obligasi", "Waktu rata-rata penerimaan cash flow", "Spread kredit"],
+    answer: 2
   },
   {
-    question: "Apa manfaat punya tujuan keuangan?",
-    options: ["Agar lebih terarah dalam menggunakan uang", "Untuk berutang lebih banyak", "Supaya tidak menabung"],
-    answer: 0
+    question: "Properti dengan rental yield Rp 180 juta/tahun dan apresiasi 8% per tahun termasuk contoh?",
+    options: ["TVM Case Study", "Valuasi startup", "Annuity perpetuity"],
+    answer: 1
   },
   {
-    question: "Apa arti hidup sesuai kemampuan?",
-    options: ["Menggunakan uang sesuai penghasilan", "Berhutang untuk gaya hidup", "Menghabiskan tabungan"],
-    answer: 0
+    question: "Recency Bias menyebabkan investor?",
+    options: ["Fokus pada data jangka panjang", "Overweight data terbaru", "Tidak memperhatikan return"],
+    answer: 2
+  },
+  {
+    question: "Robo-advisors merupakan contoh?",
+    options: ["Tax advisor manual", "Automated investment strategy", "Kalkulator bunga sederhana"],
+    answer: 2
+  },
+  {
+    question: "Dalam konteks Indonesia, pajak capital gain harus?",
+    options: ["Diabaikan", "Dipertimbangkan dalam return bersih", "Tidak ada efek"],
+    answer: 2
+  },
+  {
+    question: "Best practice dalam TVM adalah?",
+    options: ["Mengabaikan inflasi", "Menggunakan real returns", "Tidak melakukan review"],
+    answer: 2
+  },
+  {
+    question: "Kesalahan umum dalam TVM adalah?",
+    options: ["Melakukan sensitivity analysis", "Menggunakan nominal return tanpa adjustment", "Mencatat asumsi dengan baik"],
+    answer: 2
   }
 ];
-
 
  let currentQuestion = 0;
     const questionEl = document.getElementById("question");
@@ -309,7 +307,6 @@ const quiz = [
   btnKonfirmasiKeluar.addEventListener("click", () => {
     location.reload(); // reload halaman, progress hilang
   });
-</script>
-
+</script> 
 </body>
 </html>

@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz investasi pemula</title>
-    <link rel="stylesheet" href="quiz-personal-management-pemula.css">
+    <title>Quiz Tabungan & Dana</title>
+    <link rel="stylesheet" href="quiz-tabungan-dana.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicons/walletFav.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-  <img src="/favicons/cloud1.png" id="cloud1">
+    <img src="/favicons/cloud1.png" id="cloud1">
   <img src="/favicons/cloud2.png" id="cloud2">
   <img src="/favicons/cloud1.png" id="cloud3">
   <img src="/favicons/cloud2.png" id="cloud4">
@@ -53,7 +52,7 @@
     <h2>Anda yakin ingin keluar dari quiz ini?</h2>
     <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
     <button id="lanjutQuiz">Lanjut</button>
-    <a href="/personal-management/personal-management.html">
+    <a href="/Index.html">
         <button id="konfirmasiKeluar">Keluar</button>
     </a>
   </div>
@@ -61,153 +60,273 @@
 <script>
 const quiz = [
   {
-    question: "Apa yang dimaksud dengan anggaran keuangan pribadi?",
-    options: ["Rencana belanja dan pemasukan", "Catatan nilai mata uang", "Laporan perusahaan"],
+    question: "Apa yang dimaksud dengan tabungan?",
+    options: [
+      "Sejumlah uang yang disimpan untuk kebutuhan tertentu",
+      "Uang yang dipinjam dari bank",
+      "Investasi jangka panjang"
+    ],
     answer: 0
   },
   {
-    question: "Mengapa penting membuat anggaran bulanan?",
-    options: ["Untuk mengatur pemasukan dan pengeluaran", "Supaya tidak menabung", "Untuk membeli barang mewah"],
-    answer: 0
-  },
-  {
-    question: "Apa yang sebaiknya dilakukan dengan uang sisa gaji?",
-    options: ["Dihabiskan untuk hiburan", "Ditabung atau diinvestasikan", "Dipinjamkan ke semua orang"],
+    question: "Tabungan biasanya disimpan di mana?",
+    options: [
+      "Rumah",
+      "Bank atau lembaga keuangan",
+      "Dompet"
+    ],
     answer: 1
   },
   {
-    question: "Contoh kebutuhan pokok adalah...",
-    options: ["Makan dan tempat tinggal", "Mainan", "Liburan mewah"],
-    answer: 0
-  },
-  {
-    question: "Contoh keinginan adalah...",
-    options: ["Makan sehari-hari", "Bayar listrik", "Beli baju baru setiap minggu"],
-    answer: 2
-  },
-  {
-    question: "Mengapa penting membedakan kebutuhan dan keinginan?",
-    options: ["Agar tahu prioritas pengeluaran", "Agar uang cepat habis", "Supaya bisa berutang lebih banyak"],
-    answer: 0
-  },
-  {
-    question: "Apa manfaat menabung di bank?",
-    options: ["Uang lebih aman", "Uang hilang", "Lebih boros"],
-    answer: 0
-  },
-  {
-    question: "Apa itu tabungan darurat?",
-    options: ["Uang untuk jajan", "Dana untuk keperluan mendadak", "Dana untuk pesta"],
+    question: "Tabungan berjangka hanya bisa dicairkan kapan?",
+    options: [
+      "Setiap saat",
+      "Setelah jangka waktu tertentu",
+      "Sebelum menabung"
+    ],
     answer: 1
   },
   {
-    question: "Berapa persen idealnya menabung dari gaji?",
-    options: ["10-20%", "50%", "0%"],
+    question: "Salah satu manfaat tabungan adalah?",
+    options: [
+      "Mengurangi penghasilan",
+      "Menyediakan dana cadangan",
+      "Mengurangi stabilitas keuangan"
+    ],
+    answer: 1
+  },
+  {
+    question: "Tabungan membantu dalam?",
+    options: [
+      "Perencanaan keuangan",
+      "Menambah hutang",
+      "Mengurangi gaji"
+    ],
     answer: 0
   },
   {
-    question: "Apa manfaat investasi?",
-    options: ["Nilai uang bisa berkembang", "Uang jadi hilang", "Uang cepat habis"],
+    question: "Uang tabungan di bank biasanya mendapatkan?",
+    options: [
+      "Utang",
+      "Bunga",
+      "Denda"
+    ],
+    answer: 1
+  },
+  {
+    question: "Berapa persen minimal penghasilan yang sebaiknya disisihkan untuk tabungan?",
+    options: [
+      "1–5%",
+      "10–20%",
+      "30–50%"
+    ],
+    answer: 1
+  },
+  {
+    question: "Mengapa disarankan memiliki rekening terpisah untuk tabungan?",
+    options: [
+      "Agar lebih mudah mengambil uang",
+      "Agar tidak tergoda mengambil uang",
+      "Agar bunga lebih besar"
+    ],
+    answer: 1
+  },
+  {
+    question: "Menabung dengan tujuan jelas membantu untuk?",
+    options: [
+      "Mengurangi utang",
+      "Mencapai target finansial",
+      "Mengurangi penghasilan"
+    ],
+    answer: 1
+  },
+  {
+    question: "Contoh tujuan menabung adalah?",
+    options: [
+      "Membeli gadget",
+      "Membayar denda",
+      "Menambah utang"
+    ],
     answer: 0
   },
   {
-    question: "Contoh investasi jangka panjang adalah...",
-    options: ["Beli properti", "Beli makanan", "Beli tiket bioskop"],
+    question: "Dana darurat sebaiknya disimpan dalam bentuk?",
+    options: [
+      "Tabungan",
+      "Utang",
+      "Pinjaman"
+    ],
     answer: 0
   },
   {
-    question: "Apa yang dimaksud dengan hutang produktif?",
-    options: ["Hutang untuk usaha atau pendidikan", "Hutang untuk liburan", "Hutang untuk beli baju"],
+    question: "Tabungan berbeda dengan investasi karena?",
+    options: [
+      "Risikonya lebih rendah",
+      "Selalu memberikan keuntungan besar",
+      "Tidak bisa diambil kapan saja"
+    ],
     answer: 0
   },
   {
-    question: "Mengapa perlu mencatat pengeluaran?",
-    options: ["Agar tahu kemana uang dipakai", "Agar uang cepat habis", "Supaya tidak menabung"],
+    question: "Apa yang dimaksud dengan bunga tabungan?",
+    options: [
+      "Biaya administrasi",
+      "Imbalan dari bank atas simpanan",
+      "Pinjaman dari bank"
+    ],
+    answer: 1
+  },
+  {
+    question: "Faktor apa yang memengaruhi besar kecilnya bunga tabungan?",
+    options: [
+      "Jumlah saldo dan kebijakan bank",
+      "Jumlah hutang nasabah",
+      "Besar gaji nasabah"
+    ],
     answer: 0
   },
   {
-    question: "Apa tujuan memiliki asuransi?",
-    options: ["Perlindungan dari risiko finansial", "Agar uang cepat habis", "Supaya bisa berutang"],
+    question: "Menabung secara rutin dapat membentuk?",
+    options: [
+      "Kebiasaan konsumtif",
+      "Kebiasaan disiplin keuangan",
+      "Kebiasaan berhutang"
+    ],
+    answer: 1
+  },
+  {
+    question: "Jenis tabungan yang dibuat untuk tujuan khusus adalah?",
+    options: [
+      "Tabungan berjangka",
+      "Tabungan harian",
+      "Pinjaman"
+    ],
     answer: 0
   },
   {
-    question: "Jika gaji Rp3.000.000, berapa minimal tabungan (10%)?",
-    options: ["Rp300.000", "Rp30.000", "Rp1.500.000"],
+    question: "Tabungan harian memiliki kelebihan berupa?",
+    options: [
+      "Bisa diambil kapan saja",
+      "Tidak dikenakan biaya",
+      "Bunga sangat besar"
+    ],
     answer: 0
   },
   {
-    question: "Apa itu inflasi?",
-    options: ["Kenaikan harga barang", "Penurunan harga barang", "Nilai gaji meningkat"],
+    question: "Apa yang dimaksud dengan saldo minimum?",
+    options: [
+      "Jumlah saldo yang harus selalu ada",
+      "Jumlah uang untuk pinjaman",
+      "Jumlah maksimal tabungan"
+    ],
     answer: 0
   },
   {
-    question: "Mengapa inflasi berbahaya bagi uang?",
-    options: ["Nilai uang jadi berkurang", "Nilai uang bertambah", "Gaji lebih tinggi"],
+    question: "Mengapa penting mencatat tujuan tabungan?",
+    options: [
+      "Agar tabungan cepat habis",
+      "Agar lebih fokus dalam menabung",
+      "Agar bisa mengambil utang"
+    ],
+    answer: 1
+  },
+  {
+    question: "Tabungan bisa digunakan untuk?",
+    options: [
+      "Membiayai kebutuhan mendadak",
+      "Mengurangi penghasilan",
+      "Membayar denda"
+    ],
     answer: 0
   },
   {
-    question: "Apa itu gaya hidup hemat?",
-    options: ["Mengatur pengeluaran dengan bijak", "Menghabiskan semua uang", "Boros dalam belanja"],
+    question: "Apa risiko jika tidak memiliki tabungan?",
+    options: [
+      "Sulit menghadapi keadaan darurat",
+      "Selalu mendapat bunga",
+      "Lebih mudah menabung"
+    ],
     answer: 0
   },
   {
-    question: "Contoh pengeluaran rutin bulanan adalah...",
-    options: ["Listrik dan air", "Liburan ke luar negeri", "Pesta ulang tahun"],
+    question: "Menabung sedikit demi sedikit akan menjadi?",
+    options: [
+      "Beban hutang",
+      "Jumlah besar di masa depan",
+      "Pengeluaran tambahan"
+    ],
+    answer: 1
+  },
+  {
+    question: "Salah satu prinsip menabung adalah?",
+    options: [
+      "Konsisten",
+      "Suka menunda",
+      "Borong barang konsumtif"
+    ],
     answer: 0
   },
   {
-    question: "Apa manfaat mencatat pemasukan?",
-    options: ["Tahu dari mana uang berasal", "Membuat uang hilang", "Meningkatkan pengeluaran"],
+    question: "Mengapa anak-anak juga diajarkan menabung?",
+    options: [
+      "Agar boros sejak dini",
+      "Agar belajar disiplin keuangan",
+      "Agar terbiasa berhutang"
+    ],
+    answer: 1
+  },
+  {
+    question: "Tabungan digital dapat diakses melalui?",
+    options: [
+      "Aplikasi mobile banking",
+      "Kantor pos",
+      "Dompet fisik"
+    ],
     answer: 0
   },
   {
-    question: "Apa itu prioritas keuangan?",
-    options: ["Hal yang paling penting digunakan uang", "Semua barang yang diinginkan", "Tidak menabung"],
+    question: "Kelebihan menabung di bank adalah?",
+    options: [
+      "Lebih aman dan ada bunga",
+      "Lebih mudah hilang",
+      "Tidak bisa diambil"
+    ],
     answer: 0
   },
   {
-    question: "Apa contoh pengeluaran tidak terduga?",
-    options: ["Biaya berobat mendadak", "Bayar listrik bulanan", "Beli beras"],
+    question: "Jika sering mengambil tabungan, maka?",
+    options: [
+      "Tujuan tabungan sulit tercapai",
+      "Bunga bertambah",
+      "Saldo selalu penuh"
+    ],
     answer: 0
   },
   {
-    question: "Apa manfaat membandingkan harga sebelum membeli?",
-    options: ["Menghemat uang", "Membuat lebih boros", "Meningkatkan hutang"],
+    question: "Apa yang dimaksud dengan rekening tabungan?",
+    options: [
+      "Catatan keuangan pribadi",
+      "Fasilitas bank untuk menyimpan uang",
+      "Pinjaman dari bank"
+    ],
+    answer: 1
+  },
+  {
+    question: "Tabungan yang disertai kartu ATM memudahkan untuk?",
+    options: [
+      "Mengambil uang tunai",
+      "Mengurangi saldo minimum",
+      "Menambah utang"
+    ],
     answer: 0
   },
   {
-    question: "Apa itu pendapatan pasif?",
-    options: ["Uang dari investasi atau usaha tanpa kerja aktif", "Uang gaji utama", "Uang pinjaman"],
-    answer: 0
-  },
-  {
-    question: "Jika seseorang selalu berutang untuk keinginan, akibatnya?",
-    options: ["Keuangan tidak sehat", "Tabungan bertambah", "Lebih kaya"],
-    answer: 0
-  },
-  {
-    question: "Apa langkah pertama untuk mengelola uang dengan baik?",
-    options: ["Membuat anggaran", "Membeli barang mahal", "Menghabiskan gaji"],
-    answer: 0
-  },
-  {
-    question: "Apa itu rekening tabungan?",
-    options: ["Tempat menyimpan uang di bank", "Tempat belanja online", "Tempat berhutang"],
-    answer: 0
-  },
-  {
-    question: "Mengapa penting menabung sejak dini?",
-    options: ["Agar terbiasa disiplin keuangan", "Supaya cepat berutang", "Agar uang cepat habis"],
-    answer: 0
-  },
-  {
-    question: "Apa manfaat punya tujuan keuangan?",
-    options: ["Agar lebih terarah dalam menggunakan uang", "Untuk berutang lebih banyak", "Supaya tidak menabung"],
-    answer: 0
-  },
-  {
-    question: "Apa arti hidup sesuai kemampuan?",
-    options: ["Menggunakan uang sesuai penghasilan", "Berhutang untuk gaya hidup", "Menghabiskan tabungan"],
+    question: "Tabungan sangat berguna untuk?",
+    options: [
+      "Mencapai keamanan finansial",
+      "Mengurangi penghasilan",
+      "Meningkatkan konsumtif"
+    ],
     answer: 0
   }
 ];
@@ -309,7 +428,6 @@ const quiz = [
   btnKonfirmasiKeluar.addEventListener("click", () => {
     location.reload(); // reload halaman, progress hilang
   });
-</script>
-
+</script>  
 </body>
 </html>

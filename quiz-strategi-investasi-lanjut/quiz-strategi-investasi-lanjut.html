@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz investasi pemula</title>
-    <link rel="stylesheet" href="quiz-personal-management-pemula.css">
+    <title>Quiz Strategi Investasi Lanjut</title>
+    <link rel="stylesheet" href="quiz-strategi-investasi-lanjut.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicons/walletFav.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-  <img src="/favicons/cloud1.png" id="cloud1">
+    <img src="/favicons/cloud1.png" id="cloud1">
   <img src="/favicons/cloud2.png" id="cloud2">
   <img src="/favicons/cloud1.png" id="cloud3">
   <img src="/favicons/cloud2.png" id="cloud4">
@@ -53,7 +52,7 @@
     <h2>Anda yakin ingin keluar dari quiz ini?</h2>
     <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
     <button id="lanjutQuiz">Lanjut</button>
-    <a href="/personal-management/personal-management.html">
+    <a href="/Index.html">
         <button id="konfirmasiKeluar">Keluar</button>
     </a>
   </div>
@@ -61,153 +60,153 @@
 <script>
 const quiz = [
   {
-    question: "Apa yang dimaksud dengan anggaran keuangan pribadi?",
-    options: ["Rencana belanja dan pemasukan", "Catatan nilai mata uang", "Laporan perusahaan"],
-    answer: 0
-  },
-  {
-    question: "Mengapa penting membuat anggaran bulanan?",
-    options: ["Untuk mengatur pemasukan dan pengeluaran", "Supaya tidak menabung", "Untuk membeli barang mewah"],
-    answer: 0
-  },
-  {
-    question: "Apa yang sebaiknya dilakukan dengan uang sisa gaji?",
-    options: ["Dihabiskan untuk hiburan", "Ditabung atau diinvestasikan", "Dipinjamkan ke semua orang"],
+    question: "Apa yang dimaksud dengan pemikiran strategis dalam filosofi investasi lanjutan?",
+    options: ["Buy-and-hold sederhana", "Tactical asset allocation", "Spekulasi jangka pendek"],
     answer: 1
   },
   {
-    question: "Contoh kebutuhan pokok adalah...",
-    options: ["Makan dan tempat tinggal", "Mainan", "Liburan mewah"],
+    question: "Ukuran yang digunakan untuk menilai risk-adjusted return adalah?",
+    options: ["Sharpe Ratio", "Net Profit Margin", "Earnings per Share"],
     answer: 0
   },
   {
-    question: "Contoh keinginan adalah...",
-    options: ["Makan sehari-hari", "Bayar listrik", "Beli baju baru setiap minggu"],
+    question: "Apa yang dimaksud dengan ketidakefisienan pasar?",
+    options: ["Pasar selalu efisien", "Tidak ada peluang arbitrase", "Adanya anomali pasar"],
     answer: 2
   },
   {
-    question: "Mengapa penting membedakan kebutuhan dan keinginan?",
-    options: ["Agar tahu prioritas pengeluaran", "Agar uang cepat habis", "Supaya bisa berutang lebih banyak"],
-    answer: 0
-  },
-  {
-    question: "Apa manfaat menabung di bank?",
-    options: ["Uang lebih aman", "Uang hilang", "Lebih boros"],
-    answer: 0
-  },
-  {
-    question: "Apa itu tabungan darurat?",
-    options: ["Uang untuk jajan", "Dana untuk keperluan mendadak", "Dana untuk pesta"],
+    question: "Tahap dasar dalam evolusi strategi investasi adalah?",
+    options: ["Factor investing", "Diversifikasi sederhana", "Hedging kompleks"],
     answer: 1
   },
   {
-    question: "Berapa persen idealnya menabung dari gaji?",
-    options: ["10-20%", "50%", "0%"],
+    question: "Rotasi sektor dan style investing termasuk tahap?",
+    options: ["Dasar", "Menengah", "Lanjutan"],
+    answer: 1
+  },
+  {
+    question: "Factor Investing dikembangkan oleh?",
+    options: ["Keynes", "Fama-French", "Sharpe"],
+    answer: 1
+  },
+  {
+    question: "Dalam Three-Factor Model, SMB berarti?",
+    options: ["Small minus Big cap premium", "Stock market balance", "Standard market beta"],
     answer: 0
   },
   {
-    question: "Apa manfaat investasi?",
-    options: ["Nilai uang bisa berkembang", "Uang jadi hilang", "Uang cepat habis"],
+    question: "Faktor RMW dalam Five-Factor Model menunjukkan?",
+    options: ["Return Market Weight", "Robust minus Weak profitability", "Risk Management Weight"],
+    answer: 1
+  },
+  {
+    question: "Strategi Smart Beta dengan equal weighting bertujuan untuk?",
+    options: ["Mengurangi diversifikasi", "Menghindari konsentrasi cap-weighted", "Meningkatkan beta"],
+    answer: 1
+  },
+  {
+    question: "Ukuran statistik yang menunjukkan excess return dibanding benchmark adalah?",
+    options: ["Alpha", "Beta", "Sortino Ratio"],
     answer: 0
   },
   {
-    question: "Contoh investasi jangka panjang adalah...",
-    options: ["Beli properti", "Beli makanan", "Beli tiket bioskop"],
+    question: "Beta mengukur risiko apa?",
+    options: ["Risiko sistematis terhadap pasar", "Risiko perusahaan internal", "Risiko default obligasi"],
     answer: 0
   },
   {
-    question: "Apa yang dimaksud dengan hutang produktif?",
-    options: ["Hutang untuk usaha atau pendidikan", "Hutang untuk liburan", "Hutang untuk beli baju"],
+    question: "Metrik risiko lanjutan yang mengukur kerugian di luar ambang VaR adalah?",
+    options: ["CVaR", "Sortino Ratio", "Sharpe Ratio"],
     answer: 0
   },
   {
-    question: "Mengapa perlu mencatat pengeluaran?",
-    options: ["Agar tahu kemana uang dipakai", "Agar uang cepat habis", "Supaya tidak menabung"],
+    question: "Jenis REITs yang berfokus pada properti fisik adalah?",
+    options: ["Mortgage REITs", "Equity REITs", "Hybrid REITs"],
+    answer: 1
+  },
+  {
+    question: "Strategi real estate Buy-and-hold bertujuan untuk?",
+    options: ["Spekulasi cepat", "Pendapatan sewa & apresiasi jangka panjang", "Likuiditas tinggi"],
+    answer: 1
+  },
+  {
+    question: "Apa kepanjangan dari BRRRR strategy?",
+    options: ["Buy, Rent, Reinvest, Repeat", "Buy, Rehab, Rent, Refinance, Repeat", "Build, Rent, Return, Recycle, Repeat"],
+    answer: 1
+  },
+  {
+    question: "Investasi komoditas melalui ETF/ETN memberikan keuntungan berupa?",
+    options: ["Likuid tanpa biaya penyimpanan", "Harga selalu naik", "Tidak ada volatilitas"],
     answer: 0
   },
   {
-    question: "Apa tujuan memiliki asuransi?",
-    options: ["Perlindungan dari risiko finansial", "Agar uang cepat habis", "Supaya bisa berutang"],
+    question: "Risiko utama dalam kontrak futures adalah?",
+    options: ["Tidak ada leverage", "Contango", "Likuiditas tinggi"],
+    answer: 1
+  },
+  {
+    question: "Strategi komoditas momentum berarti?",
+    options: ["Mengikuti tren harga komoditas", "Mengabaikan tren", "Arbitrase musiman"],
     answer: 0
   },
   {
-    question: "Jika gaji Rp3.000.000, berapa minimal tabungan (10%)?",
-    options: ["Rp300.000", "Rp30.000", "Rp1.500.000"],
+    question: "Covered Call Writing menggabungkan posisi?",
+    options: ["Long saham + Short call option", "Long saham + Long call", "Short saham + Long call"],
     answer: 0
   },
   {
-    question: "Apa itu inflasi?",
-    options: ["Kenaikan harga barang", "Penurunan harga barang", "Nilai gaji meningkat"],
+    question: "Tujuan utama Covered Call Writing adalah?",
+    options: ["Spekulasi volatilitas", "Mendapat income tambahan dari premi", "Maksimalkan upside"],
+    answer: 1
+  },
+  {
+    question: "Cash-Secured Puts membuat investor?",
+    options: ["Menjual saham tanpa modal", "Membeli saham dengan diskon atau dapat premi", "Hanya untung di pasar bullish"],
+    answer: 1
+  },
+  {
+    question: "Protective Put berfungsi sebagai?",
+    options: ["Leverage return", "Asuransi portofolio", "Hedging komoditas"],
+    answer: 1
+  },
+  {
+    question: "Collar Strategy menggabungkan?",
+    options: ["Long Stock + Long Put + Short Call", "Short Stock + Long Call + Long Put", "Long Put + Short Put"],
     answer: 0
   },
   {
-    question: "Mengapa inflasi berbahaya bagi uang?",
-    options: ["Nilai uang jadi berkurang", "Nilai uang bertambah", "Gaji lebih tinggi"],
-    answer: 0
+    question: "Kelebihan Collar Strategy adalah?",
+    options: ["Unlimited upside", "Upside dan downside terbatas", "Tanpa biaya premi"],
+    answer: 1
   },
   {
-    question: "Apa itu gaya hidup hemat?",
-    options: ["Mengatur pengeluaran dengan bijak", "Menghabiskan semua uang", "Boros dalam belanja"],
-    answer: 0
+    question: "Straddle cocok digunakan saat?",
+    options: ["Volatilitas rendah", "Volatilitas tinggi", "Pasar sideways"],
+    answer: 1
   },
   {
-    question: "Contoh pengeluaran rutin bulanan adalah...",
-    options: ["Listrik dan air", "Liburan ke luar negeri", "Pesta ulang tahun"],
-    answer: 0
+    question: "Short straddle akan menguntungkan bila?",
+    options: ["Volatilitas tinggi", "Volatilitas rendah (range-bound)", "Pasar bullish"],
+    answer: 1
   },
   {
-    question: "Apa manfaat mencatat pemasukan?",
-    options: ["Tahu dari mana uang berasal", "Membuat uang hilang", "Meningkatkan pengeluaran"],
-    answer: 0
+    question: "Bull Call Spread digunakan untuk?",
+    options: ["Strategi bearish", "Strategi bullish terbatas", "Spekulasi tanpa risiko"],
+    answer: 1
   },
   {
-    question: "Apa itu prioritas keuangan?",
-    options: ["Hal yang paling penting digunakan uang", "Semua barang yang diinginkan", "Tidak menabung"],
-    answer: 0
+    question: "Bear Put Spread cocok untuk kondisi?",
+    options: ["Bullish", "Bearish dengan risiko terbatas", "Sideways"],
+    answer: 1
   },
   {
-    question: "Apa contoh pengeluaran tidak terduga?",
-    options: ["Biaya berobat mendadak", "Bayar listrik bulanan", "Beli beras"],
-    answer: 0
+    question: "Iron Condor biasanya digunakan pada pasar?",
+    options: ["Bullish ekstrem", "Bearish ekstrem", "Netral dengan probabilitas tinggi"],
+    answer: 2
   },
   {
-    question: "Apa manfaat membandingkan harga sebelum membeli?",
-    options: ["Menghemat uang", "Membuat lebih boros", "Meningkatkan hutang"],
-    answer: 0
-  },
-  {
-    question: "Apa itu pendapatan pasif?",
-    options: ["Uang dari investasi atau usaha tanpa kerja aktif", "Uang gaji utama", "Uang pinjaman"],
-    answer: 0
-  },
-  {
-    question: "Jika seseorang selalu berutang untuk keinginan, akibatnya?",
-    options: ["Keuangan tidak sehat", "Tabungan bertambah", "Lebih kaya"],
-    answer: 0
-  },
-  {
-    question: "Apa langkah pertama untuk mengelola uang dengan baik?",
-    options: ["Membuat anggaran", "Membeli barang mahal", "Menghabiskan gaji"],
-    answer: 0
-  },
-  {
-    question: "Apa itu rekening tabungan?",
-    options: ["Tempat menyimpan uang di bank", "Tempat belanja online", "Tempat berhutang"],
-    answer: 0
-  },
-  {
-    question: "Mengapa penting menabung sejak dini?",
-    options: ["Agar terbiasa disiplin keuangan", "Supaya cepat berutang", "Agar uang cepat habis"],
-    answer: 0
-  },
-  {
-    question: "Apa manfaat punya tujuan keuangan?",
-    options: ["Agar lebih terarah dalam menggunakan uang", "Untuk berutang lebih banyak", "Supaya tidak menabung"],
-    answer: 0
-  },
-  {
-    question: "Apa arti hidup sesuai kemampuan?",
-    options: ["Menggunakan uang sesuai penghasilan", "Berhutang untuk gaya hidup", "Menghabiskan tabungan"],
+    question: "Information Ratio digunakan untuk mengukur?",
+    options: ["Return aktif per unit tracking error", "Total risiko pasar", "Likuiditas pasar saham"],
     answer: 0
   }
 ];
@@ -309,7 +308,6 @@ const quiz = [
   btnKonfirmasiKeluar.addEventListener("click", () => {
     location.reload(); // reload halaman, progress hilang
   });
-</script>
-
+</script>     
 </body>
 </html>
