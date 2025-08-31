@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Alokasi Asset</title>
+    <link rel="stylesheet" href="quiz-Alokasi-Asset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicons/walletFav.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+      <img src="/favicons/cloud1.png" id="cloud1">
+  <img src="/favicons/cloud2.png" id="cloud2">
+  <img src="/favicons/cloud1.png" id="cloud3">
+  <img src="/favicons/cloud2.png" id="cloud4">
+  <img src="/favicons/cloud1.png" id="cloud5">
+  <img src="/favicons/cloud2.png" id="cloud6">
+  <img src="/favicons/cloud2.png" id="cloud7">
+
+  <div id="questioncontainer">
+    <h2 id="question"></h2>
+
+    <div id="quiz-container">
+        <form id="quiz-form">
+        <label>
+            <input type="radio" name="answer" value="0">
+            <span id="option0"></span>
+        </label>
+        <label>
+            <input type="radio" name="answer" value="1">
+            <span id="option1"></span>
+        </label>
+        <label>
+            <input type="radio" name="answer" value="2">
+            <span id="option2"></span>
+        </label>
+        </form>
+    </div>
+
+    <h3 id="benaratausalah"></h3>
+  </div>
+
+  <button id="kembalibtn">Kembali</button>
+  <button id="selanjutnyabtn">Selanjutnya</button>
+  <button id="keluar">Keluar</button>
+
+  <div id="warning" class="hidden">
+    <h2>Anda yakin ingin keluar dari quiz ini?</h2>
+    <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
+    <button id="lanjutQuiz">Lanjut</button>
+    <a href="/Index.html">
+        <button id="konfirmasiKeluar">Keluar</button>
+    </a>
+  </div>
+
+<script>
+const quiz = [
+  {
+    question: "Apa yang dimaksud dengan alokasi aset?",
+    options: [
+      "Strategi menabung setiap bulan",
+      "Strategi membagi investasi ke dalam beberapa jenis aset",
+      "Strategi menukar aset dengan barang konsumtif"
+    ],
+    answer: 1
+  },
+  {
+    question: "Salah satu tujuan utama alokasi aset adalah?",
+    options: [
+      "Mengurangi risiko investasi",
+      "Mengurangi aset produktif",
+      "Menghindari investasi sama sekali"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mengapa diversifikasi penting dalam alokasi aset?",
+    options: [
+      "Untuk memperbesar risiko",
+      "Untuk mengurangi risiko kerugian",
+      "Agar tabungan tidak berkurang"
+    ],
+    answer: 1
+  },
+  {
+    question: "Jenis aset apa yang paling mudah dicairkan?",
+    options: [
+      "Properti",
+      "Tabungan dan deposito",
+      "Emas"
+    ],
+    answer: 1
+  },
+  {
+    question: "Contoh aset produktif adalah?",
+    options: [
+      "Tabungan",
+      "Barang konsumtif",
+      "Saham dan obligasi"
+    ],
+    answer: 2
+  },
+  {
+    question: "Apa risiko utama dari aset properti?",
+    options: [
+      "Likuiditas rendah",
+      "Harga selalu naik",
+      "Tidak pernah rugi"
+    ],
+    answer: 0
+  },
+  {
+    question: "Alokasi aset bertujuan untuk?",
+    options: [
+      "Menggabungkan aset produktif dan konsumtif secara seimbang",
+      "Meningkatkan risiko semaksimal mungkin",
+      "Hanya berinvestasi di tabungan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa yang dimaksud dengan aset konsumtif?",
+    options: [
+      "Aset yang menghasilkan pendapatan",
+      "Aset yang nilainya cenderung berkurang",
+      "Aset yang selalu naik nilainya"
+    ],
+    answer: 1
+  },
+  {
+    question: "Diversifikasi investasi dilakukan dengan?",
+    options: [
+      "Menaruh semua uang di satu instrumen",
+      "Menyebar investasi di berbagai instrumen",
+      "Menghindari semua instrumen investasi"
+    ],
+    answer: 1
+  },
+  {
+    question: "Contoh alokasi aset yang seimbang adalah?",
+    options: [
+      "Hanya menabung di deposito",
+      "50% saham, 30% obligasi, 20% deposito",
+      "Semua modal di properti"
+    ],
+    answer: 1
+  },
+  {
+    question: "Mengapa deposito disebut aset dengan risiko rendah?",
+    options: [
+      "Karena bunganya selalu tinggi",
+      "Karena dijamin pemerintah",
+      "Karena nilainya cepat naik turun"
+    ],
+    answer: 1
+  },
+  {
+    question: "Aset apa yang biasanya digunakan untuk proteksi dari inflasi?",
+    options: [
+      "Emas",
+      "Deposito",
+      "Uang tunai"
+    ],
+    answer: 0
+  },
+  {
+    question: "Alokasi aset harus mempertimbangkan?",
+    options: [
+      "Usia, tujuan finansial, dan profil risiko",
+      "Waktu makan",
+      "Warna kesukaan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Jika investor tidak suka risiko, sebaiknya?",
+    options: [
+      "Investasi seluruhnya di saham",
+      "Pilih aset dengan risiko rendah",
+      "Gunakan semua uang untuk konsumsi"
+    ],
+    answer: 1
+  },
+  {
+    question: "Aset yang nilainya naik turun drastis adalah?",
+    options: [
+      "Obligasi",
+      "Saham",
+      "Deposito"
+    ],
+    answer: 1
+  },
+  {
+    question: "Apa manfaat utama dari alokasi aset?",
+    options: [
+      "Menyeimbangkan risiko dan keuntungan",
+      "Menghilangkan semua risiko",
+      "Memastikan tidak ada kerugian"
+    ],
+    answer: 0
+  },
+  {
+    question: "Diversifikasi bisa dilakukan dengan?",
+    options: [
+      "Berinvestasi pada sektor berbeda",
+      "Menabung di satu bank",
+      "Menyimpan semua uang di rumah"
+    ],
+    answer: 0
+  },
+  {
+    question: "Contoh aset yang mudah turun nilainya adalah?",
+    options: [
+      "Barang elektronik",
+      "Saham",
+      "Emas"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mengapa alokasi aset perlu dievaluasi secara berkala?",
+    options: [
+      "Karena kebutuhan dan tujuan bisa berubah",
+      "Karena inflasi tidak pernah terjadi",
+      "Agar selalu rugi"
+    ],
+    answer: 0
+  },
+  {
+    question: "Aset dengan potensi return tinggi biasanya?",
+    options: [
+      "Deposito",
+      "Saham",
+      "Tabungan"
+    ],
+    answer: 1
+  },
+  {
+    question: "Jika ingin investasi jangka panjang, pilihan yang tepat adalah?",
+    options: [
+      "Saham dan properti",
+      "Tabungan harian",
+      "Barang konsumtif"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa perbedaan utama aset riil dan aset finansial?",
+    options: [
+      "Aset riil berupa fisik, aset finansial berupa surat berharga",
+      "Aset riil lebih likuid",
+      "Aset finansial selalu rugi"
+    ],
+    answer: 0
+  },
+  {
+    question: "Contoh aset finansial adalah?",
+    options: [
+      "Saham dan obligasi",
+      "Rumah dan tanah",
+      "Perhiasan"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa dampak inflasi pada aset tunai?",
+    options: [
+      "Nilai uang berkurang",
+      "Nilai uang naik",
+      "Nilai uang tetap sama"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mengapa investor muda biasanya berani ambil risiko lebih besar?",
+    options: [
+      "Karena punya waktu panjang untuk pemulihan",
+      "Karena tidak pernah rugi",
+      "Karena tidak butuh uang"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa itu reksa dana?",
+    options: [
+      "Wadah investasi kolektif yang dikelola manajer investasi",
+      "Tabungan harian",
+      "Kartu kredit"
+    ],
+    answer: 0
+  },
+  {
+    question: "Apa risiko utama dari investasi saham?",
+    options: [
+      "Harga bisa naik turun tajam",
+      "Nilai selalu stabil",
+      "Tidak bisa dijual"
+    ],
+    answer: 0
+  },
+  {
+    question: "Aset konsumtif contohnya?",
+    options: [
+      "Mobil mewah",
+      "Obligasi",
+      "Deposito"
+    ],
+    answer: 0
+  },
+  {
+    question: "Strategi alokasi aset yang tepat akan?",
+    options: [
+      "Mengurangi risiko sekaligus memaksimalkan potensi return",
+      "Selalu memberi keuntungan pasti",
+      "Menghapus semua risiko"
+    ],
+    answer: 0
+  },
+  {
+    question: "Mengapa penting memiliki aset likuid?",
+    options: [
+      "Agar mudah digunakan saat darurat",
+      "Agar nilainya tidak berubah",
+      "Agar tidak pernah dijual"
+    ],
+    answer: 0
+  }
+];
+
+
+
+ let currentQuestion = 0;
+    const questionEl = document.getElementById("question");
+    const optionEls = [
+      document.getElementById("option0"),
+      document.getElementById("option1"),
+      document.getElementById("option2")
+    ];
+    const feedbackEl = document.getElementById("benaratausalah");
+
+    function loadQuestion() {
+      const q = quiz[currentQuestion];
+      questionEl.textContent = (currentQuestion+1) + ". " + q.question;
+      q.options.forEach((opt, i) => {
+        optionEls[i].textContent = opt;
+      });
+      feedbackEl.textContent = ""; 
+      document.querySelectorAll('input[name="answer"]').forEach(r => r.checked = false);
+    }
+
+    document.getElementById("selanjutnyabtn").addEventListener("click", () => {
+      const selected = document.querySelector('input[name="answer"]:checked');
+      if (!selected) {
+        feedbackEl.textContent = "⚠️ Pilih salah satu jawaban dulu!";
+        feedbackEl.style.color = "orange";
+        return;
+      }
+
+      const answer = parseInt(selected.value);
+      if (answer === quiz[currentQuestion].answer) {
+        feedbackEl.textContent = "✅ Jawaban benar!";
+        feedbackEl.style.color = "green";
+      } else {
+        const correctText = quiz[currentQuestion].options[quiz[currentQuestion].answer];
+        feedbackEl.textContent = "❌ Jawaban salah. Yang benar: " + correctText;
+        feedbackEl.style.color = "red";
+      }
+
+      // lanjut soal setelah 1,5 detik
+      setTimeout(() => {
+        if (currentQuestion < quiz.length - 1) {
+          currentQuestion++;
+          loadQuestion();
+        } else {
+          questionEl.textContent = "🎉 Kuis selesai!";
+          feedbackEl.textContent = "";
+          document.getElementById("selanjutnyabtn").disabled = true;
+          document.getElementById("kembalibtn").disabled = true;
+        }
+      }, 1500);
+    });
+
+    document.getElementById("kembalibtn").addEventListener("click", () => {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        loadQuestion();
+      } else {
+        feedbackEl.textContent = "Ini soal pertama!";
+        feedbackEl.style.color = "orange";
+      }
+    });
+
+    loadQuestion();
+
+</script>
+
+</style>
+
+<div id="overlay" class="hidden"></div>
+
+<script>
+  const btnKeluar = document.getElementById("keluar");
+  const warning = document.getElementById("warning");
+  const overlay = document.getElementById("overlay");
+  const btnLanjut = document.getElementById("lanjutQuiz");
+  const btnKonfirmasiKeluar = document.getElementById("konfirmasiKeluar");
+
+  // Saat klik tombol keluar → fade in popup
+  btnKeluar.addEventListener("click", () => {
+    warning.classList.add("show");
+    warning.classList.remove("hidden");
+    overlay.classList.add("show");
+    overlay.classList.remove("hidden");
+  });
+
+  // Saat klik lanjut → fade out popup
+  btnLanjut.addEventListener("click", () => {
+    warning.classList.remove("show");
+    warning.classList.add("hidden");
+    overlay.classList.remove("show");
+    overlay.classList.add("hidden");
+  });
+
+  // Saat klik keluar di dalam warning → reset quiz
+  btnKonfirmasiKeluar.addEventListener("click", () => {
+    location.reload(); // reload halaman, progress hilang
+  });
+</script>
+</body>
+</html>

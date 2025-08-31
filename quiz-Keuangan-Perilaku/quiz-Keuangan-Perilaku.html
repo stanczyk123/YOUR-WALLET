@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Keuangan Perilaku</title>
+    <link rel="stylesheet" href="quiz-Keuangan-Perilaku.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicons/walletFav.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+      <img src="/favicons/cloud1.png" id="cloud1">
+  <img src="/favicons/cloud2.png" id="cloud2">
+  <img src="/favicons/cloud1.png" id="cloud3">
+  <img src="/favicons/cloud2.png" id="cloud4">
+  <img src="/favicons/cloud1.png" id="cloud5">
+  <img src="/favicons/cloud2.png" id="cloud6">
+  <img src="/favicons/cloud2.png" id="cloud7">
+
+  <div id="questioncontainer">
+    <h2 id="question"></h2>
+
+    <div id="quiz-container">
+        <form id="quiz-form">
+        <label>
+            <input type="radio" name="answer" value="0">
+            <span id="option0"></span>
+        </label>
+        <label>
+            <input type="radio" name="answer" value="1">
+            <span id="option1"></span>
+        </label>
+        <label>
+            <input type="radio" name="answer" value="2">
+            <span id="option2"></span>
+        </label>
+        </form>
+    </div>
+
+    <h3 id="benaratausalah"></h3>
+  </div>
+
+  <button id="kembalibtn">Kembali</button>
+  <button id="selanjutnyabtn">Selanjutnya</button>
+  <button id="keluar">Keluar</button>
+
+  <div id="warning" class="hidden">
+    <h2>Anda yakin ingin keluar dari quiz ini?</h2>
+    <h3>Jika anda keluar semua jawaban anda akan diulang dari awal</h3>
+    <button id="lanjutQuiz">Lanjut</button>
+    <a href="/Index.html">
+        <button id="konfirmasiKeluar">Keluar</button>
+    </a>
+  </div>
+
+<script>
+const quiz = [
+  {
+    question: "Keuangan perilaku mempelajari:",
+    options: ["Bagaimana psikologi memengaruhi keputusan finansial", "Hanya teori investasi rasional", "Perhitungan matematis aset finansial"],
+    answer: 0
+  },
+  {
+    question: "Tujuan utama keuangan perilaku adalah:",
+    options: ["Mengidentifikasi kesalahan berpikir dan mengurangi pengaruh emosi", "Meningkatkan return tanpa risiko", "Menciptakan portofolio optimal"],
+    answer: 0
+  },
+  {
+    question: "Perbedaan utama keuangan perilaku dengan keuangan klasik adalah:",
+    options: ["Keuangan klasik menekankan bias manusia", "Keuangan perilaku menekankan ketidaksempurnaan manusia", "Tidak ada perbedaan"],
+    answer: 1
+  },
+  {
+    question: "Overconfidence dalam keuangan perilaku berarti:",
+    options: ["Terlalu yakin dengan kemampuan sehingga mengambil risiko berlebihan", "Selalu mengikuti keputusan orang lain", "Takut mengambil keputusan investasi"],
+    answer: 0
+  },
+  {
+    question: "Herding behavior terjadi ketika investor:",
+    options: ["Mengikuti keputusan orang lain tanpa analisis", "Membuat keputusan berdasarkan riset sendiri", "Menahan kerugian terlalu lama"],
+    answer: 0
+  },
+  {
+    question: "Anchoring bias adalah:",
+    options: ["Terlalu fokus pada informasi awal dan sulit menyesuaikan dengan data baru", "Menghindari kerugian", "Mengikuti orang lain"],
+    answer: 0
+  },
+  {
+    question: "Loss aversion menyebabkan investor:",
+    options: ["Menahan kerugian terlalu lama karena takut kehilangan", "Berinvestasi lebih agresif", "Mengikuti strategi rasional"],
+    answer: 0
+  },
+  {
+    question: "Mental accounting adalah:",
+    options: ["Memperlakukan uang secara terpisah berdasarkan sumber atau tujuan", "Menghitung return portofolio", "Mengikuti keputusan massa"],
+    answer: 0
+  },
+  {
+    question: "Ketakutan (fear) dalam keputusan investasi dapat menyebabkan:",
+    options: ["Menjual aset saat harga turun secara impulsif", "Membeli aset secara agresif", "Diversifikasi portofolio"],
+    answer: 0
+  },
+  {
+    question: "Keserakahan (greed) dalam keuangan perilaku dapat memicu:",
+    options: ["Investasi spekulatif dan berisiko tinggi", "Pengambilan keputusan rasional", "Menahan aset jangka panjang"],
+    answer: 0
+  },
+  {
+    question: "Dorongan penasaran atau eksperimen bisa membuat investor:",
+    options: ["Mencoba instrumen baru tanpa riset sehingga keputusan tidak optimal", "Selalu mengikuti strategi jangka panjang", "Hanya menginvestasikan di aset aman"],
+    answer: 0
+  },
+  {
+    question: "Prinsip mengenali bias sendiri bertujuan:",
+    options: ["Membuat keputusan lebih rasional", "Meningkatkan keserakahan", "Mengabaikan emosi dalam investasi"],
+    answer: 0
+  },
+  {
+    question: "Membuat rencana keuangan tertulis membantu:",
+    options: ["Mengurangi keputusan emosional", "Meningkatkan risiko investasi", "Mengikuti herding behavior"],
+    answer: 0
+  },
+  {
+    question: "Diversifikasi investasi berfungsi untuk:",
+    options: ["Menyebar risiko dan meminimalkan efek kesalahan perilaku", "Memusatkan risiko pada satu aset", "Meningkatkan bias kognitif"],
+    answer: 0
+  },
+  {
+    question: "Evaluasi berkala portofolio dilakukan untuk:",
+    options: ["Menyesuaikan strategi dengan kondisi nyata", "Meningkatkan keserakahan", "Menghindari diversifikasi"],
+    answer: 0
+  },
+  {
+    question: "Manfaat memahami keuangan perilaku termasuk:",
+    options: ["Mengurangi kesalahan finansial", "Meningkatkan risiko impulsif", "Mengabaikan perencanaan jangka panjang"],
+    answer: 0
+  },
+  {
+    question: "Kesadaran diri dalam keuangan perilaku membantu investor:",
+    options: ["Mengenali pengaruh emosi dan psikologi pada keuangan pribadi", "Mengambil keputusan tanpa analisis", "Selalu mengikuti orang lain"],
+    answer: 0
+  },
+  {
+    question: "Keuangan klasik berasumsi bahwa investor:",
+    options: ["Selalu rasional", "Sangat emosional", "Selalu salah dalam keputusan investasi"],
+    answer: 0
+  },
+  {
+    question: "Kesalahan umum akibat overconfidence adalah:",
+    options: ["Mengambil risiko berlebihan", "Diversifikasi berlebihan", "Menjual aset terlalu cepat"],
+    answer: 0
+  },
+  {
+    question: "Herding behavior sering terlihat saat investor:",
+    options: ["Membeli saham populer tanpa analisis", "Meneliti pasar dengan cermat", "Mengurangi risiko portofolio"],
+    answer: 0
+  },
+  {
+    question: "Anchoring bias sering membuat investor:",
+    options: ["Sulit menyesuaikan dengan informasi baru", "Selalu update strategi", "Mengurangi risiko"],
+    answer: 0
+  },
+  {
+    question: "Investor yang takut kehilangan lebih besar daripada menginginkan keuntungan mengalami:",
+    options: ["Loss aversion", "Overconfidence", "Herding"],
+    answer: 0
+  },
+  {
+    question: "Mental accounting dapat menyebabkan:",
+    options: ["Perlakuan uang secara terpisah sehingga keputusan finansial tidak optimal", "Portofolio optimal", "Diversifikasi risiko yang baik"],
+    answer: 0
+  },
+  {
+    question: "Fear dapat menyebabkan investor:",
+    options: ["Menjual aset secara impulsif saat harga turun", "Membeli lebih banyak aset", "Mengikuti rencana keuangan"],
+    answer: 0
+  },
+  {
+    question: "Greed dapat mendorong investor untuk:",
+    options: ["Investasi spekulatif untuk keuntungan cepat", "Menahan aset jangka panjang", "Diversifikasi portofolio"],
+    answer: 0
+  },
+  {
+    question: "Eksperimen dalam investasi tanpa riset bisa mengakibatkan:",
+    options: ["Keputusan tidak optimal", "Portofolio optimal", "Minim risiko"],
+    answer: 0
+  },
+  {
+    question: "Mengenali bias sendiri membantu:",
+    options: ["Mengambil keputusan lebih rasional", "Menambah kesalahan finansial", "Mengikuti massa tanpa analisis"],
+    answer: 0
+  },
+  {
+    question: "Rencana keuangan tertulis membantu:",
+    options: ["Mengurangi pengaruh emosi dalam pengambilan keputusan", "Meningkatkan impulsif", "Mengabaikan risiko"],
+    answer: 0
+  },
+  {
+    question: "Diversifikasi investasi membantu:",
+    options: ["Menyebar risiko", "Memusatkan risiko pada satu aset", "Meningkatkan bias perilaku"],
+    answer: 0
+  },
+  {
+    question: "Evaluasi portofolio secara rutin bertujuan:",
+    options: ["Menyesuaikan strategi dengan kondisi nyata", "Mengikuti emosi pasar", "Meningkatkan spekulasi"],
+    answer: 0
+  }
+];
+
+
+
+ let currentQuestion = 0;
+    const questionEl = document.getElementById("question");
+    const optionEls = [
+      document.getElementById("option0"),
+      document.getElementById("option1"),
+      document.getElementById("option2")
+    ];
+    const feedbackEl = document.getElementById("benaratausalah");
+
+    function loadQuestion() {
+      const q = quiz[currentQuestion];
+      questionEl.textContent = (currentQuestion+1) + ". " + q.question;
+      q.options.forEach((opt, i) => {
+        optionEls[i].textContent = opt;
+      });
+      feedbackEl.textContent = ""; 
+      document.querySelectorAll('input[name="answer"]').forEach(r => r.checked = false);
+    }
+
+    document.getElementById("selanjutnyabtn").addEventListener("click", () => {
+      const selected = document.querySelector('input[name="answer"]:checked');
+      if (!selected) {
+        feedbackEl.textContent = "⚠️ Pilih salah satu jawaban dulu!";
+        feedbackEl.style.color = "orange";
+        return;
+      }
+
+      const answer = parseInt(selected.value);
+      if (answer === quiz[currentQuestion].answer) {
+        feedbackEl.textContent = "✅ Jawaban benar!";
+        feedbackEl.style.color = "green";
+      } else {
+        const correctText = quiz[currentQuestion].options[quiz[currentQuestion].answer];
+        feedbackEl.textContent = "❌ Jawaban salah. Yang benar: " + correctText;
+        feedbackEl.style.color = "red";
+      }
+
+      // lanjut soal setelah 1,5 detik
+      setTimeout(() => {
+        if (currentQuestion < quiz.length - 1) {
+          currentQuestion++;
+          loadQuestion();
+        } else {
+          questionEl.textContent = "🎉 Kuis selesai!";
+          feedbackEl.textContent = "";
+          document.getElementById("selanjutnyabtn").disabled = true;
+          document.getElementById("kembalibtn").disabled = true;
+        }
+      }, 1500);
+    });
+
+    document.getElementById("kembalibtn").addEventListener("click", () => {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        loadQuestion();
+      } else {
+        feedbackEl.textContent = "Ini soal pertama!";
+        feedbackEl.style.color = "orange";
+      }
+    });
+
+    loadQuestion();
+
+</script>
+
+</style>
+
+<div id="overlay" class="hidden"></div>
+
+<script>
+  const btnKeluar = document.getElementById("keluar");
+  const warning = document.getElementById("warning");
+  const overlay = document.getElementById("overlay");
+  const btnLanjut = document.getElementById("lanjutQuiz");
+  const btnKonfirmasiKeluar = document.getElementById("konfirmasiKeluar");
+
+  // Saat klik tombol keluar → fade in popup
+  btnKeluar.addEventListener("click", () => {
+    warning.classList.add("show");
+    warning.classList.remove("hidden");
+    overlay.classList.add("show");
+    overlay.classList.remove("hidden");
+  });
+
+  // Saat klik lanjut → fade out popup
+  btnLanjut.addEventListener("click", () => {
+    warning.classList.remove("show");
+    warning.classList.add("hidden");
+    overlay.classList.remove("show");
+    overlay.classList.add("hidden");
+  });
+
+  // Saat klik keluar di dalam warning → reset quiz
+  btnKonfirmasiKeluar.addEventListener("click", () => {
+    location.reload(); // reload halaman, progress hilang
+  });
+</script>
+</body>
+</html>

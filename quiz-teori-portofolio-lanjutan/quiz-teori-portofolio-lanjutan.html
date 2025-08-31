@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Alokasi Asset</title>
-    <link rel="stylesheet" href="quiz-Alokasi -Asset.css">
+    <title>Teori Portofolio Lanjutan</title>
+    <link rel="stylesheet" href="quiz-teori-portofolio-lanjutan.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicons/walletFav.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,277 +60,156 @@
 <script>
 const quiz = [
   {
-    question: "Apa yang dimaksud dengan alokasi aset?",
-    options: [
-      "Strategi menabung setiap bulan",
-      "Strategi membagi investasi ke dalam beberapa jenis aset",
-      "Strategi menukar aset dengan barang konsumtif"
-    ],
+    question: "Apa tujuan utama diversifikasi dalam teori portofolio?",
+    options: ["Meningkatkan risiko total", "Mengurangi risiko total", "Memaksimalkan return tanpa risiko"],
     answer: 1
   },
   {
-    question: "Salah satu tujuan utama alokasi aset adalah?",
-    options: [
-      "Mengurangi risiko investasi",
-      "Mengurangi aset produktif",
-      "Menghindari investasi sama sekali"
-    ],
+    question: "Hubungan antara risiko dan return biasanya bersifat:",
+    options: ["Risiko tinggi → return rendah", "Risiko tinggi → return tinggi", "Tidak ada hubungan"],
+    answer: 1
+  },
+  {
+    question: "Portofolio optimal adalah:",
+    options: ["Portofolio dengan return maksimal tanpa memperhatikan risiko", "Portofolio dengan risiko minimal untuk return tertentu", "Portofolio yang hanya terdiri dari satu aset"],
+    answer: 1
+  },
+  {
+    question: "Rumus return ekspektasi portofolio adalah:",
+    options: ["E(Rp) = Σ (wi × E(Ri))", "σ²p = ΣΣ (wi × wj × Cov(Ri,Rj))", "Sharpe Ratio = (Rp – Rf) / σp"],
     answer: 0
   },
   {
-    question: "Mengapa diversifikasi penting dalam alokasi aset?",
-    options: [
-      "Untuk memperbesar risiko",
-      "Untuk mengurangi risiko kerugian",
-      "Agar tabungan tidak berkurang"
-    ],
+    question: "Apa yang dimaksud wi dalam rumus return ekspektasi portofolio?",
+    options: ["Return ekspektasi aset i", "Proporsi aset i dalam portofolio", "Risiko aset i"],
     answer: 1
   },
   {
-    question: "Jenis aset apa yang paling mudah dicairkan?",
-    options: [
-      "Properti",
-      "Tabungan dan deposito",
-      "Emas"
-    ],
+    question: "Kovarians antar aset digunakan untuk menghitung:",
+    options: ["Return portofolio", "Risiko portofolio", "Sharpe Ratio"],
     answer: 1
   },
   {
-    question: "Contoh aset produktif adalah?",
-    options: [
-      "Tabungan",
-      "Barang konsumtif",
-      "Saham dan obligasi"
-    ],
+    question: "Nilai korelasi -1 antara dua aset menunjukkan:",
+    options: ["Aset bergerak searah", "Aset tidak berkorelasi", "Aset bergerak berlawanan arah"],
     answer: 2
   },
   {
-    question: "Apa risiko utama dari aset properti?",
-    options: [
-      "Likuiditas rendah",
-      "Harga selalu naik",
-      "Tidak pernah rugi"
-    ],
+    question: "Nilai korelasi +1 menunjukkan:",
+    options: ["Aset bergerak searah", "Aset bergerak berlawanan arah", "Tidak ada hubungan"],
     answer: 0
   },
   {
-    question: "Alokasi aset bertujuan untuk?",
-    options: [
-      "Menggabungkan aset produktif dan konsumtif secara seimbang",
-      "Meningkatkan risiko semaksimal mungkin",
-      "Hanya berinvestasi di tabungan"
-    ],
+    question: "Portofolio yang berada di bawah garis efisien memiliki:",
+    options: ["Return rendah atau risiko terlalu tinggi", "Return maksimal untuk risiko tertentu", "Portofolio ideal"],
     answer: 0
   },
   {
-    question: "Apa yang dimaksud dengan aset konsumtif?",
-    options: [
-      "Aset yang menghasilkan pendapatan",
-      "Aset yang nilainya cenderung berkurang",
-      "Aset yang selalu naik nilainya"
-    ],
+    question: "Portofolio yang berada di atas garis efisien:",
+    options: ["Tidak mungkin dicapai dengan aset yang ada", "Portofolio optimal", "Portofolio pasar"],
+    answer: 0
+  },
+  {
+    question: "Garis efisien menunjukkan:",
+    options: ["Hubungan antara risiko dan return portofolio", "Return aset tunggal", "Korelasi antar aset"],
+    answer: 0
+  },
+  {
+    question: "Portofolio pasar mewakili:",
+    options: ["Satu aset terbaik", "Semua aset yang ada di pasar", "Portofolio dengan risiko nol"],
     answer: 1
   },
   {
-    question: "Diversifikasi investasi dilakukan dengan?",
-    options: [
-      "Menaruh semua uang di satu instrumen",
-      "Menyebar investasi di berbagai instrumen",
-      "Menghindari semua instrumen investasi"
-    ],
+    question: "Capital Market Line (CML) menunjukkan:",
+    options: ["Hubungan risiko total dan return ekspektasi dengan aset bebas risiko", "Hubungan return antar aset", "Portofolio optimal tanpa aset bebas risiko"],
+    answer: 0
+  },
+  {
+    question: "Investor dapat menempatkan dana di aset bebas risiko untuk:",
+    options: ["Mengurangi return portofolio", "Mencapai portofolio optimal di CML", "Meningkatkan risiko portofolio"],
     answer: 1
   },
   {
-    question: "Contoh alokasi aset yang seimbang adalah?",
-    options: [
-      "Hanya menabung di deposito",
-      "50% saham, 30% obligasi, 20% deposito",
-      "Semua modal di properti"
-    ],
+    question: "Sharpe Ratio digunakan untuk:",
+    options: ["Mengukur efisiensi portofolio", "Menghitung return ekspektasi", "Menentukan korelasi antar aset"],
+    answer: 0
+  },
+  {
+    question: "Rumus Sharpe Ratio adalah:",
+    options: ["(Rp – Rf) / σp", "E(Rp) = Σ (wi × E(Ri))", "σ²p = ΣΣ (wi × wj × Cov(Ri,Rj))"],
+    answer: 0
+  },
+  {
+    question: "Interpretasi Sharpe Ratio tinggi menunjukkan:",
+    options: ["Portofolio kurang efisien", "Portofolio lebih efisien", "Return portofolio rendah"],
     answer: 1
   },
   {
-    question: "Mengapa deposito disebut aset dengan risiko rendah?",
-    options: [
-      "Karena bunganya selalu tinggi",
-      "Karena dijamin pemerintah",
-      "Karena nilainya cepat naik turun"
-    ],
+    question: "Risiko portofolio dapat dikurangi melalui:",
+    options: ["Diversifikasi aset", "Menambah satu aset dengan return tinggi", "Investasi hanya pada satu aset"],
+    answer: 0
+  },
+  {
+    question: "Return ekspektasi portofolio bergantung pada:",
+    options: ["Proporsi aset dan return masing-masing aset", "Hanya return satu aset terbaik", "Risiko satu aset"],
+    answer: 0
+  },
+  {
+    question: "Korelasi antar aset yang ideal untuk diversifikasi adalah:",
+    options: ["+1", "0", "-1"],
+    answer: 2
+  },
+  {
+    question: "Portofolio optimal dapat dicapai dengan:",
+    options: ["Hanya memilih aset berisiko rendah", "Mengkombinasikan aset dengan return dan risiko berbeda", "Memilih aset dengan return tertinggi saja"],
     answer: 1
   },
   {
-    question: "Aset apa yang biasanya digunakan untuk proteksi dari inflasi?",
-    options: [
-      "Emas",
-      "Deposito",
-      "Uang tunai"
-    ],
-    answer: 0
-  },
-  {
-    question: "Alokasi aset harus mempertimbangkan?",
-    options: [
-      "Usia, tujuan finansial, dan profil risiko",
-      "Waktu makan",
-      "Warna kesukaan"
-    ],
-    answer: 0
-  },
-  {
-    question: "Jika investor tidak suka risiko, sebaiknya?",
-    options: [
-      "Investasi seluruhnya di saham",
-      "Pilih aset dengan risiko rendah",
-      "Gunakan semua uang untuk konsumsi"
-    ],
+    question: "Efek diversifikasi terbesar terjadi ketika aset:",
+    options: ["Bergerak searah", "Berlawanan arah atau tidak berkorelasi", "Return sama persis"],
     answer: 1
   },
   {
-    question: "Aset yang nilainya naik turun drastis adalah?",
-    options: [
-      "Obligasi",
-      "Saham",
-      "Deposito"
-    ],
+    question: "Variansi portofolio (σ²p) dihitung dengan:",
+    options: ["Σ (wi × E(Ri))", "ΣΣ (wi × wj × Cov(Ri,Rj))", "(Rp – Rf) / σp"],
     answer: 1
   },
   {
-    question: "Apa manfaat utama dari alokasi aset?",
-    options: [
-      "Menyeimbangkan risiko dan keuntungan",
-      "Menghilangkan semua risiko",
-      "Memastikan tidak ada kerugian"
-    ],
-    answer: 0
-  },
-  {
-    question: "Diversifikasi bisa dilakukan dengan?",
-    options: [
-      "Berinvestasi pada sektor berbeda",
-      "Menabung di satu bank",
-      "Menyimpan semua uang di rumah"
-    ],
-    answer: 0
-  },
-  {
-    question: "Contoh aset yang mudah turun nilainya adalah?",
-    options: [
-      "Barang elektronik",
-      "Saham",
-      "Emas"
-    ],
-    answer: 0
-  },
-  {
-    question: "Mengapa alokasi aset perlu dievaluasi secara berkala?",
-    options: [
-      "Karena kebutuhan dan tujuan bisa berubah",
-      "Karena inflasi tidak pernah terjadi",
-      "Agar selalu rugi"
-    ],
-    answer: 0
-  },
-  {
-    question: "Aset dengan potensi return tinggi biasanya?",
-    options: [
-      "Deposito",
-      "Saham",
-      "Tabungan"
-    ],
+    question: "Investor yang mengikuti garis CML dapat:",
+    options: ["Memilih portofolio dengan risiko lebih tinggi tanpa batas", "Mencapai kombinasi return dan risiko optimal", "Menghindari diversifikasi"],
     answer: 1
   },
   {
-    question: "Jika ingin investasi jangka panjang, pilihan yang tepat adalah?",
-    options: [
-      "Saham dan properti",
-      "Tabungan harian",
-      "Barang konsumtif"
-    ],
-    answer: 0
+    question: "Portofolio dengan return maksimal untuk risiko tertentu berada di:",
+    options: ["Bawah garis efisien", "Garis efisien", "Di atas garis efisien"],
+    answer: 1
   },
   {
-    question: "Apa perbedaan utama aset riil dan aset finansial?",
-    options: [
-      "Aset riil berupa fisik, aset finansial berupa surat berharga",
-      "Aset riil lebih likuid",
-      "Aset finansial selalu rugi"
-    ],
-    answer: 0
+    question: "Aset bebas risiko digunakan untuk:",
+    options: ["Meningkatkan risiko portofolio", "Menurunkan risiko portofolio tanpa mengurangi return", "Meningkatkan return portofolio dengan risiko sama"],
+    answer: 1
   },
   {
-    question: "Contoh aset finansial adalah?",
-    options: [
-      "Saham dan obligasi",
-      "Rumah dan tanah",
-      "Perhiasan"
-    ],
-    answer: 0
+    question: "Tujuan utama teori portofolio lanjutan adalah:",
+    options: ["Maksimalkan return tanpa memikirkan risiko", "Optimasi return dan risiko melalui kombinasi aset", "Menghilangkan semua risiko investasi"],
+    answer: 1
   },
   {
-    question: "Apa dampak inflasi pada aset tunai?",
-    options: [
-      "Nilai uang berkurang",
-      "Nilai uang naik",
-      "Nilai uang tetap sama"
-    ],
-    answer: 0
+    question: "Cov(Ri,Rj) dalam rumus variansi portofolio adalah:",
+    options: ["Return ekspektasi portofolio", "Korelasi antar aset", "Kovarians antara return aset i dan j"],
+    answer: 2
   },
   {
-    question: "Mengapa investor muda biasanya berani ambil risiko lebih besar?",
-    options: [
-      "Karena punya waktu panjang untuk pemulihan",
-      "Karena tidak pernah rugi",
-      "Karena tidak butuh uang"
-    ],
-    answer: 0
+    question: "Portofolio yang mengandung semua aset di pasar disebut:",
+    options: ["Portofolio optimal", "Portofolio pasar", "Portofolio minimal risiko"],
+    answer: 1
   },
   {
-    question: "Apa itu reksa dana?",
-    options: [
-      "Wadah investasi kolektif yang dikelola manajer investasi",
-      "Tabungan harian",
-      "Kartu kredit"
-    ],
-    answer: 0
-  },
-  {
-    question: "Apa risiko utama dari investasi saham?",
-    options: [
-      "Harga bisa naik turun tajam",
-      "Nilai selalu stabil",
-      "Tidak bisa dijual"
-    ],
-    answer: 0
-  },
-  {
-    question: "Aset konsumtif contohnya?",
-    options: [
-      "Mobil mewah",
-      "Obligasi",
-      "Deposito"
-    ],
-    answer: 0
-  },
-  {
-    question: "Strategi alokasi aset yang tepat akan?",
-    options: [
-      "Mengurangi risiko sekaligus memaksimalkan potensi return",
-      "Selalu memberi keuntungan pasti",
-      "Menghapus semua risiko"
-    ],
-    answer: 0
-  },
-  {
-    question: "Mengapa penting memiliki aset likuid?",
-    options: [
-      "Agar mudah digunakan saat darurat",
-      "Agar nilainya tidak berubah",
-      "Agar tidak pernah dijual"
-    ],
+    question: "Return ekspektasi portofolio membantu investor untuk:",
+    options: ["Memperkirakan keuntungan portofolio", "Menentukan risiko minimum", "Menghitung Sharpe Ratio"],
     answer: 0
   }
 ];
-
 
 
  let currentQuestion = 0;

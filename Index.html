@@ -2312,24 +2312,24 @@ Konsultasi dengan Ahli Keuangan Internasional – Membantu memahami risiko kompl
 document.addEventListener('DOMContentLoaded', () => {
 
   // Ambil tombol Pelajari Lanjut
-const descriptionBtn = document.getElementById('description');
+  const descriptionBtn = document.getElementById('description');
 
-descriptionBtn.addEventListener('click', () => {
-  // Ambil judul dari popup saat ini
-  const title = document.getElementById('popup-title').innerText.trim();
+  descriptionBtn.addEventListener('click', () => {
+    // Ambil judul dari popup saat ini
+    const title = document.getElementById('popup-title').innerText.trim();
 
-  // Set extended content
-  document.getElementById('extended-img').src = document.getElementById('popup-img').src;
-  document.getElementById('extended-title').innerText = title;
-  document.getElementById('extended-material').innerText =
-    extendedMaterials[title] || "Materi diperluas tidak tersedia untuk topik ini.";
+    // Set extended content
+    document.getElementById('extended-img').src = document.getElementById('popup-img').src;
+    document.getElementById('extended-title').innerText = title;
+    document.getElementById('extended-material').innerText =
+      extendedMaterials[title] || "Materi diperluas tidak tersedia untuk topik ini.";
 
-  // Tampilkan extended content
-  document.getElementById('extended-content').classList.add('active');
+    // Tampilkan extended content
+    document.getElementById('extended-content').classList.add('active');
 
-  // Sembunyikan popup utama jika mau
-  document.getElementById('popup-content').classList.remove('active');
-});
+    // Sembunyikan popup utama jika mau
+    document.getElementById('popup-content').classList.remove('active');
+  });
 
   // Current material yang sedang dibuka
   let currentMaterialTitle = "";
@@ -2361,18 +2361,51 @@ descriptionBtn.addEventListener('click', () => {
   });
 
   // Tombol close & back
-  ['closeextended-btn', 'back-btn'].forEach(id => {
+  ['back-btn'].forEach(id => {
     const btn = document.getElementById(id);
     if (btn) btn.addEventListener('click', closeExtendedContent);
   });
 
-  // Tombol Quiz
-  const quizBtn = document.getElementById('extended-quizbtn');
-  if (quizBtn) {
-    quizBtn.addEventListener('click', () => {
-      alert(`Quiz untuk topik "${currentMaterialTitle}" akan segera tersedia!`);
-    });
-  }
+// Tombol Quiz di extended
+const quizBtn = document.getElementById('extended-quizbtn');
+if (quizBtn) {
+  quizBtn.addEventListener('click', () => {
+    // Redirect ke quiz sesuai materi
+    if (currentMaterialTitle === "Pengertian Utang") {
+      window.location.href = "/quiz-pengertian-utang/quiz-pengertian-utang.html";
+    } else if (currentMaterialTitle === "Anggaran") {
+      window.location.href = "/quiz-anggaran/quiz-anggaran.html";
+    } else if (currentMaterialTitle === "Tabungan & Dana darurat") {
+      window.location.href = "/quiz-tabungan-dana/quiz-tabungan-dana.html";
+    } else if (currentMaterialTitle === "Komponen Dasar dalam Keuangan"){
+      window.location.href="/quiz-Komponen-Dasar-dalam-Keuangan/quiz-Komponen-Dasar-dalam-Keuangan.html"
+    } else if (currentMaterialTitle === "Kesadaran Kekayaan Bersih"){
+      window.location.href="/quiz-Kesadaran-Kekayaan-Bersih/quiz-Kesadaran-Kekayaan-Bersih.html"
+    } else if (currentMaterialTitle === "Alokasi Asset"){
+      window.location.href="/quiz-Alokasi-Asset/quiz-Alokasi-Asset.html"
+    } else if (currentMaterialTitle === "Investasi Hemat Pajak"){
+      window.location.href="/quiz-Investasi-Hemat-Pajak/quiz-Investasi-Hemat-Pajak.html"
+    } else if (currentMaterialTitle === "Rencana Pensiun"){
+      window.location.href="/quiz-rencana-pensiun/quiz-rencana-pensiun.html"
+    } else if (currentMaterialTitle === "Daya Beli"){
+      window.location.href="/quiz-daya-beli/quiz-daya-beli.html"
+    } else if (currentMaterialTitle === "Nilai Waktu dari Uang"){
+      window.location.href="/quiz-Nilai-Waktu-dari-Uang/quiz-Nilai-Waktu-dari-Uang.html"
+    } else if (currentMaterialTitle === "Strategi Investasi Lanjut"){
+      window.location.href="/quiz-strategi-investasi-lanjut/quiz-strategi-investasi-lanjut.html"
+    } else if (currentMaterialTitle === "Teori Portofolio Lanjutan"){
+      window.location.href="/quiz-teori-portofolio-lanjutan/quiz-teori-portofolio-lanjutan.html"
+    } else if (currentMaterialTitle === "Keuangan Perilaku"){
+      window.location.href="/quiz-Keuangan-Perilaku/quiz-Keuangan-Perilaku.html"
+    } else if (currentMaterialTitle === "Investasi Alternatif"){
+      window.location.href="/quiz-investasi-alternatif/quiz-investasi-alternatif.html"
+    } else if (currentMaterialTitle === "Keuangan Internasional"){
+      window.location.href="/quiz-keuangan-internasional/quiz-keuangan-internasional.html"
+    } else {
+      alert(`Quiz untuk topik "${currentMaterialTitle}" belum tersedia!`);
+    }
+  });
+}
 
   // Tutup extended jika klik di luar konten
   window.addEventListener('click', e => {
@@ -2387,10 +2420,12 @@ descriptionBtn.addEventListener('click', () => {
       closeExtendedContent();
     }
   });
+
 });
 
 
 </script>
+
 
 
 <script>
