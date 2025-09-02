@@ -215,3 +215,72 @@ label{
   #konfirmasiKeluar:hover{
     background-color: rgb(155, 0, 0);
   }
+
+  /* ==================== RESPONSIVE ==================== */
+
+/* Tablet (iPad) */
+@media (max-width: 1024px) {
+  #cloud1, #cloud2, #cloud3, #cloud4, #cloud5, #cloud6, #cloud7 {
+    width: 200px; /* perkecil awan */
+  }
+
+  button {
+    width: 200px;
+    height: 70px;
+    font-size: medium;
+  }
+
+  #kembalibtn, #selanjutnyabtn {
+    top: auto;
+    bottom: 20px; /* biar gak ketiban */
+  }
+
+  #question {
+    max-width: 90%;
+    font-size: smaller;
+  }
+
+  #quiz-container label {
+    font-size: smaller;
+    height: auto;
+    padding: 8px;
+  }
+}
+
+/* HP (Mobile) */
+@media (max-width: 600px) {
+  #cloud1, #cloud2, #cloud3, #cloud4, #cloud5, #cloud6, #cloud7 {
+    width: 120px; /* lebih kecil lagi */
+  }
+
+  button {
+    width: 160px;
+    height: 60px;
+    font-size: small;
+  }
+
+  #questioncontainer {
+    padding: 10px;
+  }
+
+  #question {
+    max-width: 95%;
+    font-size: 12px;
+  }
+
+  #quiz-container label {
+    font-size: 12px;
+    height: auto;
+    padding: 6px;
+  }
+
+  #keluar {
+    width: 150px;
+    height: 50px;
+    font-size: small;
+  }
+
+  #benaratausalah {
+    font-size: medium;
+  }
+}

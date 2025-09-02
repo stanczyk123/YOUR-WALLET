@@ -1,4 +1,4 @@
-body{
+body {
     background-color: rgb(50, 152, 225);
     overflow-x: hidden;
     overflow-y: hidden;
@@ -49,7 +49,6 @@ body{
     width: 300px;
     position: fixed;
     left: 20px;
-
 }
 
 button{
@@ -83,30 +82,29 @@ button:hover{
 #questioncontainer {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* center secara vertikal */
-  align-items: center;     /* center secara horizontal */
-  height: 100vh;           /* penuh tinggi layar */
-  text-align: center;      /* biar teks rata tengah */
+  justify-content: center;
+  align-items: center;     
+  height: 100vh;           
+  text-align: center;     
   gap: 10px;
   cursor: pointer;
   padding: 10px 20px;
 }
 
 #quiz-container label {
-  display: block;   /* bikin tiap label jadi 1 baris penuh */
-  margin: 8px 0;    /* kasih jarak antar pilihan */
+  display: block;  
+  margin: 8px 0;    
   font-family: "press start 2p";
   border: 2px solid black;
   height: 50px;
   background-color: whitesmoke;
   border-radius: 20px;
-  
 }
 
 #quiz-container {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* kasih jarak antar jawaban */
+  gap: 15px; 
   margin-top: 20px;
 }
 
@@ -129,7 +127,7 @@ label{
 
 #cloud1, #cloud2, #cloud3, #cloud4, #cloud5, #cloud6, #cloud7 {
   position: fixed;
-  z-index: -1; /* ini bikin awan ada di layer belakang */
+  z-index: -1; 
 }
 
 #benaratausalah{
@@ -153,7 +151,7 @@ label{
     background-color: rgb(148, 0, 0);
 }
 
-  #warning {
+#warning {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -170,20 +168,19 @@ label{
     font-family: "roboto";
     text-align: center;
     border: 2px solid white;
-  }
+}
 
-  #warning.show {
+#warning.show {
     opacity: 1;
     pointer-events: auto;
-  }
+}
 
-  #warning.hidden {
+#warning.hidden {
     opacity: 0;
     pointer-events: none;
-  }
+}
 
-  /* optional overlay */
-  #overlay {
+#overlay {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
@@ -192,26 +189,75 @@ label{
     pointer-events: none;
     transition: opacity 0.4s ease;
     z-index: 999;
-  }
-  #overlay.show {
+}
+#overlay.show {
     opacity: 1;
     pointer-events: auto;
-  }
+}
 
-  #lanjutQuiz{
+#lanjutQuiz{
     background-color: green;
     cursor: pointer;
-  }
+}
 
-  #lanjutQuiz:hover{
+#lanjutQuiz:hover{
     background-color: rgb(0, 71, 0);
-  }
+}
 
-  #konfirmasiKeluar{
+#konfirmasiKeluar{
     background-color: red;
     cursor: pointer;
-  }
+}
 
-  #konfirmasiKeluar:hover{
+#konfirmasiKeluar:hover{
     background-color: rgb(155, 0, 0);
+}
+
+/* ================== Tambahan biar responsif ================== */
+@media (max-width: 1024px) {
+  /* tablet */
+  button {
+    width: 200px;
+    height: 70px;
+    font-size: medium;
   }
+  #question {
+    max-width: 600px;
+    font-size: 14px;
+  }
+  #quiz-container label {
+    font-size: 12px;
+    height: auto;
+    padding: 12px;
+  }
+  #cloud1, #cloud2, #cloud3, #cloud4, #cloud5, #cloud6, #cloud7 {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* hp */
+  button {
+    width: 180px;
+    height: 60px;
+    font-size: small;
+  }
+  #question {
+    max-width: 90%;
+    font-size: 12px;
+  }
+  #quiz-container label {
+    font-size: 10px;
+    height: auto;
+    padding: 10px;
+  }
+  #cloud1, #cloud2, #cloud3, #cloud4, #cloud5, #cloud6, #cloud7 {
+    width: 150px;
+  }
+  #kembalibtn, #selanjutnyabtn {
+    position: relative;
+    top: auto;
+    bottom: 20px;
+    margin: 5px;
+  }
+}

@@ -817,3 +817,62 @@ p {
     right: 20%;
     top: 10%;
 }
+
+/* =========================
+   Tambahan Media Queries
+   ========================= */
+
+/* Tablet (max 1024px) */
+@media (max-width: 1024px) {
+  #title1, #title2 {
+    font-size: 8vw; /* judul ikut lebar layar */
+  }
+
+  #header-container {
+    width: 90%; /* jangan fixed 730px */
+  }
+
+  #wallet {
+    width: 300px; /* lebih kecil */
+    right: 0; /* biar gak ketabrak */
+  }
+
+  #popup-content, #extended-content {
+    max-width: 90%; 
+    height: auto;
+  }
+}
+
+/* HP (max 600px) */
+@media (max-width: 600px) {
+  #title1, #title2 {
+    font-size: 12vw;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+  }
+
+  #wallet {
+    width: 70%; 
+    right: 0;
+  }
+
+  #popup-content, #extended-content {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  /* Row flex → kolom biar rapi di HP */
+  .rows, .rows2, .rows3 {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* Sidebar jadi full screen di HP */
+  .sidebar {
+    width: 100%;
+    right: -100%;
+  }
+}

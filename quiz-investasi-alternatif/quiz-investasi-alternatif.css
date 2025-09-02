@@ -1,217 +1,220 @@
-body{
-    background-color: rgb(50, 152, 225);
-    overflow-x: hidden;
-    overflow-y: hidden;
+body {
+  background-color: rgb(50, 152, 225);
+  overflow-x: hidden;
+  overflow-y: auto; /* biar bisa scroll di layar kecil */
+  margin: 0;
+  padding: 0;
 }
 
-#cloud1{
-    width: 300px;
-    position: fixed;
-    left: 100px;
-    top: 300px;
+/* ========== CLOUD ========== */
+#cloud1, #cloud2, #cloud3, #cloud4, #cloud5, #cloud6, #cloud7 {
+  position: fixed;
+  z-index: -1;
+  max-width: 25vw;   /* ukuran relatif */
+  height: auto;
 }
 
-#cloud2{
-    width: 320px;
-    position: fixed;
-    left: 960px;
-    top: 600px;
+#cloud1 { left: 5%; top: 30%; }
+#cloud2 { left: 60%; top: 60%; }
+#cloud3 { left: 75%; top: 50%; }
+#cloud4 { left: 15%; top: 60%; }
+#cloud5 { left: 40%; top: 20%; }
+#cloud6 { right: 5%; top: 20%; }
+#cloud7 { left: 2%; top: 10%; }
+
+/* ========== BUTTON ========== */
+button {
+  width: 60%;
+  max-width: 250px;
+  height: 60px;
+  font-size: clamp(12px, 2vw, 18px);
+  background-color: rgb(0, 106, 255);
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  font-family: "press start 2p", sans-serif;
 }
 
-#cloud3{
-    width: 290px;
-    position: fixed;
-    left: 1230px;
-    top: 500px;
+#kembalibtn {
+  position: fixed;
+  bottom: 20px;
+  left: 10px;
+  cursor: pointer;
 }
 
-#cloud4{
-    width: 310px;
-    position: fixed;
-    left: 200px;
-    top: 600px;
+#selanjutnyabtn {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  cursor: pointer;
 }
 
-#cloud5{
-    width: 300px;
-    position: fixed;
-    left: 670px;
+button:hover {
+  background-color: rgb(0, 86, 206);
 }
 
-#cloud6{
-    width: 300px;
-    position: fixed;
-    right:100px;
-    top: 200px;
-}
-
-#cloud7{
-    width: 300px;
-    position: fixed;
-    left: 20px;
-
-}
-
-button{
-    width: 250px;
-    height: 80px;
-    font-size: larger;
-    background-color: rgb(0, 106, 255);
-    border: 2px solid white;
-    border-radius: 20px;
-    color: white;
-    font-family: "press start 2p" ;
-}
-
-#kembalibtn{
-    position: fixed;
-    top: 820px;
-    cursor: pointer;
-}
-
-#selanjutnyabtn{
-    position: fixed;
-    top: 820px;
-    right: 10px;
-    cursor: pointer;
-}
-
-button:hover{
-    background-color: rgb(0, 86, 206);
-}
-
+/* ========== QUIZ CONTAINER ========== */
 #questioncontainer {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* center secara vertikal */
-  align-items: center;     /* center secara horizontal */
-  height: 100vh;           /* penuh tinggi layar */
-  text-align: center;      /* biar teks rata tengah */
-  gap: 10px;
-  cursor: pointer;
-  padding: 10px 20px;
+  justify-content: center; 
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  gap: 15px;
+  padding: 20px;
 }
 
 #quiz-container label {
-  display: block;   /* bikin tiap label jadi 1 baris penuh */
-  margin: 8px 0;    /* kasih jarak antar pilihan */
-  font-family: "press start 2p";
+  display: block;
+  margin: 8px 0;
+  font-family: "press start 2p", sans-serif;
   border: 2px solid black;
-  height: 50px;
+  min-height: 45px;
   background-color: whitesmoke;
   border-radius: 20px;
-  
+  font-size: clamp(10px, 2vw, 14px);
+  padding: 8px;
 }
 
 #quiz-container {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* kasih jarak antar jawaban */
+  gap: 15px;
   margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
 }
 
-#question{
-    font-family: "press start 2p";
-    max-width: 800px;
+#question {
+  font-family: "press start 2p", sans-serif;
+  max-width: 90%;
+  font-size: clamp(12px, 2.5vw, 18px);
 }
 
-label{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 20px;
+/* label dalam */
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
 }
 
-#option0, #option1, #option2{
-    cursor: pointer;
+#option0, #option1, #option2 {
+  cursor: pointer;
 }
 
-#cloud1, #cloud2, #cloud3, #cloud4, #cloud5, #cloud6, #cloud7 {
+/* ========== FEEDBACK ========== */
+#benaratausalah {
+  font-family: "press start 2p", sans-serif;
+  font-size: clamp(12px, 2vw, 20px);
+  color: whitesmoke;
+}
+
+/* ========== EXIT BUTTON ========== */
+#keluar {
+  width: 160px;
+  height: 50px;
+  background-color: red;
+  color: white;
+  border: 2px solid white;
   position: fixed;
-  z-index: -1; /* ini bikin awan ada di layer belakang */
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: clamp(10px, 2vw, 14px);
 }
 
-#benaratausalah{
-    font-family: "press start 2p";
-    font-size: larger;
-    color: whitesmoke;
+#keluar:hover {
+  background-color: rgb(148, 0, 0);
 }
 
-#keluar{
-    width: 200px;
-    height: 60px;
-    background-color: red;
-    color: white;
-    border: 2px solid white;
-    position: fixed;
-    top: 10px;
-    cursor: pointer;
+/* ========== WARNING POPUP ========== */
+#warning {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(48, 48, 48);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+  color: white;
+  font-family: "roboto", sans-serif;
+  text-align: center;
+  border: 2px solid white;
+  max-width: 80%;
 }
 
-#keluar:hover{
-    background-color: rgb(148, 0, 0);
+#warning.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-  #warning {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgb(48, 48, 48);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease;
-    z-index: 1000;
-    color: white;
-    font-family: "roboto";
-    text-align: center;
-    border: 2px solid white;
+#warning.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 999;
+}
+#overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* tombol dalam popup */
+#lanjutQuiz {
+  background-color: green;
+  cursor: pointer;
+}
+
+#lanjutQuiz:hover {
+  background-color: rgb(0, 71, 0);
+}
+
+#konfirmasiKeluar {
+  background-color: red;
+  cursor: pointer;
+}
+
+#konfirmasiKeluar:hover {
+  background-color: rgb(155, 0, 0);
+}
+
+/* ========== MEDIA QUERIES ========== */
+@media (max-width: 1024px) {
+  /* tablet */
+  button {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* hp */
+  button {
+    width: 90%;
+    height: 55px;
   }
 
-  #warning.show {
-    opacity: 1;
-    pointer-events: auto;
+  #quiz-container {
+    gap: 10px;
   }
 
-  #warning.hidden {
-    opacity: 0;
-    pointer-events: none;
+  #keluar {
+    width: 120px;
+    height: 45px;
   }
-
-  /* optional overlay */
-  #overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.5);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease;
-    z-index: 999;
-  }
-  #overlay.show {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  #lanjutQuiz{
-    background-color: green;
-    cursor: pointer;
-  }
-
-  #lanjutQuiz:hover{
-    background-color: rgb(0, 71, 0);
-  }
-
-  #konfirmasiKeluar{
-    background-color: red;
-    cursor: pointer;
-  }
-
-  #konfirmasiKeluar:hover{
-    background-color: rgb(155, 0, 0);
-  }
+}

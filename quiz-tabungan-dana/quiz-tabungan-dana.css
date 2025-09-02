@@ -1,58 +1,25 @@
-body{
+body {
     background-color: rgb(50, 152, 225);
     overflow-x: hidden;
     overflow-y: hidden;
 }
 
-#cloud1{
-    width: 300px;
+/* Clouds */
+#cloud1, #cloud2, #cloud3, #cloud4, #cloud5, #cloud6, #cloud7 {
     position: fixed;
-    left: 100px;
-    top: 300px;
+    z-index: -1; /* clouds stay in background */
 }
 
-#cloud2{
-    width: 320px;
-    position: fixed;
-    left: 960px;
-    top: 600px;
-}
+#cloud1 { width: 300px; left: 100px; top: 300px; }
+#cloud2 { width: 320px; left: 960px; top: 600px; }
+#cloud3 { width: 290px; left: 1230px; top: 500px; }
+#cloud4 { width: 310px; left: 200px; top: 600px; }
+#cloud5 { width: 300px; left: 670px; }
+#cloud6 { width: 300px; right: 100px; top: 200px; }
+#cloud7 { width: 300px; left: 20px; }
 
-#cloud3{
-    width: 290px;
-    position: fixed;
-    left: 1230px;
-    top: 500px;
-}
-
-#cloud4{
-    width: 310px;
-    position: fixed;
-    left: 200px;
-    top: 600px;
-}
-
-#cloud5{
-    width: 300px;
-    position: fixed;
-    left: 670px;
-}
-
-#cloud6{
-    width: 300px;
-    position: fixed;
-    right:100px;
-    top: 200px;
-}
-
-#cloud7{
-    width: 300px;
-    position: fixed;
-    left: 20px;
-
-}
-
-button{
+/* Buttons */
+button {
     width: 250px;
     height: 80px;
     font-size: larger;
@@ -60,85 +27,79 @@ button{
     border: 2px solid white;
     border-radius: 20px;
     color: white;
-    font-family: "press start 2p" ;
-}
-
-#kembalibtn{
-    position: fixed;
-    top: 820px;
+    font-family: "press start 2p";
     cursor: pointer;
 }
 
-#selanjutnyabtn{
-    position: fixed;
-    top: 820px;
-    right: 10px;
-    cursor: pointer;
-}
-
-button:hover{
+button:hover {
     background-color: rgb(0, 86, 206);
 }
 
+#kembalibtn {
+    position: fixed;
+    top: 820px;
+    left: 10px;
+}
+
+#selanjutnyabtn {
+    position: fixed;
+    top: 820px;
+    right: 10px;
+}
+
+/* Question Container */
 #questioncontainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* center secara vertikal */
-  align-items: center;     /* center secara horizontal */
-  height: 100vh;           /* penuh tinggi layar */
-  text-align: center;      /* biar teks rata tengah */
-  gap: 10px;
-  cursor: pointer;
-  padding: 10px 20px;
-}
-
-#quiz-container label {
-  display: block;   /* bikin tiap label jadi 1 baris penuh */
-  margin: 8px 0;    /* kasih jarak antar pilihan */
-  font-family: "press start 2p";
-  border: 2px solid black;
-  height: 50px;
-  background-color: whitesmoke;
-  border-radius: 20px;
-  
-}
-
-#quiz-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px; /* kasih jarak antar jawaban */
-  margin-top: 20px;
-}
-
-#question{
-    font-family: "press start 2p";
-    max-width: 800px;
-}
-
-label{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;           
+    text-align: center;      
     gap: 10px;
     padding: 10px 20px;
 }
 
-#option0, #option1, #option2{
+#question {
+    font-family: "press start 2p";
+    max-width: 800px;
+}
+
+/* Quiz Options */
+#quiz-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#quiz-container label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "press start 2p";
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    height: 50px;
+    padding: 10px 20px;
+    margin: 8px 0;
     cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-#cloud1, #cloud2, #cloud3, #cloud4, #cloud5, #cloud6, #cloud7 {
-  position: fixed;
-  z-index: -1; /* ini bikin awan ada di layer belakang */
+#quiz-container label:hover {
+    background-color: #ddd;
 }
 
-#benaratausalah{
+/* Feedback Text */
+#benaratausalah {
     font-family: "press start 2p";
     font-size: larger;
     color: whitesmoke;
 }
 
-#keluar{
+/* Exit Button */
+#keluar {
     width: 200px;
     height: 60px;
     background-color: red;
@@ -146,14 +107,16 @@ label{
     border: 2px solid white;
     position: fixed;
     top: 10px;
+    left: 10px;
     cursor: pointer;
 }
 
-#keluar:hover{
+#keluar:hover {
     background-color: rgb(148, 0, 0);
 }
 
-  #warning {
+/* Warning Box */
+#warning {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -170,48 +133,85 @@ label{
     font-family: "roboto";
     text-align: center;
     border: 2px solid white;
-  }
+}
 
-  #warning.show {
+#warning.show {
     opacity: 1;
     pointer-events: auto;
-  }
+}
 
-  #warning.hidden {
+#warning.hidden {
     opacity: 0;
     pointer-events: none;
-  }
+}
 
-  /* optional overlay */
-  #overlay {
+/* Overlay */
+#overlay {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
     background: rgba(0,0,0,0.5);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s ease;
     z-index: 999;
-  }
-  #overlay.show {
+}
+
+#overlay.show {
     opacity: 1;
     pointer-events: auto;
-  }
+}
 
-  #lanjutQuiz{
+/* Special Buttons inside Warning */
+#lanjutQuiz {
     background-color: green;
-    cursor: pointer;
-  }
+}
 
-  #lanjutQuiz:hover{
+#lanjutQuiz:hover {
     background-color: rgb(0, 71, 0);
-  }
+}
 
-  #konfirmasiKeluar{
+#konfirmasiKeluar {
     background-color: red;
-    cursor: pointer;
+}
+
+#konfirmasiKeluar:hover {
+    background-color: rgb(155, 0, 0);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  button {
+    width: 200px;
+    height: 60px;
+    font-size: medium;
   }
 
-  #konfirmasiKeluar:hover{
-    background-color: rgb(155, 0, 0);
+  #cloud1, #cloud2, #cloud3, #cloud4, #cloud5, #cloud6, #cloud7 {
+    width: 200px;
   }
+
+  #question {
+    font-size: 14px;
+  }
+}
+
+/* HP */
+@media (max-width: 600px) {
+  button {
+    width: 150px;
+    height: 50px;
+    font-size: small;
+  }
+
+  #cloud1, #cloud2, #cloud3, #cloud4, #cloud5, #cloud6, #cloud7 {
+    width: 120px;
+  }
+
+  #question {
+    font-size: 12px;
+    max-width: 90%;
+  }
+}

@@ -215,3 +215,69 @@ label{
   #konfirmasiKeluar:hover{
     background-color: rgb(155, 0, 0);
   }
+
+  /* Responsiveness: Tablet dan HP */
+@media (max-width: 1024px) {
+  #cloud1, #cloud2, #cloud3, #cloud4, #cloud5, #cloud6, #cloud7 {
+    width: 150px;   /* perkecil ukuran awan */
+  }
+
+  button {
+    width: 180px;
+    height: 60px;
+    font-size: medium;
+  }
+
+  #kembalibtn, #selanjutnyabtn {
+    top: auto;
+    bottom: 20px; /* pindah ke bawah biar ga ketiban */
+  }
+
+  #question {
+    max-width: 90%; /* biar teks muat di layar kecil */
+    font-size: 14px;
+  }
+
+  #quiz-container label {
+    font-size: 12px;
+    height: auto; /* biar fleksibel sesuai teks */
+    padding: 10px;
+  }
+
+  #keluar {
+    width: 150px;
+    height: 50px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  #cloud1, #cloud2, #cloud3, #cloud4, #cloud5, #cloud6, #cloud7 {
+    width: 100px;
+  }
+
+  button {
+    width: 150px;
+    height: 50px;
+    font-size: small;
+  }
+
+  #question {
+    font-size: 12px;
+  }
+
+  #quiz-container {
+    gap: 10px;
+  }
+
+  #quiz-container label {
+    font-size: 11px;
+    padding: 8px;
+  }
+
+  #keluar {
+    width: 120px;
+    height: 40px;
+    font-size: 11px;
+  }
+}

@@ -495,3 +495,151 @@ h4{
     right: 7%;
     font-family: "roboto";
 }
+
+/* ==================== RESPONSIVE ==================== */
+
+/* Tablet ukuran medium (max 1024px, misalnya iPad landscape) */
+@media (max-width: 1024px) {
+  #header-container {
+    width: 90%;
+    gap: 15px;
+    height: 55px;
+  }
+
+  .headerbtn {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+
+  #title, #title2, #title3, #title4, #title5, #title6 {
+    font-size: 60px;
+  }
+
+  #inside, #inside2, #inside3, #inside4, #inside5, #inside6 {
+    max-width: 700px;
+  }
+
+  #apaituinvestasi,
+  #mengapakitaharusinvestasi,
+  #tipsandtrick,
+  #perencanaan,
+  #manajemen,
+  #perlindungan {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .pemula, .sedang, .sulit {
+    width: 300px;
+    height: 220px;
+  }
+}
+
+/* Tablet portrait / small devices (max 768px) */
+@media (max-width: 768px) {
+  #header-container {
+    width: 95%;
+    gap: 10px;
+    height: auto;
+    flex-wrap: wrap; /* biar kalau tombol banyak, turun ke bawah */
+    padding: 8px;
+  }
+
+  .headerbtn {
+    font-size: 0.7rem;
+    padding: 6px 10px;
+  }
+
+  #title, #title2, #title3, #title4, #title5, #title6 {
+    font-size: 45px;
+    text-align: center;
+    margin-left: 0;
+    right: 0;
+  }
+
+  #inside, #inside2, #inside3, #inside4, #inside5, #inside6 {
+    max-width: 90%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+  }
+
+  #apaituinvestasi,
+  #mengapakitaharusinvestasi,
+  #tipsandtrick,
+  #perencanaan,
+  #manajemen,
+  #perlindungan {
+    width: 95%;
+    margin-left: 2.5%;
+    border-radius: 30px;
+    padding: 20px;
+  }
+
+  #buttoncontainer {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .pemula, .sedang, .sulit {
+    width: 90%;
+    height: auto;
+  }
+
+  #quizcontainer {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+/* HP kecil (max 480px) */
+@media (max-width: 480px) {
+  #header-container {
+    flex-direction: column;
+    gap: 8px;
+    width: 95%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .headerbtn {
+    width: 100%;
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  #title, #title2, #title3, #title4, #title5, #title6 {
+    font-size: 30px;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  #inside, #inside2, #inside3, #inside4, #inside5, #inside6 {
+    font-size: 0.9rem;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #apaituinvestasi,
+  #mengapakitaharusinvestasi,
+  #tipsandtrick,
+  #perencanaan,
+  #manajemen,
+  #perlindungan {
+    width: 95%;
+    margin: 20px auto;
+    border-radius: 20px;
+    padding: 15px;
+  }
+
+  .pemula, .sedang, .sulit {
+    width: 95%;
+    height: auto;
+    padding: 15px;
+  }
+
+  #quizcontainer {
+    font-size: 28px;
+  }
+}
